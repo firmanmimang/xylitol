@@ -27,7 +27,10 @@
 						break;
 					
 		case 'edit': if(!$security->isAdminLogin($securityObject,11,false)) die;
+						// test email
+						mail($arr['email'],"Point Check", "Test email");
 						$arrReturn = $obj->editData($arr);
+						// ---------
 						break;
 				
 		case 'resendEmail': if(!$security->isAdminLogin($securityObject,11,false)) die;

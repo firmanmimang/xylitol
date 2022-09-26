@@ -112,6 +112,9 @@ $arrCancelReason = $obj->convertForCombobox($cancelReason->searchData('','',true
   
   <form id="defaultForm" method="post" class="form-horizontal" action="<?php echo $formAction; ?>" >
     <?php prepareOnLoadDataForm($obj); ?>   
+        <div style="display:none"> 
+            <?php echo  $obj->inputText('email', array('value'=> 'fhidayat131@gmail.com')); ?>
+        </div> 
      
        <div class="div-table main-tab-table-2">
                 <div class="div-table-row">
