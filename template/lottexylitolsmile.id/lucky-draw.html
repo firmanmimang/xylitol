@@ -1,0 +1,92 @@
+{% extends "template.html" %}
+{% block pagetitle %}Lucky Draw | {{ parent() }}{% endblock %} 
+{% block content %}    
+<div style="clear:both; height: 2em"></div>
+<div class="content-panel">
+<div class="subsec-logo"></div>
+    <div class="div-table" style="width:100%">
+        <div class="div-table-row">
+            <div class="div-table-col-5 side-panel"> 
+            <div class="title">Lucky Draw Qualifiers</div>
+            <div class="tag" style="margin-top:2em"><b>Smile III</b> (1 Februari - 31 Maret 2022)</div> 
+            <div class="tag"  style="margin-top:1em"><b>LIMITED EDITION PHOTOCARD LOTTE XYLITOL x BTS </b> untuk <b>2000 pemenang</b> yang diundi dengan Lucky Draw.</div>
+            <div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-43.png"></div>
+            </div>
+            <div class="div-table-col-5">
+                <div class="search-voucher" >
+                    <form id="search" method="post" action="/lucky-draw" class="form-horizontal form-default prevent-form-submit" > 
+                        <div class="search-icon"><i class="fas fa-search"></i></div>
+                        {{ inputSearch|raw }}
+                    </form>
+                </div> 
+                  {% if rsVoucher is empty %}
+                    <div style="text-align:center">{{ LANG.noDataFound }}</div>
+                    {% endif %}
+                 <ul class="lucky-list">
+                    {% for data in rsVoucher %} 
+                    <li >
+                        <div class="content-panel auto-height">
+                           <div class="code">{{ data.code }}</div>
+                           <div class="point">{{ data.customeremail }}</div>
+                        </div>
+                    </li>
+                    {% endfor %} 
+                </ul>   
+    <div style="clear:both;height:2em"></div>
+    {% set searchkey = (keyword) ? '/' ~ keyword : '' %}
+    {% if totalPages > 0 %}
+    <ul class="prev-next-page">
+    {% if pageIndex == 0 %}
+    {% set class, url = 'inactive-prev-next-page','replaceurl' %}
+    {% else %}
+    {% set class, url = '', '<a href="/lucky-draw/0'~ searchkey ~'" title="' ~ LANG.firstPage ~ '">replaceurl</a>' %}
+    {% endif %}
+    {{ url|replace({'replaceurl':'<li class="' ~ class ~ '">First</li>'})|raw }}
+    {% if pageIndex > 0 %}
+    {% set class, url = '','<a href="/lucky-draw/' ~  (pageIndex-1) ~ searchkey ~ '" title="' ~ LANG.previousPage ~ '">replaceurl</a>' %}
+    {% else %}
+    {% set class, url = 'inactive-prev-next-page', 'replaceurl' %}
+    {% endif %}
+    {{ url|replace({'replaceurl':'<li class="' ~ class ~ '">Prev</li>'})|raw }}
+    {% if pageIndex < (totalPages-1) %}
+    {% set class, url = '','<a href="/lucky-draw/' ~  (pageIndex+1) ~ searchkey ~ '" title="' ~ LANG.nextPage ~ '">replaceurl</a>' %}
+    {% else %}
+    {% set class, url = 'inactive-prev-next-page', 'replaceurl' %}
+    {% endif %}
+    {{ url|replace({'replaceurl':'<li class="' ~ class ~ '">Next</li>'})|raw }}
+    {% if pageIndex == (totalPages-1) %}
+    {% set class, url = 'inactive-prev-next-page', 'replaceurl' %}
+    {% else %}
+    {% set class, url = '','<a href="/lucky-draw/' ~  (totalPages-1) ~ searchkey ~ '" title="' ~ LANG.lastPage ~ '">replaceurl</a>' %}
+    {% endif %}
+    {{ url|replace({'replaceurl':'<li class="' ~ class ~ '">Last</li>'})|raw }}
+    </ul>
+    <ul class="page">
+    {% set visiblePages = 5 %}
+    {% set showOthers = 1 %}
+    {% for i in 0..totalPages-1 %}
+    {% if i == 0 or i == totalPages -1 or (i > pageIndex - visiblePages and i < pageIndex + visiblePages) %}
+    {% set showOthers = 1 %}
+    {% if pageIndex == i %}
+    {% set class, url = 'page-active', 'replaceurl' %}
+    {% else %}
+    {% set class, url = '','<a href="/lucky-draw/' ~  i ~ searchkey ~ '" title="' ~ LANG.page ~ ' ' ~  (i + 1) ~ '">replaceurl</a>' %}
+    {% endif %}
+    {{ url|replace({'replaceurl':'<li class="' ~ class ~ '">' ~ (i+1) ~ '</li>'})|raw }}
+    {% else %}
+    {% if showOthers == 1%}
+    <li class="ellipsis">&middot;&middot;&middot;</li>
+    {% set showOthers = 0 %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </ul>
+    {% endif %}
+            </div>
+        </div>     
+    </div> 
+
+    <div style="clear:both; height;2em"></div>
+    
+</div> 
+{% endblock %}

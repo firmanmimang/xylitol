@@ -1,0 +1,14 @@
+{% extends "email-template.html" %} 
+{% block content %}
+Hi {{ CUSTOMER_NAME|raw }},
+<br><br>
+Upload Strukmu di tanggal {{ TRANS_DATE|date("d / m / Y") }} telah divalidasi dan dinyatakan <b>BERHASIL</b>.<br><br>Poin kamu bertambah sebanyak {{ POINT }}. 
+<br><br> 
+{% if POINT_NEEDED > 0 %}
+Ayo kumpulkan <b>{{ POINT_NEEDED }} poin</b> lagi dengan pembelian Lotte Xylitol apa saja dan upload strukmu untuk mendapatkan <b>Limited Edition Merchandise Lotte Xylitol x BTS</b>.
+{% else %}
+Selamat ! Jumlah poin kamu sudah cukup untuk mengikuti Lucky Draw <b>Limited Edition Merchandise Lotte Xylitol x BTS</b>.
+{% endif %}
+<br><br>
+<b>Periode SMILE III berhadiah satu set PHOTOCARD Lotte Xylitol x BTS. Akan ada 2000 pemenang Lucky Draw di akhir periode ini untuk bisa mendapatkannya.</b>
+{% endblock %}

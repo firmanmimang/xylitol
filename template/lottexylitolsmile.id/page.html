@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+{% block pagetitle %}{{ title|raw }} | {{ parent() }}{% endblock %}
+{% block contenttitle %}
+<div class="title">
+<h1>{{ title }}</h1>
+</div>
+{% endblock %}
+{% block JSOnLoad %}
+$(window).bind("load resize", function() {     
+           
+            columnConform('.auto-height');
+        });
+    
+{% endblock %}
+        
+{% block content %}
+<div id="{{ PAGE_ID }}" class="free-page">
+<div class="subsec-logo-2"></div>
+<div class="content-wrapper">     
+<div style="clear:both; height: 1em"></div>
+{{ content|raw }}
+</div>
+<div style="clear:both; height: 4em"></div> 
+</div>
+{% endblock %}

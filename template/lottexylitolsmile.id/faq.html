@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+{% block pagetitle %}{{ LANG.faq }} | {{ parent() }}{% endblock %} 
+{% block JS %}
+<script type="text/javascript" src="{{ TEMPLATE_JS_PAGE_PATH }}faq.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){    
+ var faq = new FAQ();
+ faq.loadOnReady(); 
+})
+</script> 
+{% endblock %}  
+{% block content %}   
+<div class="content-panel">
+<div class="subsec-logo-2"></div>
+<div style="clear: both; height: 5em"></div>      
+<div class="content-wrapper"> 
+<div class="div-table faq-table">
+    <div class="div-table-row">
+        <div class="div-table-col-5 index-panel">
+            <div class="title">Common Inquiries</div>
+            <div class="tag">Quick Answers</div>  
+            <ul class="faq-index">
+                {% for data in rsFAQ %} 
+                <li rel="{{ data.pkey }}"><div class="question">{{ data.question }}</div></li>
+                {% endfor %}  
+            </ul>      
+        </div> 
+        <div class="div-table-col-5 asnwer-panel">
+            <ul class="faq-detail">
+                {% for data in rsFAQ %}  
+                    <li class="faq-detail-{{ data.pkey }}" style="{{ (loop.index == 1) ? '' : 'display: none' }}"> 
+                    <div class="question">{{ data.question }}</div>
+                    <div class="answer">{{ data.answer|raw }}</div>
+                    </li>    
+                {% endfor %}  
+            </ul> 
+        </div>
+    </div>
+</div>   
+</div>   
+</div> 
+<div style="clear: both;"></div>
+{% endblock %}

@@ -1,0 +1,56 @@
+<body style="font-family:arial;color:#333">
+<table style="width:100%;max-width:800px;" cellspacing="0" cellpadding="0">
+<tr>
+<td style="padding:2em; background-color:#F2F2F2; "> 
+<div style="border-radius: 1.5em; background-color: #fff;">
+    <div style="text-align: center"><img src="{{ TEMPLATE_IMG_PATH|raw }}email-header.png" style="max-width: 100%" /></div>
+    <div style="background-color: #02aa4d; padding: 2em; border-radius: 0 0 1.5em 1.5em">
+        <div style="padding:2em; background-color:#fff; border-radius: 1.5em;"> 
+            <div style="text-align:center; color:#333">
+                {% block content %}{% endblock %}
+            </div> 
+            <br><br>
+            <div style="font-size:0.9em; text-align: center; color: #C41E3A; font-style: italic; ">
+            Mohon perhatikan bahwa pesan email ini dikirimkan hanya untuk pemberitahuan dan tidak bisa menerima email masuk. Mohon tidak membalas pesan ini.<br>
+            Lotte Xylitol x BTS
+            </div>
+        </div>
+    </div> 
+</div>    
+</td>
+</tr>
+<tr>
+<td style="text-align:center;font-size:.9em;padding:2em 0.5em;background-color:#dadbda">
+<a href="{{ HTTP_HOST|raw }}" target="_blank" style="color:#333"><img src="{{ TEMPLATE_IMG_PATH|raw }}footer-email-logo.png" style="max-width: 100%" /></a>
+<table style="width:100%; margin-top:1em">
+    <tr>
+        <td style="width:33%; text-align: center;">
+            <table  style="margin:auto">
+                <tr>
+                    <td style="vertical-align: middle"><img src="{{ TEMPLATE_IMG_PATH|raw }}footer-fb.png" style="height: 15px;" /></td>
+                    <td  style="vertical-align: middle"><a href="https://id-id.facebook.com/lottexylitol.id" style="color:#333; text-decoration: none" target="_blank">lottexylitol.id</a></td>
+                </tr>
+            </table>
+        </td>
+        <td style="width:33%; text-align: center;">
+            <table style="margin:auto">
+                <tr>
+                    <td style="vertical-align: middle"><img src="{{ TEMPLATE_IMG_PATH|raw }}footer-ig.png" style="height: 15px;" /></td>
+                    <td  style="vertical-align: middle"><a href="https://www.instagram.com/lottexylitol.id" style="color:#333; text-decoration: none" target="_blank">lottexylitol.id</a></td>
+                </tr>
+            </table>
+        </td>
+        <td style="width:33%; text-align: center;">
+            <table  style="margin:auto">
+                <tr>
+                    <td style="vertical-align: middle"><img src="{{ TEMPLATE_IMG_PATH|raw }}footer-twitter.png" style="height: 15px;" /></td>
+                    <td  style="vertical-align: middle"><a href="https://www.twitter.com/lottexylitol_" style="color:#333; text-decoration: none" target="_blank">lottexylitol_</a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</td>
+</tr>
+</table>
+</body>

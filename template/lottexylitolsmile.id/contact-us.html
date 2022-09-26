@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+{% block pagetitle %}{{ LANG.contactUs}} | {{ parent() }}{% endblock %}
+{% block content %} 
+<div class="content-panel">
+<div class="subsec-logo"></div>
+<div class="form-panel"> 
+<div class="title">{{ LANG.contactUs }}</div>
+<div>{{ settings.companyAddress|raw }}</div> 
+<div style="clear: both; height: 0.5em"></div> 
+<ul class="msg-list">
+ {% for item in settings.companyMessenger %}    
+            {% set HREF = '' %}
+            {% set FA_ICON = '' %}
+            {% if item.label|lower == "wa" or item.label|lower == "whatsapp" %}  
+                {% set FA_ICON = "fab fa-whatsapp" %} 
+                {% set HREF = "https://api.whatsapp.com/send?phone=" ~ item.value|wafilter %}
+            {% endif %}  
+          
+        <li><i class="{{ FA_ICON }}" ></i> {% if not HREF is empty %}<a href="{{ HREF }}">{% endif %}{{ item.value }}{% if not HREF is empty %}</a>{% endif %}</li> 
+  {% endfor %}    
+   <li><i class="fas fa-envelope"></i> <a href="mailto:info@lottexylitolsmile.id">info@lottexylitolsmile.id</a></li> 
+</ul>  
+<div style="clear: both; height: 0.5em"></div>    
+<div>{{ settings.sitesName|raw }}</div> 
+<div style="clear: both; height: 0.5em"></div>  
+<ul class="medsos"> 
+     {% for item in settings.companyMedsos %} 
+        {% if item.label|lower == "fb" or item.label|lower == "facebook" %}    
+            {% set FA_ICON = "fab fa-facebook-square" %}
+        {% elseif item.label|lower == "instagram" %}  
+            {% set FA_ICON = "fab fa-instagram" %}
+        {% elseif item.label|lower == "twitter" %}   
+            {% set FA_ICON = "fab fa-twitter" %}
+        {% elseif item.label|lower == "youtube" %}   
+            {% set FA_ICON = "fab fa-youtube" %}
+        {% endif %}  
+         {% if item.label|lower == "fb" or item.label|lower == "facebook" or item.label|lower == "instagram" %}    
+            <li><a href="{{ item.value }}" title="{{ LANG.linkto }} {{ item.label }}" target="_blank"><i class="{{ FA_ICON }}"></i></a></li>
+        {% endif %}  
+      {% endfor %}  
+</ul>    
+<div style="clear:both"></div>
+<div class="subsec-01"><img src="{{ TEMPLATE_IMG_PATH }}img-21.png"></div>
+</div>
+</div>
+{% endblock %}

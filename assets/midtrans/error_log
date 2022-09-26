@@ -1,0 +1,14 @@
+[03-Nov-2018 13:35:21 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'CURL Error: Could not resolve host: app.sandbox.veritrans.co.id' in /home/eternala/public_html/assets/midtrans/Veritrans/SnapApiRequestor.php:91
+Stack trace:
+#0 /home/eternala/public_html/assets/midtrans/Veritrans/SnapApiRequestor.php(28): Veritrans_SnapApiRequestor::remoteCall('https://app.san...', 'SB-Mid-server-L...', Array, true)
+#1 /home/eternala/public_html/assets/midtrans/Veritrans/Snap.php(53): Veritrans_SnapApiRequestor::post('https://app.san...', 'SB-Mid-server-L...', Array)
+#2 /home/eternala/public_html/assets/midtrans/checkout-process.php(91): Veritrans_Snap::getSnapToken(Array)
+#3 {main}
+  thrown in /home/eternala/public_html/assets/midtrans/Veritrans/SnapApiRequestor.php on line 91
+[08-Nov-2018 14:12:42 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'CURL Error: Could not resolve host: app.sandbox.veritrans.co.id' in /home/eternala/public_html/assets/midtrans/Veritrans/SnapApiRequestor.php:91
+Stack trace:
+#0 /home/eternala/public_html/assets/midtrans/Veritrans/SnapApiRequestor.php(28): Veritrans_SnapApiRequestor::remoteCall('https://app.san...', 'SB-Mid-server-L...', Array, true)
+#1 /home/eternala/public_html/assets/midtrans/Veritrans/Snap.php(53): Veritrans_SnapApiRequestor::post('https://app.san...', 'SB-Mid-server-L...', Array)
+#2 /home/eternala/public_html/assets/midtrans/checkout-process.php(91): Veritrans_Snap::getSnapToken(Array)
+#3 {main}
+  thrown in /home/eternala/public_html/assets/midtrans/Veritrans/SnapApiRequestor.php on line 91

@@ -1,0 +1,2 @@
+[27-Aug-2022 16:57:52 Asia/Jakarta] PHP Warning:  require_once(../_config.php): failed to open stream: No such file or directory in /home/lottexyl/public_html/lucky-draw.php on line 2
+[27-Aug-2022 16:57:52 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '../_config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/lottexyl/public_html/lucky-draw.php on line 2

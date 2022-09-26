@@ -1,0 +1,97 @@
+{% extends "template.html" %}
+{% block pagetitle %}Upload Your Receipt | {{ parent() }}{% endblock %}
+{% block CSS %}
+<link rel="stylesheet" type="text/css" href="{{ TEMPLATE_CSS_PATH }}fileuploader.css"> 
+{% endblock %}
+{% block JS %}
+<script type="text/javascript" src="{{ TEMPLATE_JS_PATH }}fileuploader.min.js"></script>  
+<script type="text/javascript" src="{{ TEMPLATE_JS_PAGE_PATH }}uploadReceipt.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){  
+ var opt = new Array();    
+ var errMsg = new Array();      
+ opt['errMsg'] = errMsg;
+ opt['uploadFolder'] = "{{ uploadFolder }}";    
+ opt['imageUploaderTarget'] ='item-image-uploader'; 
+ var uploadReceipt = new UploadReceipt(opt);
+ uploadReceipt.loadOnReady(); 
+})
+</script>
+{% endblock %}
+
+{% block contenttitle %}
+<div class="title">
+<h1>{{ LANG.upload }}</h1>
+</div>
+{% endblock %}
+{% block content %}
+<div class="content-panel">  
+<div class="subsec-logo"></div>
+<div class="form-panel"> 
+<div class="title">Upload strukmu</div>
+<div class="label-color tag" style="margin-top: 0.5em">Beli, Upload, Tambah Poin, Menang !</div>
+<div class="subsec-form">  
+<div class="label-color" style="margin-top: 2em; font-size: 1.2em">Jangan lupa untuk upload strukmu sesuai dengan standar dan ketentuan yang berlaku. Tim kami akan memvalidasi strukmu sah atau tidak.</div>
+{% if not errorList is empty %}
+<div class="subsec-03" style="margin-top: 0.5em">  
+    {% for data in errorList %} 
+    {{ data|raw }} 
+    {% endfor %}  
+</div>
+{% else %}
+    
+<div class="subsec-04"><img src="{{ TEMPLATE_IMG_PATH }}struk.png"></div>
+<form id="form-upload" method="post" class="form-horizontal form-default prevent-form-submit label-style" action="/ajax-receipt.php">
+{{ inputHidAction|raw }}
+<div style="clear:both;height:0.5em"></div>
+<div class="notification-msg"></div>
+<div style="clear:both;height:1em"></div> 
+<div class="form-group">
+<div class="col-lg-12">
+{{ inputSelCity|raw }}
+</div>
+</div>
+<div style="clear:both; height: 1em"></div>    
+{% for data in rsQtyItem %} 
+<div class="form-group">
+<div class="col-lg-8 control-label" >
+  {{ data.itemName|raw }}
+</div>
+<div class="col-lg-4">
+    {{ data.inputHidDetailKey|raw }}
+    {{ data.inputQtyItem|raw }}
+    {{ data.inputHidItemKey|raw }}
+</div> 
+</div> 
+{% endfor %}  
+
+<div style="clear:both; height: 1em"></div>  
+<div class="form-group"> 
+    <div class="col-xs-12">  
+         <!-- image uploader --> 
+        <div class="item-image-uploader">
+            <ul class="image-list" ></ul>
+            <div style="clear:both; height:1em; "></div>
+            <div class="file-uploader">	
+                <noscript><p>Please enable JavaScript to use file uploader.</p></noscript> 
+            </div>
+          </div>  
+        <!-- image uploader -->  
+    </div> 
+</div>   
+    
+<div style="clear: both; margin-top: 0.5em">{{ inputChkAgreement|raw }}<span style="margin-left: 0.5em"><a href="/terms-and-conditions.html" target="_blank">{{ LANG.iAgreeToTermsAndConditions}}</a></span></div>
+    
+<div class="form-group" style="margin-top: 1em"> 
+<div class="col-lg-12">
+{{ btnSubmit|raw }}
+</div>
+</div>
+</form>
+{% endif %} 
+</div>     
+</div> 
+<div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}struk.png"></div>
+<div style="clear: both; height: 2em"></div> 
+</div> 
+{% endblock %}

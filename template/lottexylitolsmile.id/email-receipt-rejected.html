@@ -1,0 +1,12 @@
+{% extends "email-template.html" %} 
+{% block content %}
+Hi {{ CUSTOMER_NAME|raw }},
+<br><br>
+Upload Strukmu di tanggal {{ TRANS_DATE|date("d / m / Y") }} telah divalidasi dan dinyatakan <b>GAGAL</b>.<br><br>Alasan struk kamu ditolak adalah karena <b>{{ CANCEL_REASON }}</b>. 
+<br><br>
+Jangan putus semangat! Coba Upload Strukmu ulang dengan memperbaiki kesalahan kecil itu ya.
+<br><br>
+Ayo kumpulkan 20 Poin untuk pembelian Lotte Xylitol apa saja dan upload strukmu untuk mendapatkan LIMITED EDITION MERCHANDISE BTS.
+<br><br>
+<b>Periode SMILE III berhadiah satu set PHOTOCARD Lotte Xylitol x BTS. Akan ada 2000 pemenang Lucky Draw di akhir periode ini untuk bisa mendapatkannya.</b>
+{% endblock %}

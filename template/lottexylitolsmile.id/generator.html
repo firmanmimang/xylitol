@@ -1,0 +1,66 @@
+{% extends "template.html" %}
+{% block pagetitle %}Lucky Draw | {{ parent() }}{% endblock %} 
+{% block JS %}     
+<script type="text/javascript" src="{{ TEMPLATE_JS_PATH }}randomizeText.js"></script>
+<script type="text/javascript"> 
+jQuery(document).ready(function(){     
+    // $(".randomize").randomizeText();
+    
+     $(".lucky-list li").each(function (i) {
+        // store the item around for use in the 'timeout' function
+        var $item = $(this); 
+        // execute this function sometime later:
+        setTimeout(function() {  
+            showCard($item.attr("rel"));
+           // $item.animate({"opacity": 1}, 1000);
+            //console.log("."+$item.attr("rel"));
+            //$("."+$item.attr("rel")).randomizeText();
+        }, 150*i); 
+      });
+     
+    
+    function showCard($index){
+       $(".card"+$index).animate({"opacity": 1}, 1000);
+       $("."+$index).randomizeText();
+    }
+
+});
+</script>
+{% endblock %}
+{% block content %}    
+<div style="clear:both; height: 2em"></div>
+<div class="content-panel">
+<div class="subsec-logo"></div>
+    <div class="div-table" style="width:100%">
+        <div class="div-table-row">
+            <div class="div-table-col-5 side-panel"> 
+            <div class="title">Lucky Draw Winners</div>
+            <div class="tag" style="margin-top:2em"><b>Smile I</b> (1 September - 27 Oktober 2021)</div> 
+            <div class="tag"  style="margin-top:1em"><b>LIMITED EDITION MERCHANDISE LOTTE XYLITOL x BTS: CLEAR HOLDER</b> untuk <b>200 pemenang</b> yang diundi dengan Lucky Draw.</div>
+            <div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-43.png"></div>
+            </div>
+            <div class="div-table-col-5"> 
+                  {% if rsVoucher is empty %}
+                    <div style="text-align:center">{{ LANG.noDataFound }}</div>
+                    {% endif %}
+                    <ul class="lucky-list">
+                        {% for data in rsVoucher|reverse %} 
+                        <li class="card{{ data.pkey }}" rel="{{ data.pkey }}" style="opacity: 0">
+                            <div class="content-panel">
+                               <div class="code randomize {{ data.pkey }}">{{ data.code }}</div>
+                           <div class="point randomize">{{ data.customername }}</div> 
+                            </div>
+                            <div style="clear: both"></div>
+                        </li>
+                        {% endfor %} 
+                    </ul>   
+                <div style="clear:both;height:2em"></div>
+ 
+            </div>
+        </div>     
+    </div> 
+
+    <div style="clear:both; height;2em"></div>
+    
+</div> 
+{% endblock %}

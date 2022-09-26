@@ -1,0 +1,55 @@
+<script type="text/javascript" src="{{ TEMPLATE_JS_PAGE_PATH }}popupLogin.min.js"></script>
+<script type="text/javascript"> 
+jQuery(document).ready(function(){     
+ var opt = new Array();    
+ var errMsg = new Array();     
+ errMsg['username'] = {{ ERRORMSG.username|json_encode()|raw }}; 
+ errMsg['password'] = {{ ERRORMSG.password|json_encode()|raw }}; 
+ opt['errMsg'] = errMsg;
+ var popupLogin = new PopupLogin(opt);
+ popupLogin.loadOnReady();    
+});
+</script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<div id="popup-login" class="div-table">
+    <div class="div-table-row">
+        <div class="div-table-col">
+            <div class="content-panel"> 
+                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                        <div class="img"></div>
+                        <div class="login-form">
+                             <form id="form-popup-login" method="post" class="form-horizontal form-default prevent-form-submit" action="/ajax-member.php">  
+                                    {{ inputHidActionPopupLogin|raw }} 
+                                    <div class="title">Login</div> 
+                                    <div class="notification-msg"></div>
+                                    <div class="form-group">
+                                        <div class="col-lg-12">
+                                          {{ inputPopupUsernamePlaceholder|raw }}
+                                        </div>
+                                    </div>
+
+                                     <div class="form-group ">
+                                        <div class="col-lg-12">
+                                          {{ inputPopupPasswordPlaceholder|raw }}
+                                        </div>
+                                    </div> 
+                                    <div>
+                                        <div style="float:right">atau <a href="/registration">registrasi di sini</a></div>
+                                    </div>
+                                    <div style="clear: both; height: 1em"></div>
+                                    <div style="text-align: center">
+                                        <!--<div class="g-recaptcha" data-sitekey="{{ settings.reCaptchaSiteKey }}"></div>-->
+                                        <div style="clear: both; height: 1em"></div>
+                                        <div>{{ btnSubmitPopupLogin|raw }}</div>
+                                    </div>
+                                    <div style="clear: both; height: 1px; background-color: #999; margin :1em 0 0.5em 0"></div>
+                                    {{ btnGoogle|raw }}  
+                                    <div class="fb-login">
+                                        <a href="{{ fbLoginLink|raw }}"> <div><i class="fab fa-facebook-square"></i> Lanjutkan dengan Facebook</div></a> 
+                                    </div>
+                                </form>  
+                        </div>  
+            </div>
+        </div>
+    </div>
+</div>

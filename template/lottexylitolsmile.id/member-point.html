@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block pagetitle %}{{ title }} | {{ parent() }}{% endblock %} 
+{% block content %}   
+<div class="subsec-logo-2"></div>
+<div class="logo"></div> 
+<div class="content-panel">
+    <div class="label-01">Total point kamu</div>
+    <div class="label-02">
+        {% if rsCust[0].point >= 60 %}
+           Selamat ! Jumlah poin kamu sudah cukup untuk mengikuti Lucky Draw <b>Limited Edition Merchandise Lotte Xylitol x BTS</b>
+        {% else %}
+           Ayo upload struk pembelian Lotte Xylitol dan kumpulkan terus poin kamu hingga 20 poin untuk mendapatkan <b>Limited Edition Merchandise Lotte Xylitol x BTS</b>
+        {% endif %}
+    </div>
+    <div style="clear: both; height: 3em"></div>
+   <div class="point">{{ rsCust[0].point|number_format }}</div>
+    <div style="clear: both; height: 3em"></div>
+</div> 
+{% endblock %}

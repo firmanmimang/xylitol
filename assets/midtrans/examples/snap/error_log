@@ -1,0 +1,21 @@
+[12-Jan-2018 16:34:28 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Veritrans Error (401): Access denied due to unauthorized transaction, please check client or server key,Visit https://snap-docs.midtrans.com/#request-headers for more details' in /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php:98
+Stack trace:
+#0 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php(28): Veritrans_SnapApiRequestor::remoteCall('https://app.san...', 'Mid-server-2Yeq...', Array, true)
+#1 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/Snap.php(53): Veritrans_SnapApiRequestor::post('https://app.san...', 'Mid-server-2Yeq...', Array)
+#2 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/examples/snap/checkout-process.php(84): Veritrans_Snap::getSnapToken(Array)
+#3 {main}
+  thrown in /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php on line 98
+[15-Jan-2018 03:03:02 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Veritrans Error (401): Access denied due to unauthorized transaction, please check client or server key,Visit https://snap-docs.midtrans.com/#request-headers for more details' in /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php:98
+Stack trace:
+#0 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php(28): Veritrans_SnapApiRequestor::remoteCall('https://app.san...', 'Mid-server-2Yeq...', Array, true)
+#1 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/Snap.php(53): Veritrans_SnapApiRequestor::post('https://app.san...', 'Mid-server-2Yeq...', Array)
+#2 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/examples/snap/checkout-process.php(84): Veritrans_Snap::getSnapToken(Array)
+#3 {main}
+  thrown in /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php on line 98
+[15-Jan-2018 05:59:09 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Veritrans Error (401): Access denied due to unauthorized transaction, please check client or server key,Visit https://snap-docs.midtrans.com/#request-headers for more details' in /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php:98
+Stack trace:
+#0 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php(28): Veritrans_SnapApiRequestor::remoteCall('https://app.san...', 'SB-Mid-server-2...', Array, true)
+#1 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/Snap.php(53): Veritrans_SnapApiRequestor::post('https://app.san...', 'SB-Mid-server-2...', Array)
+#2 /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/examples/snap/checkout-process.php(84): Veritrans_Snap::getSnapToken(Array)
+#3 {main}
+  thrown in /home/eternala/public_html/dev.eternal-asia.co.id/midtrans/Veritrans/SnapApiRequestor.php on line 98

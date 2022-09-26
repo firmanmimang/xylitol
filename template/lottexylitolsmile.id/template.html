@@ -1,0 +1,291 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJH3G46');</script>
+<!-- End Google Tag Manager -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% block meta %}
+<meta name="title" content="{{ META_TITLE }}">
+<meta name="description"  content="{{ META_DESCRIPTION }}">
+<meta name="keywords" content="{{ META_KEYWORDS }}">
+<meta name="author" content="{{ settings.companyName }}"> 
+<meta property=og:url content="{{ CANONICAL }}" />
+<meta property=og:site_name content="{{ settings.companyName }}" />
+<meta property="og:url" content="{{ META_URL }}" />
+<meta property="og:type" content="{{ META_TYPE }}" />
+<meta property="og:title" content="{{ META_TITLE }}" />
+<meta property="og:description" content="{{ META_DESCRIPTION }}" /> 
+<meta property="og:image" content="{{ META_IMAGE }}" /> 
+<meta property="fb:app_id" content="{{ settings.FBAppID }}" /> 
+{% endblock %} 
+    
+<link rel=apple-touch-icon sizes=180x180 href="{{ TEMPLATE_IMG_PATH }}favicon/apple-touch-icon.png">
+<link rel=icon type=image/png sizes=32x32 href="{{ TEMPLATE_IMG_PATH }}favicon/favicon-32x32.png">
+<link rel=icon type=image/png sizes=16x16 href="{{ TEMPLATE_IMG_PATH }}favicon/favicon-16x16.png">
+    
+<link rel="canonical" href="{{ CANONICAL }}" />  
+<link rel="stylesheet" type="text/css" href="{{ TEMPLATE_CSS_PATH }}bootstrap.min.css"> 
+<link rel="stylesheet" type="text/css" href="{{ TEMPLATE_CSS_PATH }}jquery.mmenu.all.css">
+{% block CSS %}{% endblock %}   <!-- harus sebelum webstyle agar bisa dioverwrite -->
+<link rel="stylesheet" type="text/css" href="{{ TEMPLATE_CSS_PATH }}webStyle.1.9.min.css">
+{% block CSSInline %}{% endblock %}    
+    
+<script type="text/javascript" src="{{ TEMPLATE_JS_PATH }}jquery-3.3.1.min.js"></script>  
+<script type="text/javascript" src="{{ TEMPLATE_JS_PATH }}jquery-ui.min.js"></script>   
+<script type="text/javascript" src="{{ TEMPLATE_JS_PATH }}bootstrap.min.js"></script>   
+<script type="text/javascript">
+// onload CSS
+function loadCSS(a,d,f,g){var b=window.document.createElement("link");var c=d||window.document.getElementsByTagName("script")[0];var e=window.document.styleSheets;b.rel="stylesheet";b.href=a;b.media="only x";if(g){b.onload=g}c.parentNode.insertBefore(b,c);b.onloadcssdefined=function(h){var k;for(var j=0;j<e.length;j++){if(e[j].href&&e[j].href===b.href){k=true}}if(k){h()}else{setTimeout(function(){b.onloadcssdefined(h)})}};b.onloadcssdefined(function(){b.media=f||"all"});return b};
+
+loadCSS( "{{ TEMPLATE_CSS_PATH }}jquery-font-awesome.min.css" );   
+</script> 
+     
+{% set categoryKey = 0 %} 
+{% if not categoryPath is empty %}
+    {% set categoryName = categoryPath[0].name %}
+    {% set categoryKey = categoryPath[0].pkey %}
+{% endif %} 
+ 
+{% block structureData %}{{ STRUCTURE_DATA|raw }}{% endblock %}
+{% if not settings.FBPluginScript is empty %} 
+     {{ settings.FBPluginScript|replace({'{{ FB_APP_ID }}': settings.FBAppID })|raw }}
+{% endif %}     
+
+{% import "twigMacro.html" as macro %}  
+    
+{{ settings.googleSiteVerification|raw }}
+<title>{% block pagetitle %} {{ HTTP_HOST|trim('/') }} {% endblock %}</title>  
+</head>
+
+<body>  
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJH3G46"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="popup-panel"></div>
+<form name="parameter-form" method="post">
+{{ hidLayout|raw }} 
+{{ hidTotalItemPerPage|raw }}
+</form>
+<nav id="side-menu">  
+<div class="mm-menu mm-offcanvas">  
+{% for langRow in rslang %} 
+ <!--<div class="side-menu-lang flag" relkey="{{ langRow.code }}" style="background-image:url('/phpthumb/phpThumb.php?src={{ PHPTHUMB_URL_SRC }}lang/{{ langRow.pkey }}/{{ langRow.file }}&hash={{ langRow.phpThumbHash }}')"></div>  -->
+{% endfor %}
+<div style="clear: both; height: 1em"></div> 
+<div class="side-menu-logo"></div>
+<div style="clear: both; height: 8em"></div>    
+<ul class="side-menu">     
+     <li name="/index.php"><a href="/" title="{{ LANG.home }}">Home</a></li> 
+     <li name="/how-to-join.php"><a href="/how-to-join" title="How to Join">How to Join</a></li> 
+     <li name="/upload-receipt.php"><a href="/upload-receipt" title="Upload Your Receipt">Upload Struk</a></li> 
+     <li name="/lucky-draw.php"><a href="/lucky-draw" title="Lucky Draw">Lucky Draw</a></li>     
+     <li name="/terms-and-conditions.php"><a href="/terms-and-conditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li> 
+     <li name="/faq.php"><a href="/faq" title="FAQ">FAQ</a></li> 
+     <li name="/contact-us.php"><a href="/contact-us" title="Contact Us">Hubungi Kami</a></li> 
+    
+    {% if loginName is empty %}
+        <li name="/login.php" style="margin-top: 1em"><a href="/login" title="{{ LANG.login }}">{{ LANG.login }}</a></li> 
+        <li name="/registration.php"><a href="/registration" title="{{ LANG.registration }}">{{ LANG.registration }}</a></li>  
+    {% else %}
+        <li name="/profile.php" style="margin-top: 1em"><a href="/profile" >{{ LANG.profile }}</a></li> 
+        <li name="/member-point.php" ><a href="/member-point">Jumlah Poin</a></li>
+        <li name="/upload-history.php" ><a href="/upload-history" >Upload Histori</a></li> 
+        <li name="/logout.php"><a href="/logout" title="{{ LANG.logout }}">{{ LANG.logout }}</a></li>  
+    {% endif %} 
+
+</ul> 
+</div>  
+</nav>
+<div class="header-menu">  
+    <a href="#side-menu" id="btn-side-menu"><i class="fas fa-bars"></i></a> 
+    <div class="fixed-header"> 
+        <div class="top-menu-bar hide-mobile" >  
+              <ul class="main-menu">       
+                     <li name="/index.php"  style="margin-right: 0"><a href="/" title="{{ LANG.home }}"><i class="fas fa-home"></i></a></li> 
+                     <li name="/how-to-join.php"><a href="/how-to-join" title="How to Join">How to Join</a></li> 
+                     <li name="/upload-receipt.php"><a href="/upload-receipt" title="Upload Your Receipt">Upload Struk</a></li> 
+                     <li name="/lucky-draw.php"><a href="/lucky-draw" title="Lucky Draw">Lucky Draw</a></li> 
+                     <li name="/terms-and-conditions.php"><a href="/terms-and-conditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li> 
+                     <li name="/faq.php"><a href="/faq" title="FAQ">FAQ</a></li> 
+                     <!--   <li name="/contact-us.php"><a href="/contact-us" title="Contact Us">Hubungi Kami</a></li> -->
+                </ul>  
+                <div class="login-menu {% if not loginName is empty %}subsec-profile{% endif %}">
+                   <i class="fas fa-user-circle" style="float: left; margin-right: 0.5em; margin-top: 0.1em"></i>
+                    <div style="float:left">
+                    {% if loginName is empty %}
+                        <a href="/login" title="{{ LANG.login }}">Login</a> / <a href="/registration" title="{{ LANG.registration }}">{{ LANG.registration }}</a>
+                    {% else %}
+                        <div>{{ loginName }}
+                        <div class="profile-sub-menu">
+                            <ul>
+                                <li><a href="/profile"><div class="item">{{ LANG.profile }}</div></a></li>
+                                <li><a href="/member-point"><div class="item">Jumlah Poin</div></a></li>
+                                <li><a href="/upload-history"><div class="item">Histori Upload</div></a></li>
+                                <li><a href="/logout"><div class="item">{{ LANG.logout }}</div></a></li>
+                            </ul>        
+                        </div>
+                        </div> 
+                    {% endif %} 
+                    </div>
+                </div>
+                 <ul class="medsos-panel">
+                     {% for item in settings.companyMedsos %} 
+                        {% if item.label|lower == "fb" or item.label|lower == "facebook" %}  
+                            {% set FA_ICON = "fab fa-facebook-square" %}
+                        {% elseif item.label|lower == "instagram" %}  
+                            {% set FA_ICON = "fab fa-instagram" %}
+                        {% elseif item.label|lower == "twitter" %}  
+                            {% set FA_ICON = "fab fa-twitter" %}
+                        {% elseif item.label|lower == "youtube" %}  
+                            {% set FA_ICON = "fab fa-youtube" %}
+                        {% endif %}  
+                        <li><a href="{{ item.value }}" title="{{ LANG.linkto }} {{ item.label }}" target="_blank"><i class="{{ FA_ICON }}"></i></a></li>
+                      {% endfor %}  
+                </ul> 
+        </div>   
+    </div> 
+    <div class="dummy-header"></div>
+    <div style="clear:both"></div>    
+</div> 
+<div id="{{ PAGE_ID }}"> 
+<div class="min-page-height main-panel">{% block content %}{% endblock %}</div>
+</div>  
+<div class="footer">
+<div class="footer-logo" ></div>
+<div class="content-wrapper">
+<div class="footer-col logo">   
+</div>
+<div class="footer-col menu">    
+        <div class="col-2">
+            <ul>
+                 <li name="/index.php"><a href="/" title="{{ LANG.home }}">Home</a></li> 
+                 <li name="/how-to-join.php"><a href="/how-to-join" title="How to Join">How to Join</a></li> 
+                 <li name="/upload-receipt.php"><a href="/upload-receipt" title="Upload Struk">Upload Struk</a></li> 
+            </ul> 
+        </div>
+        <div class="col-2">
+            <ul>
+                 <li name="/lucky-draw.php"><a href="/lucky-draw" title="Lucky Draw">Lucky Draw</a></li> 
+                 <li name="/terms-and-conditions.php"><a href="/terms-and-conditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li> 
+                 <li name="/privacy-policy.html"><a href="/privacy-policy.html" title="Kebijakan Privasi">Kebijakan Privasi</a></li> 
+                 <li name="/faq.php"><a href="/faq" title="FAQ">FAQ</a></li> 
+                 <li name="/contact-us.php"><a href="/contact-us" title="Contact Us">Contact Us</a></li> 
+            </ul>
+        </div>
+        <div style="clear: both; height: 1em"></div>
+        <div class="col-2"> 
+            <ul class="medsos-panel">
+                 {% for item in settings.companyMedsos %} 
+                    {% if item.label|lower == "fb" or item.label|lower == "facebook" %}  
+                        {% set FA_ICON = "fab fa-facebook-square" %}
+                    {% elseif item.label|lower == "instagram" %}  
+                        {% set FA_ICON = "fab fa-instagram" %}
+                    {% elseif item.label|lower == "twitter" %}  
+                        {% set FA_ICON = "fab fa-twitter" %}
+                    {% elseif item.label|lower == "youtube" %}  
+                        {% set FA_ICON = "fab fa-youtube" %}
+                    {% endif %}  
+                    <li><a href="{{ item.value }}" title="{{ LANG.linkto }} {{ item.label }}" target="_blank"><i class="{{ FA_ICON }}"></i></a></li>
+                  {% endfor %}  
+            </ul>
+        </div>
+        <div class="col-2">&copy; Lotte Xylitol 2021</div>  
+</div>     
+</div>
+  
+<div style="clear:both;"></div> 
+</div> 
+    
+<!-- set constant first -->
+<script type="text/javascript">
+    
+var $phpConfig = new Array();
+$phpConfig['uploadTempDocShort']  = "{{ UPLOAD_TEMP_DOC_SHORT }}";
+$phpConfig['uploadTempURL']  = "{{ UPLOAD_TEMP_URL }}";
+const  PHP_CONFIG = $phpConfig; 
+</script>    
+<script type="text/javascript" src="{{ TEMPLATE_JS_PATH }}critical-js-1.1.min.js"></script>
+    
+<script type="text/javascript"> 
+
+    var cssLoaded = false;
+    
+    var dfLoadStatus = 0;
+    var dfLoadFiles = [ 
+      /*["{{ TEMPLATE_JS_PATH }}bootstrap.min.js"], */ // dipindahkan,  bermasalah sejak pake index.js
+      ["{{ TEMPLATE_JS_PATH }}galleria-1.6.1.min.js"], 
+      ["{{ TEMPLATE_JS_PATH }}jquery.formatCurrency-1.4.0.min.js"],
+      ["{{ TEMPLATE_JS_PATH }}jquery.mmenu.min.all.js"],  
+      {% block dfLoadFiles %}{% endblock %} // ntah knp gk bisa ditaro di bwh template.min
+      [ 
+       "{{ TEMPLATE_JS_PATH }}jquery.easing.1.3.min.js",  
+       "{{ TEMPLATE_JS_PATH }}template-1.4.min.js"
+      ]
+     ];
+      
+    function downloadJSAtOnload() {
+        
+        //load css first
+        if (!cssLoaded){
+            //loadCSS( "{{ TEMPLATE_CSS_PATH }}jquery-font-awesome.min.css" );  
+            //loadCSS( "{{ TEMPLATE_CSS_PATH }}webStyle.1.0.min.css" );
+            cssLoaded = true;
+        }
+        
+        if (!dfLoadFiles.length) return;
+
+        var dfGroup = dfLoadFiles.shift();
+        dfLoadStatus = 0;
+ 
+        for(var i = 0; i<dfGroup.length; i++) {
+            dfLoadStatus++;
+            var element = document.createElement('script');
+            element.src = dfGroup[i];
+            element.onload = element.onreadystatechange = function() {
+                if ( ! this.readyState || this.readyState == 'complete') {
+                    dfLoadStatus--;
+                    if (dfLoadStatus==0) downloadJSAtOnload();
+                }
+            };
+            document.body.appendChild(element); 
+      } 
+    }
+     
+    if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+    
+</script>   
+    
+<script type="text/javascript"> 
+     function onLoadScript(){  
+        {% for activeMenuItem in ACTIVE_MENU %}
+            $("[name='{{ activeMenuItem }}']").addClass("selected");    
+        {% endfor %} 
+	        
+        $('nav#side-menu').mmenu(); 
+		var API = $("#side-menu").data( "mmenu" );  
+		API.close();  
+				
+		$("#btn-side-menu").click(function() {  API.open();	});	 
+        loadSubMenuProfile(); 
+         
+         {% block JSOnLoad %}{% endblock %}
+     }
+    
+</script>   
+{% block JS %}{% endblock %}
+</body> 
+</html>
+{{ settings.chatSupport|raw }}
+{{ settings.googleAnalytics|raw }}

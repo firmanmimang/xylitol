@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+{% block pagetitle %}Histori Upload | {{ parent() }}{% endblock %}
+{% block content %} 
+     
+<div class="content-wrapper"> 
+<div style="clear: both; height: 2em"></div>    
+{% if not rsItemReciept is empty %}  
+        <div class="div-table result-table hide-mobile">
+         <div class="div-table-row col-header" style="font-weight: bold;">
+            <div class="div-table-col-3" style="text-align: right; width:2em">#</div>
+            <div class="div-table-col-3"  style="width:6em">ID Upload</div>
+            <div class="div-table-col-3"  style="text-align: center; width: 12em">Tgl. Struk</div>
+            <div class="div-table-col-3" style="width: 12em">Nama Toko</div>
+            <div class="div-table-col-3" style="width: 12em">No. Struk</div>
+            <div class="div-table-col-3">{{ LANG.status }}</div>
+         </div>
+        {% for data in rsItemReciept %} 
+            <div class="div-table-row {{ data.classstatus }}" >
+                <div class="div-table-col-3 " style="text-align: right;"> {{ loop.index }}. </div>
+                <div class="div-table-col-3"> {{ data.code }} </div>
+                <div class="div-table-col-3"  style="text-align: center;"> {{ data.receiptdate|date('d / m / Y') }} </div>
+                <div class="div-table-col-3"> {{ data.storename }} </div>
+                <div class="div-table-col-3"> {{ data.invoicenumber }} </div>
+                <div class="div-table-col-3"> {{ data.statusname|raw }} </div>
+            </div>
+        {% endfor %}
+        </div> 
+    
+      <div style="clear: both; height: 2em"></div>   
+      <ul class="result-table-mobile show-mobile"> 
+        {% for data in rsItemReciept %} 
+            <li class="{{ data.classstatus }}"> 
+                <div class="title">{{ data.code }}</div>
+                <div><b>Tgl. Struk :</b> {{ data.receiptdate|date('d / m / Y') }}</div>
+                <div><b>Nama Toko :</b> {{ data.storename|raw }}</div> 
+                <div><b>No. Struk :</b> {{ data.invoicenumber }}</div> 
+                <div><b>{{ LANG.status }} :</b>  {{ data.statusname|raw  }}</div>  
+            </li>
+        {% endfor %}
+        </ul> 
+    
+{% else %}
+    {{ LANG.noDataFound }} 
+{% endif %}
+</div>
+{% endblock %}

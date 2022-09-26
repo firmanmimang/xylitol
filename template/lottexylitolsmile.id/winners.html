@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+{% block pagetitle %}Lucky Draw Winners | {{ parent() }}{% endblock %} 
+{% block content %}    
+<div style="clear:both; height: 2em"></div>
+<div id="lucky-draw">
+<div class="content-panel">
+<div class="subsec-logo"></div>
+    <div class="div-table" style="width:100%">
+        <div class="div-table-row">
+            <div class="div-table-col-5 side-panel"> 
+            <div class="title">Lucky Draw Qualifiers</div>
+            <div class="tag" style="margin-top:2em"><b>Smile I</b> (1 September - 15 Oktober 2021)</div> 
+            <div class="tag"  style="margin-top:1em"><b>LIMITED EDITION MERCHANDISE LOTTE XYLITOL x BTS: CLEAR HOLDER</b> untuk <b>200 pemenang</b> yang diundi dengan Lucky Draw.</div>
+            <div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-43.png"></div>
+            </div>
+            <div class="div-table-col-5">
+                <div style="text-align: center; color:#02aa4d; margin: 1em 0; font-size:1.5em">
+                    Selamat kepada pemenang Lotte Xylitol x BTS periode I.<br> 
+Kamu berhak mendapatkan <b>Clear Holder Eksklusif BTS</b> yang akan dikirimkan dalam minggu ini.<br>Pastikan alamat penerima di akunmu benar.
+<br><br>
+Untuk periode II yang dimulai 1 November 2021, kamu akan mendapatkan bonus <b>5 Poin</b> !
+<br> 
+                    </div>
+                  {% if rsVoucher is empty %}
+                    <div style="text-align:center">{{ LANG.noDataFound }}</div>
+                    {% endif %}
+                 <ul class="lucky-list">
+                    {% for data in rsVoucher %} 
+                    <li >
+                        <div class="content-panel auto-height" style="position:relative; overflow:hidden">
+                           <div class="code">{{ data.code }}</div>
+                           <div class="point">{{ data.customername }}</div>
+                           <i class="fas fa-trophy" style="position:absolute; right: 0.2em; bottom: 0.2em;font-size:2em; color : #FFDF00"></i>
+                        </div>
+                    </li>
+                    {% endfor %} 
+                </ul>   
+            <div style="clear:both;height:2em"></div>
+            
+            </div>
+        </div>     
+    </div>  
+    <div style="clear:both; height;2em"></div> 
+</div> 
+</div>
+{% endblock %}

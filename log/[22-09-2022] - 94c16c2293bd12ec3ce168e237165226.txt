@@ -1,0 +1,248 @@
+[22-Sep-2022 14:08:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:69
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#2 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#3 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 69
+[22-Sep-2022 14:08:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:69
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#2 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#3 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 69
+[22-Sep-2022 14:08:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:69
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#2 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#3 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 69
+[22-Sep-2022 14:09:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:69
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#2 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#3 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 69
+[22-Sep-2022 14:09:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:69
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#2 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#3 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 69
+[22-Sep-2022 14:10:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:69
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#2 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#3 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 69
+[22-Sep-2022 14:17:10 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:12 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:12 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:12 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:13 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:13 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:13 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:13 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:13 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:13 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:14 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:14 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:14 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:17:16 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php:76
+Stack trace:
+#0 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(76): PDO->rollBack()
+#1 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(2197): Database->doQuery('select value fr...')
+#2 C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php(361): BaseClass->loadSetting('adminTotalRowsP...')
+#3 C:\laragon\www\xylitol\_include-fe-v2.php(27): BaseClass->__construct()
+#4 C:\laragon\www\xylitol\index.php(8): require_once('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 76
+[22-Sep-2022 14:24:53 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:25:45 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:27:12 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:27:13 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:28:00 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:28:09 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:28:40 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:36:53 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:40:07 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:40:08 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:40:39 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:40:57 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:40:58 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:41:06 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 14:54:04 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:02:58 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:03:14 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:03:23 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:09:42 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:21:33 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:21:44 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:27:00 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:27:47 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:29:33 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:30:41 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:30:42 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:31:03 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:31:30 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:31:31 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:36:30 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 16:57:35 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Undefined variable: class in C:\laragon\www\xylitol\_global.php on line 8
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Trying to get property 'templateDocPath' of non-object in C:\laragon\www\xylitol\_global.php on line 8
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Undefined variable: class in C:\laragon\www\xylitol\_global.php on line 26
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Trying to get property 'templateCssPath' of non-object in C:\laragon\www\xylitol\_global.php on line 26
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Undefined variable: class in C:\laragon\www\xylitol\_global.php on line 27
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Trying to get property 'templateJsPath' of non-object in C:\laragon\www\xylitol\_global.php on line 27
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Undefined variable: class in C:\laragon\www\xylitol\_global.php on line 28
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Trying to get property 'templateJsPath' of non-object in C:\laragon\www\xylitol\_global.php on line 28
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Undefined variable: class in C:\laragon\www\xylitol\_global.php on line 29
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Trying to get property 'templateImgPath' of non-object in C:\laragon\www\xylitol\_global.php on line 29
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Notice:  Undefined variable: class in C:\laragon\www\xylitol\_global.php on line 37
+[22-Sep-2022 17:00:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function loadSetting() on null in C:\laragon\www\xylitol\_global.php:37
+Stack trace:
+#0 C:\laragon\www\xylitol\index.php(9): require_once()
+#1 {main}
+  thrown in C:\laragon\www\xylitol\_global.php on line 37
+[22-Sep-2022 17:04:39 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:04:40 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:04:41 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:04:45 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:04:53 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:06:42 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:08:10 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:08:20 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:10:43 Asia/Jakarta] PHP Notice:  Undefined offset: 403 in C:\laragon\www\xylitol\error-page.php on line 10
+[22-Sep-2022 17:10:43 Asia/Jakarta] PHP Notice:  Undefined offset: 403 in C:\laragon\www\xylitol\error-page.php on line 13
+[22-Sep-2022 17:10:58 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:11:14 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:11:20 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:17:31 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:17:56 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:18:01 Asia/Jakarta] PHP Fatal error:  SourceGuardian Loader - This protected script was not encoded for version 7.4.19 of PHP. Please re-encode or contact the author of the script regarding this problem. Error code [07] in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2
+[22-Sep-2022 17:19:43 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:19:55 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:23:15 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:23:16 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:23:21 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.0.33. in C:\laragon\www\xylitol\assets\vendor\composer\platform_check.php on line 24
+[22-Sep-2022 17:27:44 Asia/Jakarta] PHP Warning:  Declaration of ItemUploadReceipt::validateClose($rsHeader, $reason) should be compatible with BaseClass::validateClose($rsHeader) in C:\laragon\www\xylitol\include\class-2.11\ItemUploadReceipt.class.php on line 645
+[22-Sep-2022 17:27:44 Asia/Jakarta] PHP Warning:  Declaration of ItemUploadReceipt::validateClose($rsHeader, $reason) should be compatible with BaseClass::validateClose($rsHeader) in C:\laragon\www\xylitol\include\class-2.11\ItemUploadReceipt.class.php on line 645
+[22-Sep-2022 17:32:24 Asia/Jakarta] PHP Warning:  Declaration of ItemUploadReceipt::validateClose($rsHeader, $reason) should be compatible with BaseClass::validateClose($rsHeader) in C:\laragon\www\xylitol\include\class-2.11\ItemUploadReceipt.class.php on line 645
+[22-Sep-2022 17:32:25 Asia/Jakarta] PHP Warning:  Declaration of ItemUploadReceipt::validateClose($rsHeader, $reason) should be compatible with BaseClass::validateClose($rsHeader) in C:\laragon\www\xylitol\include\class-2.11\ItemUploadReceipt.class.php on line 645
+[22-Sep-2022 17:32:38 Asia/Jakarta] PHP Warning:  Declaration of ItemUploadReceipt::validateClose($rsHeader, $reason) should be compatible with BaseClass::validateClose($rsHeader) in C:\laragon\www\xylitol\include\class-2.11\ItemUploadReceipt.class.php on line 645
+[22-Sep-2022 17:32:38 Asia/Jakarta] PHP Warning:  copy(C:/laragon/www/xylitol/../_upload/lottexylitolsmile.id/upload-receipt/11293): failed to open stream: No such file or directory in C:\laragon\www\xylitol\include\class-2.11\BaseClass.class.php on line 2778

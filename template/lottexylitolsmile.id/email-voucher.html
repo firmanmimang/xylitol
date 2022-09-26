@@ -1,0 +1,12 @@
+{% extends "email-template.html" %} 
+{% block content %}
+Hi {{ CUSTOMER_NAME|raw }},
+<br><br>
+Poin kamu di periode SMILE III sudah berhasil mencapai kelipatan 20. 
+<br><br>
+Dengan itu, kamu mendapatkan tiket untuk Lucky Draw yang akan diadakan pada tanggal <b>2 April 2022</b>.
+<br><br>
+Nomor tiket kamu adalah <b>{{ TRANS_CODE }}</b>.
+<br><br>
+Semoga menang ya!
+{% endblock %}
