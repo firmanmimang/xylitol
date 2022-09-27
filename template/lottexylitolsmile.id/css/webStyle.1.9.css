@@ -286,7 +286,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .header-sec {position: relative; background-color: #fff; }
 .header-sec .content-wrapper {height: 100%; position: relative; padding: 0}
-.header-sec .subsec-01 {width: 25em; height: 10em;  position: absolute;  z-index: 1; bottom: -7em; left: 2em; background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-04.png) }
+.header-sec .subsec-01 {width: 25em; height: 10em;  position: absolute;  z-index: 1; bottom: -5em; left: 2em; background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-04.png) }
 
 .what-is {font-family: "poppins"; font-size: 1.4em;  position: relative; background-color: #fff; color: #02aa4d; text-align: center; padding: 6em 0 2em 0; background-size: cover ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-27.png) }
 .what-is .content-panel {position: relative; z-index: 1; max-width: 30em; margin: auto} 
@@ -300,17 +300,17 @@ input[type=number]::-webkit-outer-spin-button {
 .period-sec .subsec-02 {width: 100%;  height: 25em; position: absolute; left: 0; bottom: 0em;  background-size: contain, contain ; background-repeat: no-repeat,no-repeat; background-position: left,right;background-image: url(../img/img-31.png),url(../img/img-32.png)}
 .period-sec .subsec-03 {width: 3em; height: 3em; position: absolute; left: -0.6em; top: -1.5em;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
 .period-sec .subsec-04 {width: 100%; height: 25em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b.png)}
-.period-sec .subsec-05 {margin-bottom:1em; font-size: 1.53em;}
+.period-sec .subsec-05 {margin-bottom:1em; font-size: 2em; font-weight: bold;}
 .period-sec .period-table {width: 100%; margin: 0; padding: 0;  list-style: none}
 .period-sec .period-table li {float: left; width: 33%; position: relative}
 .period-sec .period-table li .content-panel {width: 94%; font-size: 1.2em; height: 100%; margin: auto;  color:#fff; background: rgb(112,179,13); background: linear-gradient(180deg, rgba(112,179,13,1) 0%, rgba(81,161,77,1) 100%); padding: 1em; border-radius: 0.5em}
-.period-sec .subtitle {font-size: 1.5em; margin-bottom: 0.5em}
+.period-sec .subtitle {font-size: 1.5em; margin: 1.2em 0}
 
-.how-to {position: relative;  font-size: 1.4em;  background-color: #FFD200; color: #02aa4d; text-align: center; padding: 5em 0;  background-size: contain,contain; background-repeat: no-repeat,no-repeat; background-position: top center, bottom center;background-image: url(../img/img-35.png), url(../img/img-37.png)}
+.how-to {position: relative;  font-size: 1.4em;  background-color: #FFD200; color: #02aa4d; text-align: center; padding: 2em 0;  background-size: contain,contain; background-repeat: no-repeat,no-repeat; background-position: top center, bottom center;background-image: url(../img/img-35.png), url(../img/img-37.png)}
 .how-to .content-panel {position: relative; z-index: 1; max-width: 30em; margin: auto}
 .how-to .div-table {text-align: left} 
-.how-to .div-table .div-table-row > .div-table-col-5 .bullets {color:#fff; background-color: #02aa4d; border-radius: 50%; width:1.4em; height: 1.4em; text-align: center}
-.how-to .title {display: inline-block; position: relative; color: #fff; margin-bottom: 1em;  font-size: 1.5em; font-weight: bold; padding: 0 2em;  background-image: url(../img/img-33.png), url(../img/img-33.png); background-position: left,right; background-size:auto,auto;  background-repeat: no-repeat, no-repeat;}
+.how-to .div-table .div-table-row > .div-table-col-5 .bullets {color:#02aa4d; background-color: #fff; border-radius: 50%; width:1.4em; height: 1.4em; text-align: center}
+.how-to .title {display: inline-block; position: relative; color: #fff; margin-bottom: 1em;  font-size: 1.8em; font-weight: bold; padding: 0 2em;  background-image: url(../img/img-26.png), url(../img/img-26.png); background-position: left,right; background-size:auto,auto;  background-repeat: no-repeat, no-repeat;}
 .how-to .subsec-01 {width: 5em; height: 10em; position: absolute; right: 1.5em; top: 2em;  background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-34.png)}
 .how-to .subsec-02 {width: 2em; height: 2em; position: absolute;  background-size: contain ; top: 0.5em; left: 2em; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-36.png)}
 .how-to .product-list {position: relative; background-color: #fcf3cd; border: 5px solid #02aa4d; padding: 1em}
@@ -705,3 +705,18 @@ input[type=number]::-webkit-outer-spin-button {
     .adaptive-table-s, .adaptive-table-s tr, .adaptive-table-s tr td {display: inherit; width: 100%; padding: 0;} 
     .g-recaptcha {transform:scale(0.95);transform-origin:0;-webkit-transform:scale(0.95);transform:scale(0.95);-webkit-transform-origin:0 0;transform-origin:0 0; 0}
 }
+
+/* bagian ff */
+.period-sec .subsec-03-01 {width: 3em; height: 3em; position: absolute; left: .8em; top: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
+.period-sec .subsec-03-02 {width: 3em; height: 3em; position: absolute; right: .8em; top: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
+.period-sec .subsec-03-03 {width: 3em; height: 3em; position: absolute; left: .8em; bottom: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
+.period-sec .subsec-03-04 {width: 3em; height: 3em; position: absolute; right: .8em; bottom: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
+    /* photo card home index */
+.period-sec .subsec-04-1 {margin: auto; width: 50%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-1.png)}
+.period-sec .subsec-04-2 {margin: auto; width: 50%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-2.png)}
+    /* --------- */
+
+    /* footer */
+.footer .footer-logo-ff {width: 20em; height: fit-content; position: absolute; left: 0; top: -0.1em;background-color: white;padding: 1em 2em; border-bottom-right-radius: 3em;}
+    /* --------- */
+/* -------- */
