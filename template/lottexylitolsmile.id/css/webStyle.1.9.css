@@ -286,12 +286,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 .header-sec {position: relative; background-color: #fff; height: auto;}
 .header-sec .content-wrapper {height: 100%; position: relative; padding: 0}
-.header-sec .subsec-01 {width: 25em; height: 10em;  position: absolute;  z-index: 1; bottom: -5em; left: 2em; background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-04.png) }
+.header-sec .subsec-01 {width: 25em; height: 10em;  position: absolute;  z-index: 1; bottom: -7em; left: 2em; background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-04.png) }
 
-.what-is {font-family: "poppins"; font-size: 1.4em;  position: relative; background-color: #fff; color: #02aa4d; text-align: center; padding: 6em 0 2em 0; background-size: cover ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-27.png) }
+.what-is {font-family: "poppins"; font-size: 1.4em;  position: relative; background-color: #fff; color: #02aa4d; text-align: center; padding: 6em 0 2em 0; background-size: cover ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-27.png); margin-top: 4em; }
 .what-is .content-panel {position: relative; z-index: 1; max-width: 30em; margin: auto} 
-/*.what-is .subsec-01 {width: 5em; height: 10em; position: absolute; right: 1.5em; top: 2em;  background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-22.png)}*/
-.what-is .subsec-03 {width: 20em; height: 13em; position: absolute; z-index: 1; top: -5em; right: 0em; background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-03.png) }
+/*.what-is .subsec-01 {width: 5em; height: 10em; position: absolute; right: 1.5em; top: 2em;  background-size: contain ; ackground-repeat: no-repeat; background-position: top center;background-image: url(../img/img-22.png)}*/
+.what-is .subsec-03 {width: 20em; height: 13em; position: absolute; z-index: 1; top: -8em; right: 0em; background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-03.png) }
 .what-is .title { display: inline-block; margin-bottom: 1em;  font-size: 1.5em; font-weight: bold; padding: 0 2em;  background-image: url(../img/img-26.png), url(../img/img-26.png); background-position: left,right; background-size:auto,auto;  background-repeat: no-repeat, no-repeat;}
 
 .period-sec {font-family: "poppins";  position: relative; color: #02aa4d; text-align: center; padding: 5em 0;}
