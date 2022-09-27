@@ -284,7 +284,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 #terms-and-conditions .subsec-logo-2, #how-to-join .subsec-logo-2, #faq .subsec-logo-2 {left: 2em;}
 
-.header-sec {position: relative; background-color: #fff; }
+.header-sec {position: relative; background-color: #fff; height: auto;}
 .header-sec .content-wrapper {height: 100%; position: relative; padding: 0}
 .header-sec .subsec-01 {width: 25em; height: 10em;  position: absolute;  z-index: 1; bottom: -5em; left: 2em; background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-04.png) }
 
@@ -302,7 +302,7 @@ input[type=number]::-webkit-outer-spin-button {
 .period-sec .subsec-04 {width: 100%; height: 25em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b.png)}
 .period-sec .subsec-05 {margin-bottom:1em; font-size: 2em; font-weight: bold;}
 .period-sec .period-table {width: 100%; margin: 0; padding: 0;  list-style: none}
-.period-sec .period-table li {float: left; width: 33%; position: relative}
+.period-sec .period-table li {float: left; width: 33%; position: relative; height: 650px; width: 100%;}
 .period-sec .period-table li .content-panel {width: 94%; font-size: 1.2em; height: 100%; margin: auto;  color:#fff; background: rgb(112,179,13); background: linear-gradient(180deg, rgba(112,179,13,1) 0%, rgba(81,161,77,1) 100%); padding: 1em; border-radius: 0.5em}
 .period-sec .subtitle {font-size: 1.5em; margin: 1.2em 0}
 
@@ -659,6 +659,7 @@ input[type=number]::-webkit-outer-spin-button {
     
     .footer {padding: 2em 1em}
     .footer-logo {display: none}
+    .footer-logo-ff {display: none}
     .footer .menu {margin: auto; float: none}
     
     .content-panel {width:96%}
@@ -707,16 +708,24 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* bagian ff */
+/* home index */
 .period-sec .subsec-03-01 {width: 3em; height: 3em; position: absolute; left: .8em; top: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
 .period-sec .subsec-03-02 {width: 3em; height: 3em; position: absolute; right: .8em; top: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
 .period-sec .subsec-03-03 {width: 3em; height: 3em; position: absolute; left: .8em; bottom: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
 .period-sec .subsec-03-04 {width: 3em; height: 3em; position: absolute; right: .8em; bottom: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
     /* photo card home index */
-.period-sec .subsec-04-1 {margin: auto; width: 50%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-1.png)}
-.period-sec .subsec-04-2 {margin: auto; width: 50%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-2.png)}
+.period-sec .subsec-04-1 {margin: auto; width: 100%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-1.png)}
+.period-sec .subsec-04-2 {margin: auto; width: 100%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-2.png)}
     /* --------- */
 
     /* footer */
 .footer .footer-logo-ff {width: 20em; height: fit-content; position: absolute; left: 0; top: -0.1em;background-color: white;padding: 1em 2em; border-bottom-right-radius: 3em;}
     /* --------- */
+
+@media (min-width:961px)  {
+     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+     .header-sec {height: 850px;}
+     .period-sec .period-table li {height: 450px;}
+}
+/* -------- */
 /* -------- */
