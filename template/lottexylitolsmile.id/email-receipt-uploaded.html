@@ -1,4 +1,4 @@
-{% extends "email-template.html" %} 
+<!-- {% extends "email-template.html" %} 
 {% block content %}
 Hi {{ CUSTOMER_NAME|raw }},
 <br><br>
@@ -8,4 +8,15 @@ Tim Validasi akan segera memeriksa keabsahan strukmu. Jika berhasil, poin kamu a
 Tapi jika ditolak, jangan putus semangat karena bisa saja hanya karena kesalahan teknis.
 <br><br>
 <b>Periode SMILE III berhadiah satu set PHOTOCARD Xylitol x BTS. Akan ada 2000 pemenang Lucky Draw di akhir periode ini untuk bisa mendapatkannya.</b>
+{% endblock %} -->
+
+{% extends "email-template.html" %} 
+{% block content %}
+Hi {{ CUSTOMER_NAME|raw }},
+<br><br>
+Terima kasih sudah melakukan pembelian produk Lotte Xylitol dan meng-upload struknya.
+<br><br>
+Saat ini struk pembelian kamu sedang diverifikasi. Proses ini akan berlangsung selama 3x24 jam, jadi mohon ditunggu ya.
+<br><br>
+<b>Ayo upload struk pembelian Lotte Xylitol lagi dan kumpulkan terus poinnya untuk memenangkan Limited Foldable Card Lotte Xylitol x BTS!</b>
 {% endblock %}

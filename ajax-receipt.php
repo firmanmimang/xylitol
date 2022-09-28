@@ -36,10 +36,14 @@ if (isset($_POST) && !empty($_POST['action'])) {
                 $arr['selWarehouseKey'] = $warehouse->getDefaultData(); 
                 $arr['trDate'] = date('d / m / Y H:i');
                 $arr['selStatus'] = 1;
-                
+                $arr['tagKey'] = 0;
+
                 $arrReturn = $itemUploadReceipt->addData($arr);
 
-                if($arrReturn[0]['valid']){     
+                // var_dump($arrReturn);
+                // die;
+
+                if($arrReturn[0]['valid']){
                     $arrReturn = array();
                     $arrReturn[0]['valid'] = true;
                     $arrReturn[0]['message'] = 'Upload berhasil';
