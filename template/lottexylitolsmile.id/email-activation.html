@@ -1,4 +1,4 @@
-{% extends "email-template.html" %} 
+<!-- {% extends "email-template.html" %} 
 {% block content %}
 Hi {{ CUSTOMER_NAME|raw }},
 <br><br>
@@ -10,4 +10,24 @@ Ayo kumpulkan 60 Poin untuk pembelian Lotte Xylitol apa saja dan upload strukmu 
 <b>Periode SMILE I berhadiah satu set CLEAR HOLDER Lotte Xylitol x BTS.<br>Akan ada 200 pemenang Lucky Draw di akhir periode ini untuk bisa mendapatkannya.</b>
 <br><br> 
 Terima kasih telah melakukan registrasi. 
-{% endblock %}
+{% endblock %} -->
+
+<div>
+Hi {{ CUSTOMER_NAME|raw }},
+<br><br>
+Selamat! Registrasi kamu untuk Smile to Smile Project telah berhasil. Untuk mengaktifkan akunmu silakan klik link di bawah ini:
+<br><br>
+{{ ACTIVATION_LINK|raw }}
+<br><br>
+Ayo upload struk pembelian Lotte Xylitol kamu dan kumpulkan 20 poin untuk mendapatkan Limited Foldable Card Lotte Xylitol x BTS.
+<br><br>
+
+<b>Program ini berlangsung selama 3 Oktober - 15 November 2022. Jadi, jangan sampai ketinggalan ya!</b>
+<br><br> 
+Terima kasih telah melakukan registrasi. 
+
+<br><br><br>
+<div style="font-size:0.9em; text-align: center; color: #C41E3A; font-style: italic;">
+Email ini dikirim sebagai pemberitahuan. Mohon untuk tidak membalas email ini.
+</div>
+</div>

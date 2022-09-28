@@ -28,7 +28,12 @@
 					
 		case 'edit': if(!$security->isAdminLogin($securityObject,11,false)) die;
 						// test email
-						mail($arr['email'],"Point Check", "Test email");
+						
+						// var_dump($arr);
+						// die;
+
+						$class->sendMail('','', 'test email - ' . DOMAIN_NAME, 'test email', $arr['email']); 
+						
 						$arrReturn = $obj->editData($arr);
 						// ---------
 						break;
