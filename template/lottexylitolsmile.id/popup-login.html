@@ -16,7 +16,15 @@ jQuery(document).ready(function(){
         <div class="div-table-col">
             <div class="content-panel"> 
                     <div class="close-icon"><i class="fas fa-times"></i></div>
-                        <div class="img"></div>
+                        <!-- <div class="img"></div> -->
+                        <div class="img-ff">
+                            <img src="{{ TEMPLATE_IMG_PATH }}img-04.png" alt="lotte xylitol x bts logo" style="width: 50%; position: absolute; top: 0; left: 9rem;">
+                            <img src="{{ TEMPLATE_IMG_PATH }}popup-login-img.webp" alt="sticker lotte xylitol x bts" style="width: 100%; position: absolute; top: 4rem; left: -1rem; z-index: -1;">
+                            <div style="width: 7rem; height: 7rem; border-radius: 50%; position: absolute; top: 23rem; left: 30rem; background-color: #08b099; display: flex; align-items: center; padding: 5px;">
+                                <span style="margin-top: 5px; line-height: 10px; color: #bed543; text-align: center; font-size: 8px; font-weight: 600;">MENANGKAN 500 SET FOLDABLE CARD BTS</span>
+                            </div>
+                            <p style="width: 100%; position: absolute; top: 32rem; left: 4rem; font-weight: bold; color: #6cc284;">PERIODE 3 OKTOBER - 15 NOVEMBER 2022</p>
+                        </div>
                         <div class="login-form">
                              <form id="form-popup-login" method="post" class="form-horizontal form-default prevent-form-submit" action="/ajax-member.php">  
                                     {{ inputHidActionPopupLogin|raw }} 

@@ -664,7 +664,8 @@ input[type=number]::-webkit-outer-spin-button {
     
     .content-panel {width:96%}
     
-    #popup-login .content-panel .img , #popup-login .content-panel .subsec-01 {display: none} 
+    #popup-login .content-panel .img , #popup-login .content-panel .subsec-01 {display: none}
+    #popup-login .content-panel .img-ff {display: none;}
     #popup-login .content-panel {padding: 3em 1em; width : 400px;}
     #popup-login .content-panel .login-form {width:96%; float: none; margin: auto} 
     
@@ -714,14 +715,17 @@ input[type=number]::-webkit-outer-spin-button {
 .period-sec .subsec-03-03 {width: 3em; height: 3em; position: absolute; left: .8em; bottom: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
 .period-sec .subsec-03-04 {width: 3em; height: 3em; position: absolute; right: .8em; bottom: -1.5em; z-index: 2;  background-size: contain ; background-repeat: no-repeat; background-position: left bottom;background-image: url(../img/img-28.png)}
     /* photo card home index */
-.period-sec .subsec-04-1 {margin: auto; width: 100%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-1.png)}
-.period-sec .subsec-04-2 {margin: auto; width: 100%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-2.png)}
+.period-sec .subsec-04-1 {margin: auto; width: 100%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-1.webp)}
+.period-sec .subsec-04-2 {margin: auto; width: 100%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-2.webp)}
     /* --------- */
 
     /* footer */
 .footer .footer-logo-ff {width: 20em; height: fit-content; position: absolute; left: 0; top: -0.1em;background-color: white;padding: 1em 2em; border-bottom-right-radius: 3em;}
     /* --------- */
 
+    /* login popup */
+#popup-login .content-panel .img-ff { position: relative; z-index: 1;  height: 100%; width:55%; float: left;}
+    /* ----------- */
 @media (min-width:961px)  {
      /* tablet, landscape iPad, lo-res laptops ands desktops */ 
      .header-sec {height: 850px;}
