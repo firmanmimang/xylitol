@@ -740,8 +740,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 30px;
 }
 #registration .form-panel-ff {
-    background-color: transparent;
-    width: 40%;
+    margin: auto; min-width:inherit; margin-top: 2em; width: 98%; padding: 0; background-color: transparent;
 }
 #registration .subsec-logo-ff {
     height: 6em;
@@ -771,8 +770,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 30px;
 }
 #login .form-panel-ff {
-    background-color: transparent;
-    width: 40%;
+    margin: auto; min-width:inherit; margin-top: 2em; width: 98%; padding: 0; background-color: transparent;
 }
 #login .subsec-logo-ff {
     height: 6em;
@@ -797,6 +795,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media (min-width: 767px) {
     #registration .form-panel-parent {flex-direction: row;}
+    #registration .form-panel-ff {width: 40%;}
     #registration .subsec-02-ff {
         margin-top: 0;
         width: 50%;
@@ -806,6 +805,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     #login .form-panel-parent {flex-direction: row;}
+    #login .form-panel-ff {width: 40%;}
     #login .subsec-02-ff {
         margin-top: 0;
         width: 50%;
