@@ -24,16 +24,18 @@ jQuery(document).ready(function(){
 {% endblock %} 
 
 {% block content %}
+<div class="content-panel-parent">
 <div class="content-panel">  
-<div class="subsec-logo"></div>
-<div class="form-panel"> 
-<div class="title">{{ LANG.registration }}</div>
+<div class="form-panel-parent">
+<div class="form-panel-ff"> 
+<div class="subsec-logo-ff"></div>
+<div class="title-ff">{{ LANG.registration }}</div>
 <form id="form-registration" method="post" class="form-horizontal form-default prevent-form-submit label-style" action="/ajax-member.php">
-<div class="form-information" style="margin-top:0.5em">{{ LANG.registrationReActivation|raw }}</div>
+<div class="form-information" style="margin-top:0.5em; text-align: center;">{{ LANG.registrationReActivation|raw }}</div>
 {{ inputHidAction|raw }}
 <div class="notification-msg"></div>
 <div style="clear:both;height:1em"></div>
- 
+    
 <div class="form-group"> 
 <div class="col-lg-12">
 {{ inputUserNamePlaceholder|raw }}
@@ -55,7 +57,7 @@ jQuery(document).ready(function(){
 {{ inputNamePlaceholder|raw }}
 </div>
 </div>
- 
+    
 <div class="form-group"> 
 <div class="col-lg-12">
 {{ inputEmailPlaceholder|raw }}
@@ -71,7 +73,10 @@ jQuery(document).ready(function(){
 </div>
 </form> 
 </div>
-<div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-18.png"></div>
+<!-- <div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-18.png"></div> -->
+<div class="subsec-02-ff"><img src="{{ TEMPLATE_IMG_PATH }}login-registration-image.webp"></div>
 <div style="clear: both; height: 2em"></div> 
+</div>
 </div> 
+</div>
 {% endblock %}

@@ -47,7 +47,7 @@ for($i=0;$i<count($rsItem);$i++){
     $rsQtyItem[$i]['inputHidDetailKey'] = $class->inputHidden('hidDetailKey[]'); // dummy
     $rsQtyItem[$i]['inputQtyItem'] = $class->inputNumber('qty[]',  array('etc' => ''));
     $rsQtyItem[$i]['inputHidItemKey'] = $class->inputHidden('hidItemKey[]', array('value' => $rsItem[$i]['pkey']));
-    
+
 }                          
 
 $arrTwigVar ['rsQtyItem'] = $rsQtyItem;
@@ -60,6 +60,6 @@ $arrTwigVar ['uploadFolder'] = $itemUploadReceipt->uploadFolder;
 $arrTwigVar ['inputChkAgreement'] = $class->inputCheckBox('chkAgree');
 $arrTwigVar ['inputHidAction'] =  $class->inputHidden('action',array('value' => 'upload-receipt')); 
 $arrTwigVar ['errorList'] = $errorList;
- 
+
 echo $twig->render('upload-receipt.html', $arrTwigVar);
 ?>

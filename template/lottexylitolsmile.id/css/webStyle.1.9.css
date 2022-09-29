@@ -726,10 +726,93 @@ input[type=number]::-webkit-outer-spin-button {
     /* login popup */
 #popup-login .content-panel .img-ff { position: relative; z-index: 1;  height: 100%; width:55%; float: left;}
     /* ----------- */
+
+    /* registration page */
+#registration .content-panel-parent {
+    background: url(../img/registration-login-bg.webp) no-repeat center;
+    background-size: cover;
+}
+#registration .form-panel-parent {
+    display: flex; justify-content: space-between; flex-direction: column;
+}
+#registration .subsec-02-ff {
+    width: 100%;
+    margin-top: 30px;
+}
+#registration .form-panel-ff {
+    background-color: transparent;
+    width: 40%;
+}
+#registration .subsec-logo-ff {
+    height: 6em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/img-04.png);
+}
+#registration .title-ff {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    color: #02aa4d;
+}
+    /* ------------------ */
+
+    /* login page */
+#login .content-panel-parent {
+    background: url(../img/registration-login-bg.webp) no-repeat center;
+    background-size: cover;
+}
+#login .form-panel-parent {
+    display: flex; justify-content: space-between; flex-direction: column;
+}
+#login .subsec-02-ff {
+    width: 100%;
+    margin-top: 30px;
+}
+#login .form-panel-ff {
+    background-color: transparent;
+    width: 40%;
+}
+#login .subsec-logo-ff {
+    height: 6em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/img-04.png);
+}
+#login .title-ff {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    color: #02aa4d;
+}
+    /* ------------------ */
+
 @media (min-width:961px)  {
      /* tablet, landscape iPad, lo-res laptops ands desktops */ 
      .header-sec {height: 850px;}
      .period-sec .period-table li {height: 450px;}
+}
+
+@media (min-width: 767px) {
+    #registration .form-panel-parent {flex-direction: row;}
+    #registration .subsec-02-ff {
+        margin-top: 0;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #login .form-panel-parent {flex-direction: row;}
+    #login .subsec-02-ff {
+        margin-top: 0;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 /* -------- */
 /* -------- */

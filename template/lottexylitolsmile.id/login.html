@@ -18,10 +18,12 @@ jQuery(document).ready(function(){
 {% endblock %}
 
 {% block content %}
+<div class="content-panel-parent">
 <div class="content-panel">   
-<div class="subsec-logo"></div>
-<div class="form-panel"> 
-<div class="title">Login</div>
+<div class="form-panel-parent">
+<div class="form-panel-ff"> 
+<div class="subsec-logo-ff"></div>
+<div class="title-ff">Login</div>
 <form id="form-login" method="post" class="form-horizontal form-default prevent-form-submit label-style" action="/ajax-member.php">
 {{ inputHidAction|raw }}
 <div class="notification-msg"></div>
@@ -52,7 +54,10 @@ jQuery(document).ready(function(){
 <div class="fb-login" style="margin-top:0.3em"><a href="{{ fbLoginLink|raw }}"> <div><i class="fab fa-facebook-square"></i> Lanjutkan dengan Facebook</div></a> </div>
 </form>
 </div>
-<div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-18.png"></div>
+<!-- <div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-18.png"></div> -->
+<div class="subsec-02-ff"><img src="{{ TEMPLATE_IMG_PATH }}login-registration-image.webp"></div>
 <div style="clear: both; height: 2em"></div>
-</div> 
+</div>
+</div>
+</div>
 {% endblock %}

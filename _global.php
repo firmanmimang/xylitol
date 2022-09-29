@@ -269,7 +269,7 @@ $arrTwigVar ['btnAddToCrt'] =   $class->inputSubmit('btnAddToCart', $class->lang
  
 // nanti perlu dipindahan agar lebih fleksible
 $arrTwigVar['btnGoogle'] = '
-<div class="google">
+<div class="google" style="display:flex; justify-content:center;">
 <div class="button_container" widht="15%">
     <div id="g_id_onload"
         data-client_id="'.$class->loadSetting('googleOAuthId').'"
