@@ -1,37 +1,0 @@
-Invalid SQL command : 
-					INSERT INTO		
-					 login_log (  
-						logintype,   
-                        userkey,
-						username,
-						ipaddress,
-						statuskey,
-						createdon 
-					)
-					VALUES	(  
-						'1',
-						'', 
-						'firmanmimang', 
-						'127.0.0.1', 
-						'2', 
-						now() 							
-					)
-			Incorrect integer value: '' for column 'userkey' at row 1Invalid SQL command : 
-					INSERT INTO		
-					 login_log (  
-						logintype,   
-                        userkey,
-						username,
-						ipaddress,
-						statuskey,
-						createdon 
-					)
-					VALUES	(  
-						'1',
-						'', 
-						'firman', 
-						'127.0.0.1', 
-						'2', 
-						now() 							
-					)
-			Incorrect integer value: '' for column 'userkey' at row 1Invalid SQL command : insert into customer(pkey,code,name,username,password,citykey,zipcode,mobile,email,fax,description,termofpaymentkey,activationhashkey,statuskey,createdon,createdby) values ('15319','CO07321','Firman Hidayat','firmanmimang','3f2cd8e57b096fe7e4a78a5627e34ca3f885ad65a56e61c287cf4211bbc5949f','0','','','fhidayat131@gmail.com','','','0','a4de9924a18d85f0f140c76e5984fbc2','1',now(),'1')Field 'taxid' doesn't have a default valueInvalid SQL command : insert into customer(pkey,code,name,username,password,citykey,zipcode,mobile,email,fax,description,termofpaymentkey,activationhashkey,statuskey,createdon,createdby) values ('15319','CO07321','Firman Hidayat','firmanmimang','3f2cd8e57b096fe7e4a78a5627e34ca3f885ad65a56e61c287cf4211bbc5949f','0','','','fhidayat131@gmail.com','','','0','a57af7fe6d29089df49f0ffcbb739b49','1',now(),'1')Field 'taxid' doesn't have a default valueInvalid SQL command : insert into customer(pkey,code,name,username,password,citykey,zipcode,mobile,email,fax,description,termofpaymentkey,activationhashkey,statuskey,createdon,createdby) values ('15319','CO07321','Firman Hidayat','firmanmimang','3f2cd8e57b096fe7e4a78a5627e34ca3f885ad65a56e61c287cf4211bbc5949f','0','','','fhidayat131@gmail.com','','','0','b35eeade8a9df81549fdf845743dbb4c','1',now(),'1')Field 'taxid' doesn't have a default valueInvalid SQL command : insert into customer(pkey,code,name,username,password,citykey,zipcode,mobile,email,fax,description,termofpaymentkey,activationhashkey,statuskey,createdon,createdby) values ('15319','CO07321','firman mimang','firmanminang','3f2cd8e57b096fe7e4a78a5627e34ca3f885ad65a56e61c287cf4211bbc5949f','0','','','fhidayatq131@gmail.com','','','0','2f1444fc3cf920d5a7a4fd11730d126b','1',now(),'1')Field 'taxid' doesn't have a default valueInvalid SQL command : insert into customer(pkey,code,name,username,password,citykey,zipcode,mobile,email,fax,description,termofpaymentkey,activationhashkey,statuskey,createdon,createdby) values ('15319','CO07321','firman mimang','firmanmimang','3f2cd8e57b096fe7e4a78a5627e34ca3f885ad65a56e61c287cf4211bbc5949f','0','','','fhidayat131@gmail.com','','','0','a5faf7a56f7929109d119843e0d686fa','1',now(),'1')Field 'taxid' doesn't have a default value

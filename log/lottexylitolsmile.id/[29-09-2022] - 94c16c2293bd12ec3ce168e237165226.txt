@@ -1,1 +1,0 @@
-Invalid SQL command : insert into item_upload_receipt_header(pkey,code,warehousekey,citykey,customerkey,trdate,statuskey,cancelreasonkey,createdon,createdby) values ('11296','LT2-02762','1','1107','15320','2022-09-29 13:32','1','0',now(),'0')Field 'tagkey' doesn't have a default value

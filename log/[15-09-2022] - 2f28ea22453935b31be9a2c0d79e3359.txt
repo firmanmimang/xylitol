@@ -1,2 +1,0 @@
-[15-Sep-2022 13:07:10 Asia/Jakarta] PHP Warning:  Declaration of ItemUploadReceipt::validateClose($rsHeader, $reason) should be compatible with BaseClass::validateClose($rsHeader) in /home/lottexyl/public_html/include/class-2.11/ItemUploadReceipt.class.php on line 645
-[15-Sep-2022 22:47:05 Asia/Jakarta] PHP Warning:  Declaration of ItemUploadReceipt::validateClose($rsHeader, $reason) should be compatible with BaseClass::validateClose($rsHeader) in /home/lottexyl/public_html/include/class-2.11/ItemUploadReceipt.class.php on line 645
