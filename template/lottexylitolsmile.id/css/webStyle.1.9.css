@@ -718,6 +718,9 @@ input[type=number]::-webkit-outer-spin-button {
 .period-sec .subsec-04-1 {margin: auto; width: 100%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-1.webp)}
 .period-sec .subsec-04-2 {margin: auto; width: 100%; height: 12em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b-2.webp)}
     /* --------- */
+/* -------- */
+
+.subsec-logo-2-ff {width: 280px; max-width: 100%; height: 90px; position: absolute; left: 0; top: 0;  background-size: 200px auto ; background-repeat: no-repeat; background-position: center;background-image: url(../img/img-39.png); background-color: white; border-bottom-right-radius: 2em;}
 
     /* footer */
 .footer .footer-logo-ff {width: 20em; height: fit-content; position: absolute; left: 0; top: -0.1em;background-color: white;padding: 1em 2em; border-bottom-right-radius: 3em;}
@@ -814,5 +817,4 @@ input[type=number]::-webkit-outer-spin-button {
         justify-content: center;
     }
 }
-/* -------- */
 /* -------- */
