@@ -352,7 +352,7 @@ input[type=number]::-webkit-outer-spin-button {
 #how-to-join {position: relative;  font-size: 1.4em;  background-color: #FFD200; color: #02aa4d; text-align: center; background-size: contain,contain; background-repeat: no-repeat,no-repeat; background-position: top center, bottom center;background-image: url(../img/img-35.png), url(../img/img-37.png)}
 #how-to-join .content-panel {position: relative; z-index: 1; max-width: 30em; margin: auto}
 #how-to-join .div-table {text-align: left} 
-#how-to-join .div-table .div-table-row > .div-table-col-5 .bullets {color:#fff; background-color: #02aa4d; border-radius: 50%; width:1.4em; height: 1.4em; text-align: center}
+#how-to-join .div-table .div-table-row > .div-table-col-5 .bullets {color:#02aa4d; background-color: #fff; border-radius: 50%; width:1.4em; height: 1.4em; text-align: center}
 #how-to-join .title {display: inline-block;width: 100%; text-align: left;  position: relative; color: #fff; margin-bottom: 0.3em;  font-size: 2em; font-weight: bold;}
 #how-to-join .subsec-01 {width: 5em; height: 10em; position: absolute; right: 1.5em; top: 2em;  background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-34.png)}
 #how-to-join .subsec-02 {width: 2em; height: 2em; position: absolute;  background-size: contain ; top: 0.5em; left: 2em; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-36.png)}

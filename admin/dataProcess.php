@@ -27,15 +27,8 @@
 						break;
 					
 		case 'edit': if(!$security->isAdminLogin($securityObject,11,false)) die;
-						// test email
-						
-						// var_dump($arr);
-						// die;
-
-						$class->sendMail('','', 'test email - ' . DOMAIN_NAME, 'test email', $arr['email']); 
 						
 						$arrReturn = $obj->editData($arr);
-						// ---------
 						break;
 				
 		case 'resendEmail': if(!$security->isAdminLogin($securityObject,11,false)) die;
