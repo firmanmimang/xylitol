@@ -54,7 +54,7 @@
     define('DOMAIN_COOKIES','_mnv'); // gk boleh ad titik, jd gk bisa pake nama domain
     define('PERSONALIZED_DOC_PATH',DOC_ROOT.'personalized/'.DOMAIN_NAME.'/');
     define('PERSONALIZED_URL_PATH','/personalized/'.DOMAIN_NAME.'/');
-    define('DEBUG',true); 
+    define('DEBUG',false); 
   
     define('API_URL', (IS_DEVELOPMENT) ? 'https://minerva.local/api/v2/' : HTTP_HOST.'api/v2/' );
  

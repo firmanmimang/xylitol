@@ -110,7 +110,7 @@ $bgImage = (empty($bgImage)) ? '../include/img/admin-bg.jpg' : '../phpthumb/phpT
             <div class="login-slide-panel div-table" style="width:640px;  margin-top:15px; position:relative"> 
                 <div class="div-table-row">
                     <div class="div-table-col" style="width:50%;"> 
-                       <div class="div-table"  style="width:100%;">
+                        <div class="div-table"  style="width:100%;">
                              <div class="div-table-row form-group"> 
                                 <div class="div-table-col-5" style="padding:0" >
                                     <div class="col-lg-12" style="padding:0"> 

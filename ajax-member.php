@@ -95,10 +95,9 @@ $loginLog = new LoginLog();
                                 }
                      
 								$arrReturn = $customer->addData($arr);
-                     
-             
+
 								break;
-				
+
 				case 'edit' :	 
 								$username = $_SESSION[$class->loginSession]['username'];
 								$password = $_POST['currentPassword'];
