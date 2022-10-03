@@ -655,7 +655,7 @@ class ItemUploadReceipt extends BaseClass{
         $content = $twig->render('email-notification-poins.html', $arrTwigVar);
 
         //$this->setLog($content,true);
-        $this->sendMail('','', 'Hasil Validasi Voucher' . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']); 
+        $this->sendMail('','', 'Point Anda Belom Cukup' . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']); 
 		 
 	}
 
