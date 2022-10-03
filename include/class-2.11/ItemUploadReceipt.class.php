@@ -558,7 +558,7 @@ class ItemUploadReceipt extends BaseClass{
         $twig->render('email-template.html');  
         $content = $twig->render('email-receipt-approved.html', $arrTwigVar);
 
-        $this->sendMail('','', 'Hasil Validasi Struk' . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']); 
+        $this->sendMail('','', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']); 
 		 
 	}
 
