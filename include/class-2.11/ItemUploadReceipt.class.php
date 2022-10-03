@@ -593,7 +593,7 @@ class ItemUploadReceipt extends BaseClass{
         $content = $twig->render('email-receipt-rejected.html', $arrTwigVar);
 
         //$this->setLog($content,true);
-        $this->sendMail('','', 'Hasil Validasi Struk' . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']); 
+        $this->sendMail('','', 'Verifikasi Struk Gagal' . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']); 
 		 
 	}
 
