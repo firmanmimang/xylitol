@@ -625,6 +625,40 @@ class ItemUploadReceipt extends BaseClass{
 		 
 	}
     
+    function sendReceiptPoinsEmail($rsHeader){
+		
+        require_once  $_SERVER ['DOCUMENT_ROOT'].'/Twig/Autoloader.php';
+        Twig_Autoloader::register(); 
+        $loader = new Twig_Loader_Filesystem($this->templateDocPath); 
+
+        $twig = new Twig_Environment($loader); 
+        $twig->addExtension(new Twig_Extension_Array());   
+
+        require_once  $_SERVER ['DOCUMENT_ROOT'].'/_twig-function.php';
+        
+        
+        $customerkey = $rsHeader[0]['customerkey'];
+        
+        $customer = new Customer();
+        $rsCust = $customer->getDataRowById($customerkey);
+     
+        // nanti jadikan default variable
+        $arrTwigVar = array();
+        $arrTwigVar = $this->getDefaultEmailVariable();
+         
+        $arrTwigVar['CUSTOMER_NAME'] = $rsCust[0]['name'];
+        $arrTwigVar['TRANS_CODE'] = $rsHeader[0]['code'];
+        $arrTwigVar['TRANS_DATE'] = $rsHeader[0]['trdate'];
+        $arrTwigVar['CANCEL_REASON'] = $rsHeader[0]['cancelreason'];
+         
+        $twig->render('email-template.html');  
+        $content = $twig->render('email-notification-poins.html', $arrTwigVar);
+
+        //$this->setLog($content,true);
+        $this->sendMail('','', 'Point Anda Belom Cukup' . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']); 
+		 
+	}
+
     function isAgeValid($trdate, $ageLimit = 12){
         // format $trdate = Y-m-d
         $todayYear = date('Y');

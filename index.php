@@ -17,10 +17,10 @@ $partners = new Partners();
 $portfolio = new Portfolio();
 $gallery = new Gallery();
 
-if(!PLAN_TYPE['usefrontend']){  
-   header('Location: /admin');
-   die;
-} 
+// if(!PLAN_TYPE{'usefrontend'}){  
+//    header('Location: /admin');
+//    die;
+// } 
 
 /* RANDOM PRODUCTS */
 
