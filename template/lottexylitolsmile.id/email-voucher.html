@@ -1,12 +1,12 @@
 {% extends "email-template.html" %} 
 {% block content %}
-Hi {{ CUSTOMER_NAME|raw }},
+Congratulation  {{ CUSTOMER_NAME|raw }}!
 <br><br>
-Poin kamu di periode SMILE III sudah berhasil mencapai kelipatan 20. 
+Kamu sudah berhasil mengumpulkan 20 poin, sehingga kamu berhak mendapatkan 1 (satu) tiket Lucky Draw untuk memenangkan Limited Foldable Card BTS x Lotte Xylitol.
 <br><br>
-Dengan itu, kamu mendapatkan tiket untuk Lucky Draw yang akan diadakan pada tanggal <b>2 April 2022</b>.
+Simpan nomor Lucky Draw ini pengundian di akhir periode nanti:
 <br><br>
-Nomor tiket kamu adalah <b>{{ TRANS_CODE }}</b>.
+<b>{{ TRANS_CODE }}</b>.
 <br><br>
-Semoga menang ya!
+Semangat mengumpulkan poinnya, ya! Makin banyak poin yang kamu kumpulkan, kesempatan memenangkan Limited Foldable Card Lotte Xylitol x BTS juga semakin besar!
 {% endblock %}
