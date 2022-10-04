@@ -1,18 +1,14 @@
-{% extends "email-templates.html" % }
-{% block content }
-Hi {{ CUSTOMER_NAME|raw}},
+{% extends "email-template.html" %} 
+{% block content %}
+Halo {{CUSTOMER_NAME|raw}},
 <br><br>
-Saat ini poin kamu belum cukup untuk mendapatkan lucky draw <b> untuk memenangkan Limited Foldable Card Lotte Xylitol x BTS.</b>> Ayo kumpulkan 20 poin untuk mendapatkan 1 (satu) nomor tiket lucky draw.<b>
-</b>
-<br><b>
+Saat ini poin kamu belum cukup untuk mendapatkan lucky draw untuk memenangkan Limited Foldable Card Lotte Xylitol x BTS. Ayo kumpulkan 20 poin untuk mendapatkan 1 (satu) nomor tiket lucky draw.
+<br><br>
 Kumpulkan poinnya dengan cara upload struk pembelian Lotte Xylitol melalui link di bawah ini:
-</b>
 <br>
 <b>https://lottexylitolsmile.id/upload-receipt</b>
-<br>
-<b>Program ini berlangsung selama 3 Oktober - 15 November 2022, jadi jangan sampai ketinggalan ya!
-</b>
 <br><br>
-<b>Yuk, kumpulkan terus poinmu!
-</b>
-{ % endblock %}
+Program ini berlangsung selama 3 Oktober - 15 November 2022, jadi jangan sampai ketinggalan ya!
+<br><br>
+Yuk, kumpulkan terus poinmu!
+{% endblock %}
