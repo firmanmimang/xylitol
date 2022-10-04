@@ -28,11 +28,12 @@ jQuery(document).ready(function(){
 {% endblock %}
  
 {% block content %}
-
+<div class="content-panel-parent">
 <div class="content-panel">  
-<div class="subsec-logo"></div>
-<div class="form-panel"> 
-<div class="title">Informasi Pribadi</div> 
+<div class="form-panel-parent">
+<div class="form-panel-ff"> 
+<div class="subsec-logo-ff"></div>
+<div class="title-ff">Informasi Pribadi</div> 
 <form id="form-editprofile" method="post" class="form-horizontal form-default prevent-form-submit label-style" action="/ajax-member.php">
 {{ inputHidId|raw }}
 {{ hidModifiedOn|raw }}
@@ -125,7 +126,9 @@ jQuery(document).ready(function(){
 </div>  
 </form>
 </div>
-<div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-18.png"></div>
+<div class="subsec-02-ff"><img src="{{ TEMPLATE_IMG_PATH }}login-registration-image.webp"></div>
 <div style="clear: both; height: 2em"></div> 
 </div> 
+</div>
+</div>
 {% endblock %}
