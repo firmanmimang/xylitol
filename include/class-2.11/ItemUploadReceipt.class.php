@@ -544,8 +544,8 @@ class ItemUploadReceipt extends BaseClass
         $twig->render('email-template.html');
         $content = $twig->render('email-receipt-uploaded.html', $arrTwigVar);
 
-        // $this->sendMail('', '', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
-        mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content ,$rsCust[0]['email']);
+        $this->sendMail('', '', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        // mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content ,"From: fhidayat131@gmail.com");
         // $this->sendMail('','', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME,$content,'martinhalimk@gmail.com'); 
 
     }
