@@ -294,7 +294,7 @@ input[type=number]::-webkit-outer-spin-button {
 .what-is .subsec-03 {width: 20em; height: 13em; position: absolute; z-index: 1; top: -8em; right: 0em; background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-03.png) }
 .what-is .title { display: inline-block; margin-bottom: 1em;  font-size: 1.5em; font-weight: bold; padding: 0 2em;  background-image: url(../img/img-26.png), url(../img/img-26.png); background-position: left,right; background-size:auto,auto;  background-repeat: no-repeat, no-repeat;}
 
-.period-sec {font-family: "poppins";  position: relative; color: #02aa4d; text-align: center; padding: 5em 0;}
+.period-sec {font-family: "poppins";  position: relative; color: #02aa4d; text-align: center; padding: 5em 0 0 0;}
 .period-sec .title {display: inline-block; margin-bottom: 1em;  font-size: 2.2em; font-weight: bold; padding: 0 2em;  background-image: url(../img/img-26.png), url(../img/img-26.png); background-position: left,right; background-size:auto,auto;  background-repeat: no-repeat, no-repeat;}
 .period-sec .content-panel {position: relative; z-index: 1;margin: auto}
 .period-sec .subsec-02 {width: 100%;  height: 25em; position: absolute; left: 0; bottom: 0em;  background-size: contain, contain ; background-repeat: no-repeat,no-repeat; background-position: left,right;background-image: url(../img/img-31.png),url(../img/img-32.png)}
@@ -302,7 +302,7 @@ input[type=number]::-webkit-outer-spin-button {
 .period-sec .subsec-04 {width: 100%; height: 25em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b.png)}
 .period-sec .subsec-05 {margin-bottom:1em; font-size: 2em; font-weight: bold;}
 .period-sec .period-table {width: 100%; margin: 0; padding: 0;  list-style: none}
-.period-sec .period-table li {float: left; width: 33%; position: relative; height: 650px; width: 100%;}
+.period-sec .period-table li {float: left; width: 33%; position: relative; height: 840px; width: 100%;}
 .period-sec .period-table li .content-panel {width: 94%; font-size: 1.2em; height: 100%; margin: auto;  color:#fff; background: rgb(112,179,13); background: linear-gradient(180deg, rgba(112,179,13,1) 0%, rgba(81,161,77,1) 100%); padding: 1em; border-radius: 0.5em}
 .period-sec .subtitle {font-size: 1.5em; margin: 1.2em 0}
 
@@ -353,7 +353,8 @@ input[type=number]::-webkit-outer-spin-button {
 #how-to-join .content-panel {position: relative; z-index: 1; max-width: 30em; margin: auto}
 #how-to-join .div-table {text-align: left} 
 #how-to-join .div-table .div-table-row > .div-table-col-5 .bullets {color:#02aa4d; background-color: #fff; border-radius: 50%; width:1.4em; height: 1.4em; text-align: center}
-#how-to-join .title {display: inline-block;width: 100%; text-align: left;  position: relative; color: #fff; margin-bottom: 0.3em;  font-size: 2em; font-weight: bold;}
+/* #how-to-join .title {display: inline-block;width: 100%; text-align: left;  position: relative; color: #fff; margin-bottom: 0.3em;  font-size: 2em; font-weight: bold;} */
+#how-to-join .title {display: inline-block; position: relative; color: #fff; margin-bottom: 1em;  font-size: 1.8em; font-weight: bold; padding: 0 2em;  background-image: url(../img/img-26.png), url(../img/img-26.png); background-position: left,right; background-size:auto,auto;  background-repeat: no-repeat, no-repeat;}
 #how-to-join .subsec-01 {width: 5em; height: 10em; position: absolute; right: 1.5em; top: 2em;  background-size: contain ; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-34.png)}
 #how-to-join .subsec-02 {width: 2em; height: 2em; position: absolute;  background-size: contain ; top: 0.5em; left: 2em; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-36.png)}
 #how-to-join .product-list {position: relative; background-color: #fcf3cd; border: 5px solid #02aa4d; padding: 1em}
@@ -823,7 +824,7 @@ input[type=number]::-webkit-outer-spin-button {
 @media (min-width:961px)  {
      /* tablet, landscape iPad, lo-res laptops ands desktops */ 
      .header-sec {height: 850px;}
-     .period-sec .period-table li {height: 450px;}
+     .period-sec .period-table li {height: 525px;}
 }
 
 @media (min-width: 767px) {
