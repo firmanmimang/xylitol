@@ -181,7 +181,8 @@ class ItemUploadReceipt extends BaseClass
         $this->updatePoint($arrParam['pkey']);
 
         if ($action == INSERT_DATA) {
-            $this->sendReceiptUploadedEmail($arrParam['hidCustomerKey'], $arrParam['code']);
+            $rsHeader = $this->getDataRowById($arrParam['pkey']);
+            $this->sendReceiptUploadedEmail($arrParam['hidCustomerKey'], $arrParam['code'], $rsHeader);
         } else {
             $rsHeader = $this->getDataRowById($arrParam['pkey']);
             if ($rsHeader[0]['statuskey'] == 2)
@@ -304,7 +305,6 @@ class ItemUploadReceipt extends BaseClass
 
 
         try {
-
             // ================== VALIDATION 
             if (!$ignoreValidation) {
                 switch ($status) {
@@ -526,7 +526,7 @@ class ItemUploadReceipt extends BaseClass
     }
 
 
-    function sendReceiptUploadedEmail($customerkey, $code)
+    function sendReceiptUploadedEmail($customerkey, $code, $rsHeader)
     {
 
         global $twig;
@@ -554,6 +554,10 @@ class ItemUploadReceipt extends BaseClass
         mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content ,$headers);
         // $this->sendMail('','', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME,$content,'martinhalimk@gmail.com'); 
 
+        if($rsHeader[0]['totalpoint'] < 20) {
+            $this->sendReceiptPoinsEmail($rsHeader);
+        }
+
     }
 
 
@@ -580,17 +584,14 @@ class ItemUploadReceipt extends BaseClass
 
         $arrTwigVar['CUSTOMER_NAME'] = $rsCust[0]['name'];
         $arrTwigVar['POINT_NEEDED'] = 20 - $rsCust[0]['point'];
+        $arrTwigVar['TOTAL_POINT'] = $rsCust[0]['point'];
         $arrTwigVar['POINT'] = $rsHeader[0]['totalpoint'];
         $arrTwigVar['TRANS_DATE'] = $rsHeader[0]['trdate'];
 
         $twig->render('email-template.html');
         $content = $twig->render('email-receipt-approved.html', $arrTwigVar);
 
-        $this->sendMail('', '', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
-
-        if($rsCust[0]['point'] < 20) {
-            $this->sendReceiptPoinsEmail($rsHeader);
-        }
+        $this->sendMail('', '', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);        
     }
 
 
