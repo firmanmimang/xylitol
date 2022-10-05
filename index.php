@@ -18,7 +18,7 @@ $portfolio = new Portfolio();
 $gallery = new Gallery();
 
 // if(!PLAN_TYPE{'usefrontend'}){  
-//    header('Location: /admin');
+//    header('Location: /admin'); 
 //    die;
 // } 
 

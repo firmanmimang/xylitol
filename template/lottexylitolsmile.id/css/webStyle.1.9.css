@@ -399,9 +399,9 @@ input[type=number]::-webkit-outer-spin-button {
 #popup-login {width: 100%; height: 100%;}
 #popup-login > .div-table-row > .div-table-col {vertical-align: middle;}
 #popup-login .close-icon {position: absolute; right: 0.6em; top: 0.4em; font-size: 2em; cursor: pointer; color: #999}
-#popup-login .content-panel { background-color: #fefffe; width: 55em; height: 30em; margin: auto; border-radius: 2em; padding:3em; position: relative; z-index: 1}
+#popup-login .content-panel { display: flex; background-color: #fefffe; width: 55em; height: 30em; margin: auto; border-radius: 2em; position: relative; z-index: 1}
 #popup-login .content-panel .img { position: relative; z-index: 1;  height: 100%; width:55%; float: left; background-size: contain ; background-repeat: no-repeat; background-position: center;background-image: url(../img/img-02b.png)}
-#popup-login .content-panel .login-form { position: relative; z-index: 1; width: 300px;  float: right; }
+#popup-login .content-panel .login-form { position: relative; z-index: 1; width: 300px;  float: right; padding: 2rem; }
 #popup-login .content-panel .login-form input {padding:5px; height: auto; outline-style:none !important ;  border:0 ;  border-bottom:1px solid #666;  border-radius: 0;  box-shadow: none !important; -webkit-box-shadow:none !important; -moz-box-shadow: none !important; -o-box-shadow:none !important; background: none;}
 #popup-login .title {font-weight: bold; text-align: center; font-size: 2em}
 #popup-login a {color: #333; text-decoration: underline}
@@ -559,6 +559,7 @@ input[type=number]::-webkit-outer-spin-button {
 .fb-login a {color: #fff !important; text-decoration: none !important}
 .fb-login .fab {float: left; color:#fff; font-size: 2em; position: relative; top: -0.13em; left: -0.1em;}
 
+.ga-login
 
 #generator {background-size: contain; background-repeat: no-repeat; background-position: top center;background-image: url(../img/img-44.png)}
 #generator .lucky-list {padding:0; margin:0; list-style:none; width:96%; margin:auto;}
@@ -665,7 +666,7 @@ input[type=number]::-webkit-outer-spin-button {
     .content-panel {width:96%}
     
     #popup-login .content-panel .img , #popup-login .content-panel .subsec-01 {display: none}
-    #popup-login .content-panel .img-ff {display: none;}
+    #popup-login .content-panel .img-ff {display: none; font-size: medium;}
     #popup-login .content-panel {padding: 3em 1em; width : 400px;}
     #popup-login .content-panel .login-form {width:96%; float: none; margin: auto} 
     
