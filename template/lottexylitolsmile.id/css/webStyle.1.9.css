@@ -235,7 +235,7 @@ input[type=number]::-webkit-outer-spin-button {
 #side-menu .mm-listview > li > a.mm-prev:before, #side-menu .mm-listview > li > a.mm-next:after, #side-menu .mm-header .mm-btn:before, .mm-menu .mm-header .mm-btn:after {border-color: #fff} 
 #side-menu .mm-header .mm-title{color: #fff} 
 #side-menu .side-menu li a{color: #fff !important}
-.side-menu-logo {margin-bottom: 2em;  height: 8em; width:100%; position: absolute; top: 0; left: 0; background-size: contain; background-repeat: no-repeat; background-position: left center;background-image: url(../img/img-39.png)}
+.side-menu-logo {margin-bottom: 2em;  height: 8em; width:100%; position: absolute; top: 0; left: 0; background-size: contain; background-repeat: no-repeat; background-position: left center;background-image: url(../img/img-39.png); background-color: white;}
 
 /*
 .haAclf {display:inherit !important; border:1px solid #f00;}
