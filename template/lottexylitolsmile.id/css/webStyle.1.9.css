@@ -407,7 +407,7 @@ input[type=number]::-webkit-outer-spin-button {
 #popup-login .title {font-weight: bold; text-align: center; font-size: 2em}
 #popup-login a {color: #333; text-decoration: underline}
 
-#contact-us .content-panel{padding: 1em 3em 3em 3em; margin: auto; font-size: 1.2em; width:100vw; height: 100vh; min-height: 40em; background-size: cover; background-repeat: no-repeat; background-position:center; background-image: url(../img/img-16.png)}
+#contact-us .content-panel{padding: 1em 3em 3em 3em; margin: auto; font-size: 1.2em; height: 100vh; min-height: 40em; background-size: cover; background-repeat: no-repeat; background-position:center; background-image: url(../img/img-16.png)}
 #contact-us .subsec-01 {display: none}
 #contact-us .form-panel{min-width: 30em; float:left; padding: 2em; background: rgba(255, 255, 255, 0.7)}  
 #contact-us .title {font-weight: bold; font-size: 3em; color: #02aa4d}
@@ -675,6 +675,7 @@ input[type=number]::-webkit-outer-spin-button {
     #upload-receipt .form-panel,#login .form-panel, #registration .form-panel , #contact-us .form-panel , #profile .form-panel , #resend-activation .form-panel , #forgot-password .form-panel  {float: none; margin: auto; min-width:inherit; margin-top: 2em; width: 98%; padding: 0} 
     
     #contact-us .content-panel{background-image: none; min-height: inherit; height: auto}
+    #contact-us .logo-top-right{display: none;}
     #contact-us .subsec-01 {display: inherit}
     #lucky-draw .lucky-list li {width: 50%;} 
     #lucky-draw .search-voucher {width:100%;}
@@ -821,6 +822,15 @@ input[type=number]::-webkit-outer-spin-button {
     color: #02aa4d;
 }
     /* ------------------ */
+
+    /* contact-us */
+#contact-us .logo-top-right {
+    position: absolute;
+    top: 0;
+    right: 11px;
+    background-color: white;
+    padding: 36px 10px 21px 10px;
+}
 
 @media (min-width:961px)  {
      /* tablet, landscape iPad, lo-res laptops ands desktops */ 

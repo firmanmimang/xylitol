@@ -36,7 +36,8 @@ if (isset($_POST) && !empty($_POST['action'])) {
                 $arr['selWarehouseKey'] = $warehouse->getDefaultData(); 
                 $arr['trDate'] = date('d / m / Y H:i');
                 $arr['selStatus'] = 1;
-                
+                $arr['qty']= $_POST['qty'];
+
                 $arrReturn = $itemUploadReceipt->addData($arr);
 
                 if($arrReturn[0]['valid']){     

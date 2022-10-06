@@ -182,7 +182,15 @@ class ItemUploadReceipt extends BaseClass
 
         if ($action == INSERT_DATA) {
             $rsHeader = $this->getDataRowById($arrParam['pkey']);
-            $this->sendReceiptUploadedEmail($arrParam['hidCustomerKey'], $arrParam['code'], $rsHeader);
+            // hitung total point yang diupload untuk send email kurang dari 20 point
+            $totalUploadPoint = ($arrParam['qty'][0] * 10) + ($arrParam['qty'][1] * 5) + ($arrParam['qty'][2] * 2);
+            // ----------------------------------------------------------------------
+
+            $this->sendReceiptUploadedEmail($arrParam['hidCustomerKey'], $arrParam['code']);
+
+            if($totalUploadPoint < 20) {
+                $this->sendReceiptPoinsEmail($rsHeader);
+            }
         } else {
             $rsHeader = $this->getDataRowById($arrParam['pkey']);
             if ($rsHeader[0]['statuskey'] == 2)
@@ -471,7 +479,7 @@ class ItemUploadReceipt extends BaseClass
             $counter =  floor($rsCustomer[0]['point'] / 20);
 
             // cek total voucher yg sudah didapat 
-            $sql = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey']);
+            $sql = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey'] . ' AND typekey = 1');
             //$this->setLog($sql,true);
 
             $rsVoucher = $this->oDbCon->doQuery($sql);
@@ -482,7 +490,7 @@ class ItemUploadReceipt extends BaseClass
             $totalVoucher = $counter - $voucherClaimed;
             //$this->setLog($counter.'-'.$voucherClaimed,true);
             //$this->setLog($totalVoucher,true);
-            for ($i = 0; $i < $totalVoucher; $i++) {
+            for ($i = 1; $i <= $totalVoucher; $i++) {
                 $arr = array();
                 $arr['code'] = array('code');
                 $arr['startDate'] = date('d / m / Y');
@@ -494,7 +502,48 @@ class ItemUploadReceipt extends BaseClass
                 $rsVoucherResponse = $voucher->addData($arr);
                 $rsVoucherResponse = $rsVoucherResponse[0]['data'];
                 $this->sendVoucherEmail($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+
+                // if($i%2 == 0){
+                //     $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+                // }
             }
+
+            // if($rsCustomer[0]['point'] >= 40){
+            //     // bagi 40, agar dapat kelipatannya
+            //     $counter =  floor($rsCustomer[0]['point'] / 40);
+
+            //     // cek total voucher yg sudah didapat 
+            //     $sql = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey'] . ' AND typekey = 2');
+            //     //$this->setLog($sql,true);
+
+            //     $rsVoucher = $this->oDbCon->doQuery($sql);
+            //     $voucherClaimed = $rsVoucher[0]['totalvoucher'];
+
+            //     //cek vouchernya blm ada
+            //     //if(empty($rsVoucher)){ 
+            //     $totalVoucher = $counter - $voucherClaimed;
+            //     //$this->setLog($counter.'-'.$voucherClaimed,true);
+            //     //$this->setLog($totalVoucher,true);
+            //     for ($i = 0; $i < $totalVoucher; $i++) {
+            //         $arr = array();
+            //         $arr['code'] = array('code');
+            //         $arr['startDate'] = date('d / m / Y');
+            //         $arr['hidCustomerKey'] = $rsCustomer[0]['pkey'];
+            //         $arr['value'] = 1;
+            //         $arr['selCategory'] = 2;
+            //         $arr['selType'] = 2;
+
+            //         $rsVoucherResponse = $voucher->addData($arr);
+            //         $rsVoucherResponse = $rsVoucherResponse[0]['data'];
+            //         $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+
+            //         // cek total voucher yg sudah didapat 
+            //         // $sql = "INSERT INTO ". $voucher->tableName . "(code, categorykey, startdate, typekey, value, ) VALUES ('John', 'Doe', 'john@example.com')";
+            //         //$this->setLog($sql,true);
+
+            //         // $rsVoucher = $this->oDbCon->doQuery($sql);
+            //     }
+            // }
         } else {
             // echo $rsCustomer[0]['point'] .'\n';
             // echo $rsCustomer[0]['point'] % 20;
@@ -526,7 +575,7 @@ class ItemUploadReceipt extends BaseClass
     }
 
 
-    function sendReceiptUploadedEmail($customerkey, $code, $rsHeader)
+    function sendReceiptUploadedEmail($customerkey, $code)
     {
 
         global $twig;
@@ -552,11 +601,7 @@ class ItemUploadReceipt extends BaseClass
 
         // $this->sendMail('', '', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
         mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content ,$headers);
-        // $this->sendMail('','', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME,$content,'martinhalimk@gmail.com'); 
-
-        if($rsHeader[0]['totalpoint'] < 20) {
-            $this->sendReceiptPoinsEmail($rsHeader);
-        }
+        // $this->sendMail('','', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME,$content,'martinhalimk@gmail.com');
 
     }
 
@@ -707,5 +752,31 @@ class ItemUploadReceipt extends BaseClass
         if ($todayYear == ($dobYear+$ageLimit) && $dobMonth == $todayMonth && $dobDate > $todayDate) return false;*/
 
         return true;
+    }
+
+    function sendVoucher40Email ($customerkey, $code){
+        require_once  $_SERVER['DOCUMENT_ROOT'] . '/Twig/Autoloader.php';
+        Twig_Autoloader::register();
+        $loader = new Twig_Loader_Filesystem($this->templateDocPath);
+
+        $twig = new Twig_Environment($loader);
+        $twig->addExtension(new Twig_Extension_Array());
+
+        require_once  $_SERVER['DOCUMENT_ROOT'] . '/_twig-function.php';
+
+        $customer = new Customer();
+        $rsCust = $customer->getDataRowById($customerkey);
+
+        // nanti jadikan default variable
+        $arrTwigVar = array();
+        $arrTwigVar = $this->getDefaultEmailVariable();
+
+        $arrTwigVar['CUSTOMER_NAME'] = $rsCust[0]['name'];
+        $arrTwigVar['TRANS_CODE'] = $code;
+
+        $twig->render('email-template.html');
+        $content = $twig->render('email-voucher40.html', $arrTwigVar);
+
+        $this->sendMail('', '', 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
     }
 }

@@ -1,0 +1,12 @@
+{% extends "email-template.html" %} 
+{% block content %}
+Congratulation  {{ CUSTOMER_NAME|raw }}!
+<br><br>
+Kamu sudah berhasil mengumpulkan 40 poin, sehingga kamu berhak mendapatkan 1 (satu) tambahan tiket Lucky Draw untuk memenangkan saldo e-wallet Rp100.000.
+<br><br>
+Simpan nomor Lucky Draw ini pengundian di akhir periode nanti:
+<br><br>
+<b>{{ TRANS_CODE }}</b>.
+<br><br>
+Semangat mengumpulkan poinnya, ya! Makin banyak poin yang kamu kumpulkan, kesempatan memenangkan Limited Foldable Card Lotte Xylitol x BTS juga semakin besar!
+{% endblock %}
