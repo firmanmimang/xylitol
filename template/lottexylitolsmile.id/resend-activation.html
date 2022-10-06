@@ -21,11 +21,12 @@ jQuery(document).ready(function(){
 <script type=text/javascript src='https://www.google.com/recaptcha/api.js'></script>
 {% endblock %}  
 {% block content %} 
-
-<div class="content-panel">  
-<div class="subsec-logo"></div>
-<div class="form-panel"> 
-<div class="title">{{ LANG.resendActivation }}</div>
+<div class="content-panel-parent">
+<div class="content-panel">
+<div class="form-panel-parent">
+<div class="form-panel-ff">
+<div class="subsec-logo-ff"></div> 
+<div class="title-ff">{{ LANG.resendActivation }}</div>
 <form id="form-resend-activation" method="post" class="form-horizontal form-default prevent-form-submit label-style" action="/ajax-member.php">
 <div class="form-information" style="margin-top:0.5em">{{ LANG.resendActivationMessage|raw }}</div>
 {{ inputHidAction|raw }} 
@@ -48,8 +49,11 @@ jQuery(document).ready(function(){
  
 </form> 
 </div>
-<div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-18.png"></div>
+<!-- <div class="subsec-02"><img src="{{ TEMPLATE_IMG_PATH }}img-18.png"></div> -->
+<div class="subsec-02-ff"><img src="{{ TEMPLATE_IMG_PATH }}login-registration-image.webp"></div>
 <div style="clear: both; height: 2em"></div> 
 </div> 
+</div>
+</div>
  
 {% endblock %}

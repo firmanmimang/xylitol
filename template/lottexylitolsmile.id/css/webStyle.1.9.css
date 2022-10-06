@@ -832,6 +832,38 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: white;
     padding: 36px 10px 21px 10px;
 }
+#contact-us .subsec-logo-ff{width: 15em; height: 5em; background-size: contain ; background-repeat: no-repeat; background-position:center;background-image: url(../img/img-04.png)}
+    /* ------- */
+
+    /* resend-activation */
+#resend-activation .content-panel-parent {
+    background: url(../img/registration-login-bg.webp) no-repeat center;
+    background-size: cover;
+}
+#resend-activation .form-panel-parent {
+    display: flex; justify-content: space-between; flex-direction: column;
+}
+#resend-activation .subsec-02-ff {
+    width: 100%;
+    margin-top: 30px;
+}
+#resend-activation .form-panel-ff {
+    margin: auto; min-width:inherit; margin-top: 2em; width: 98%; padding: 0; background-color: transparent;
+}
+#resend-activation .subsec-logo-ff {
+    height: 6em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/img-04.png);
+}
+#resend-activation .title-ff {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    color: #02aa4d;
+}
+/* ----- */
 
 #contact-us .subsec-logo-ff{width: 15em; height: 5em; background-size: contain ; background-repeat: no-repeat; background-position:center;background-image: url(../img/img-04.png)}
 
@@ -855,6 +887,16 @@ input[type=number]::-webkit-outer-spin-button {
     #login .form-panel-parent {flex-direction: row;}
     #login .form-panel-ff {width: 40%;}
     #login .subsec-02-ff {
+        margin-top: 0;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #resend-activation .form-panel-parent {flex-direction: row;}
+    #resend-activation .form-panel-ff {width: 40%;}
+    #resend-activation .subsec-02-ff {
         margin-top: 0;
         width: 50%;
         display: flex;
