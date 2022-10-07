@@ -181,16 +181,16 @@ class ItemUploadReceipt extends BaseClass
         $this->updatePoint($arrParam['pkey']);
 
         if ($action == INSERT_DATA) {
-            $rsHeader = $this->getDataRowById($arrParam['pkey']);
+            // $rsHeader = $this->getDataRowById($arrParam['pkey']);
             // hitung total point yang diupload untuk send email kurang dari 20 point
-            $totalUploadPoint = ($arrParam['qty'][0] * 10) + ($arrParam['qty'][1] * 5) + ($arrParam['qty'][2] * 2);
+            // $totalUploadPoint = ($arrParam['qty'][0] * 10) + ($arrParam['qty'][1] * 5) + ($arrParam['qty'][2] * 2);
             // ----------------------------------------------------------------------
 
             $this->sendReceiptUploadedEmail($arrParam['hidCustomerKey'], $arrParam['code']);
 
-            if($totalUploadPoint < 20) {
-                $this->sendReceiptPoinsEmail($rsHeader);
-            }
+            // if($totalUploadPoint < 20) {
+            //     $this->sendReceiptPoinsEmail($rsHeader);
+            // }
         } else {
             $rsHeader = $this->getDataRowById($arrParam['pkey']);
             if ($rsHeader[0]['statuskey'] == 2)
@@ -644,7 +644,11 @@ class ItemUploadReceipt extends BaseClass
         $twig->render('email-template.html');
         $content = $twig->render('email-receipt-approved.html', $arrTwigVar);
 
-        $this->sendMail('', '', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);        
+        $this->sendMail('', '', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        
+        if($rsCust[0]['point'] < 20){
+            $this->sendReceiptPoinsEmail($rsHeader);
+        }
     }
 
 
@@ -680,6 +684,10 @@ class ItemUploadReceipt extends BaseClass
 
         //$this->setLog($content,true);
         $this->sendMail('', '', 'Verifikasi Struk Gagal' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+
+        if($rsCust[0]['point'] < 20){
+            $this->sendReceiptPoinsEmail($rsHeader);
+        }
     }
 
     function sendVoucherEmail($customerkey, $code)
