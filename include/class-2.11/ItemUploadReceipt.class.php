@@ -473,17 +473,21 @@ class ItemUploadReceipt extends BaseClass
         $rsCustomer = $customer->getDataRowById($customerkey);
         if (empty($rsCustomer)) return;
 
+        
         //cek point customer jika lebih dari 20 
         if ($rsCustomer[0]['point'] >= 20) {
             // bagi 20, agar dapat kelipatannya
             $counter =  floor($rsCustomer[0]['point'] / 20);
 
             // cek total voucher yg sudah didapat 
-            $sql = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey'] . ' AND typekey = 1');
+            $sql = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey']) . ' AND typekey = 1';
             //$this->setLog($sql,true);
 
             $rsVoucher = $this->oDbCon->doQuery($sql);
             $voucherClaimed = $rsVoucher[0]['totalvoucher'];
+
+            // var_dump($voucherClaimed);
+            // die;
 
             //cek vouchernya blm ada
             //if(empty($rsVoucher)){ 
@@ -503,47 +507,50 @@ class ItemUploadReceipt extends BaseClass
                 $rsVoucherResponse = $rsVoucherResponse[0]['data'];
                 $this->sendVoucherEmail($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
 
-                if($i%2 == 0){
-                    $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
-                }
+                // if($i%2 == 0){
+                //     $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+                // }
             }
 
-            // if($rsCustomer[0]['point'] >= 40){
-            //     // bagi 40, agar dapat kelipatannya
-            //     $counter =  floor($rsCustomer[0]['point'] / 40);
+            if($rsCustomer[0]['point'] >= 40){
+                // bagi 40, agar dapat kelipatannya
+                $counter2 =  floor($rsCustomer[0]['point'] / 40);
 
-            //     // cek total voucher yg sudah didapat 
-            //     $sql = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey'] . ' AND typekey = 2');
-            //     //$this->setLog($sql,true);
+                // cek total voucher yg sudah didapat 
+                $sql2 = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey']) . ' AND typekey = 2';
+                //$this->setLog($sql,true);
 
-            //     $rsVoucher = $this->oDbCon->doQuery($sql);
-            //     $voucherClaimed = $rsVoucher[0]['totalvoucher'];
+                $rsVoucher2 = $this->oDbCon->doQuery($sql2);
+                $voucherClaimed2 = $rsVoucher2[0]['totalvoucher'];
 
-            //     //cek vouchernya blm ada
-            //     //if(empty($rsVoucher)){ 
-            //     $totalVoucher = $counter - $voucherClaimed;
-            //     //$this->setLog($counter.'-'.$voucherClaimed,true);
-            //     //$this->setLog($totalVoucher,true);
-            //     for ($i = 0; $i < $totalVoucher; $i++) {
-            //         $arr = array();
-            //         $arr['code'] = array('code');
-            //         $arr['startDate'] = date('d / m / Y');
-            //         $arr['hidCustomerKey'] = $rsCustomer[0]['pkey'];
-            //         $arr['value'] = 1;
-            //         $arr['selCategory'] = 2;
-            //         $arr['selType'] = 2;
+                // var_dump($counter2);
+                // die;
 
-            //         $rsVoucherResponse = $voucher->addData($arr);
-            //         $rsVoucherResponse = $rsVoucherResponse[0]['data'];
-            //         $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+                //cek vouchernya blm ada
+                //if(empty($rsVoucher)){ 
+                $totalVoucher2 = $counter2 - $voucherClaimed2;
+                //$this->setLog($counter.'-'.$voucherClaimed,true);
+                //$this->setLog($totalVoucher,true);
+                for ($i = 0; $i < $totalVoucher2; $i++) {
+                    $arr = array();
+                    $arr['code'] = array('code');
+                    $arr['startDate'] = date('d / m / Y');
+                    $arr['hidCustomerKey'] = $rsCustomer[0]['pkey'];
+                    $arr['value'] = 1;
+                    $arr['selCategory'] = 2;
+                    $arr['selType'] = 2;
 
-            //         // cek total voucher yg sudah didapat 
-            //         // $sql = "INSERT INTO ". $voucher->tableName . "(code, categorykey, startdate, typekey, value, ) VALUES ('John', 'Doe', 'john@example.com')";
-            //         //$this->setLog($sql,true);
+                    $rsVoucherResponse = $voucher->addData($arr);
+                    $rsVoucherResponse = $rsVoucherResponse[0]['data'];
+                    $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
 
-            //         // $rsVoucher = $this->oDbCon->doQuery($sql);
-            //     }
-            // }
+                    // cek total voucher yg sudah didapat 
+                    // $sql = "INSERT INTO ". $voucher->tableName . "(code, categorykey, startdate, typekey, value, ) VALUES ('John', 'Doe', 'john@example.com')";
+                    //$this->setLog($sql,true);
+
+                    // $rsVoucher = $this->oDbCon->doQuery($sql);
+                }
+            }
         } else {
             // echo $rsCustomer[0]['point'] .'\n';
             // echo $rsCustomer[0]['point'] % 20;
@@ -559,7 +566,8 @@ class ItemUploadReceipt extends BaseClass
     function resyncCustomerPoint($customerkey)
     {
 
-        $arrCustomer = array('8212', '8247', '8740', '8102', '8729', '8075', '8769', '8160', '8772', '8770', '8155', '8755', '8224', '8365', '8195', '8792', '8231', '8733', '8220', '8107', '8884', '8774', '8892', '8936', '8783', '8943', '8941', '8643', '8222', '8077', '8895', '8907', '8228', '8794', '8211', '8973', '8965', '8962', '9016', '8977', '8535', '9015', '8913', '9069', '9183', '8967', '9474', '9673', '9676', '9810', '9444', '8235', '9329', '9331', '9303', '8938', '8433', '9087', '9412', '9771', '9066', '9479', '9984', '8732', '9094', '8782', '9894', '8865', '10060', '8258', '10071', '10078', '8935', '10079', '10073', '8987', '10086', '8981', '10094', '10098', '8940', '10103', '8927', '10069', '10110', '10057', '10114', '8812', '9507', '9344', '8438', '10061', '10126', '10050', '10058', '10132', '10133', '10137', '10047', '8903', '9456', '10149', '8181', '8879', '9949', '10216', '10231', '9127', '10251', '10257', '10254', '10265', '10266', '10138', '10262', '10263', '10255', '10085', '10312', '10311', '10310', '10309', '10307', '10306', '10276', '10298', '10297', '10292', '10286', '10285', '10281', '10277', '10304', '10302', '10300', '10299', '10268', '10303', '10279', '10282', '10280', '10278', '10275', '10274', '10296', '10295', '10287', '10284', '10283', '10305', '10317', '10261', '10321', '10320', '10326', '10325', '10327', '10331', '10330', '10343', '10344', '10345', '10346', '10347', '10348', '10349', '10350', '10364', '10335', '10366', '10365', '10371', '10370', '10351', '10360', '10361', '10362', '10363', '10367', '10368', '10372', '10373', '10375', '10376', '10380', '10385', '10384', '10383', '10382', '10381', '10387', '10386', '10390', '10389', '10388', '8218', '10425', '10423', '10431', '8756');
+        // $arrCustomer = array('8212', '8247', '8740', '8102', '8729', '8075', '8769', '8160', '8772', '8770', '8155', '8755', '8224', '8365', '8195', '8792', '8231', '8733', '8220', '8107', '8884', '8774', '8892', '8936', '8783', '8943', '8941', '8643', '8222', '8077', '8895', '8907', '8228', '8794', '8211', '8973', '8965', '8962', '9016', '8977', '8535', '9015', '8913', '9069', '9183', '8967', '9474', '9673', '9676', '9810', '9444', '8235', '9329', '9331', '9303', '8938', '8433', '9087', '9412', '9771', '9066', '9479', '9984', '8732', '9094', '8782', '9894', '8865', '10060', '8258', '10071', '10078', '8935', '10079', '10073', '8987', '10086', '8981', '10094', '10098', '8940', '10103', '8927', '10069', '10110', '10057', '10114', '8812', '9507', '9344', '8438', '10061', '10126', '10050', '10058', '10132', '10133', '10137', '10047', '8903', '9456', '10149', '8181', '8879', '9949', '10216', '10231', '9127', '10251', '10257', '10254', '10265', '10266', '10138', '10262', '10263', '10255', '10085', '10312', '10311', '10310', '10309', '10307', '10306', '10276', '10298', '10297', '10292', '10286', '10285', '10281', '10277', '10304', '10302', '10300', '10299', '10268', '10303', '10279', '10282', '10280', '10278', '10275', '10274', '10296', '10295', '10287', '10284', '10283', '10305', '10317', '10261', '10321', '10320', '10326', '10325', '10327', '10331', '10330', '10343', '10344', '10345', '10346', '10347', '10348', '10349', '10350', '10364', '10335', '10366', '10365', '10371', '10370', '10351', '10360', '10361', '10362', '10363', '10367', '10368', '10372', '10373', '10375', '10376', '10380', '10385', '10384', '10383', '10382', '10381', '10387', '10386', '10390', '10389', '10388', '8218', '10425', '10423', '10431', '8756');
+        $arrCustomer = [];
 
         $addPoint = (in_array($customerkey, $arrCustomer)) ? 5 : 0;
 
