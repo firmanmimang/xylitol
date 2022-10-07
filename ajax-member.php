@@ -74,7 +74,7 @@ $loginLog = new LoginLog();
 				case 'add':
 								$arr['code'] = 'XXXXX';
 								$arr['createdBy'] = 0;
-								$arr['selStatus'] = 1;   
+								$arr['selStatus'] = 2;   
 								$arr['hidCityKey'] = 0; 
 								$arr['address1'] = '';  
 								$arr['address2'] = '';  
