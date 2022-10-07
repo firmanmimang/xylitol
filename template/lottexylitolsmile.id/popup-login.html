@@ -32,7 +32,7 @@ jQuery(document).ready(function(){
                     </div>
                     <div class="login-form">
                         <div class="close-icon"><i class="fas fa-times"></i></div>
-                        <form id="form-popup-login" method="post" class="form-horizontal form-default prevent-form-submit" action="/ajax-member.php">  
+                        <form id="form-popup-login" method="post" class="form-horizontal form-default prevent-form-submit" action="/ajax-member.php" style="width: 80%;">  
                             {{ inputHidActionPopupLogin|raw }} 
                             <div class="title">Login</div> 
                             <div class="notification-msg"></div>
@@ -57,10 +57,7 @@ jQuery(document).ready(function(){
                                 <div>{{ btnSubmitPopupLogin|raw }}</div>
                             </div>
                             <div style="clear: both; height: 1px; background-color: #999; margin :1em 0 0.5em 0"></div>
-                            {{ btnGoogle|raw }}  
-                            <div class="fb-login" style="margin-top: 5px;">
-                                <a href="{{ fbLoginLink|raw }}"> <div><i class="fab fa-facebook-square"></i> Lanjutkan dengan Facebook</div></a> 
-                            </div>
+                            
                         </form>  
                     </div>  
             </div>
