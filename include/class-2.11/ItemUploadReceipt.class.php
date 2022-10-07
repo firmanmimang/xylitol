@@ -503,9 +503,9 @@ class ItemUploadReceipt extends BaseClass
                 $rsVoucherResponse = $rsVoucherResponse[0]['data'];
                 $this->sendVoucherEmail($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
 
-                // if($i%2 == 0){
-                //     $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
-                // }
+                if($i%2 == 0){
+                    $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+                }
             }
 
             // if($rsCustomer[0]['point'] >= 40){
