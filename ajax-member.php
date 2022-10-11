@@ -74,7 +74,7 @@ $loginLog = new LoginLog();
 				case 'add':
 								$arr['code'] = 'XXXXX';
 								$arr['createdBy'] = 0;
-								$arr['selStatus'] = 2;   
+								$arr['selStatus'] = 1;   
 								$arr['hidCityKey'] = 0; 
 								$arr['address1'] = '';  
 								$arr['address2'] = '';  
@@ -162,13 +162,13 @@ $loginLog = new LoginLog();
 								 
 								}
 								
-								// else if ($result[0]['statuskey'] == 1){
-								// 	$class->addErrorList($arrReturn,false,$class->errorMsg['login'][1]);
-								// }
+								else if ($result[0]['statuskey'] == 1){
+									$class->addErrorList($arrReturn,false,$class->errorMsg['login'][1]);
+								}
 								else if ($result[0]['statuskey'] == 3){
 									$class->addErrorList($arrReturn,false,$class->errorMsg['login'][2]);
 								}
-								else if ($result[0]['statuskey'] == 2 || $result[0]['statuskey'] == 1){
+								else if ($result[0]['statuskey'] == 2){
 									 
 										$_SESSION[$class->loginSession]['id'] = base64_encode($result[0]['pkey']);
 										$_SESSION[$class->loginSession]['name'] = $result[0]['name']; 
