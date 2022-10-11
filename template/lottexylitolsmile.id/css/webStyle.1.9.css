@@ -302,7 +302,7 @@ input[type=number]::-webkit-outer-spin-button {
 .period-sec .subsec-04 {width: 100%; height: 25em; background-size: contain ; background-repeat: no-repeat; background-position: center; background-image: url(../img/img-30b.png)}
 .period-sec .subsec-05 {margin-bottom:1em; font-size: 2em; font-weight: bold;}
 .period-sec .period-table {width: 100%; margin: 0; padding: 0;  list-style: none}
-.period-sec .period-table li {float: left; width: 33%; position: relative; height: 570px; width: 100%;}
+.period-sec .period-table li {float: left; width: 33%; position: relative; height: 840px; width: 100%;}
 .period-sec .period-table li .content-panel {width: 94%; font-size: 1.2em; height: 100%; margin: auto;  color:#fff; background: rgb(112,179,13); background: linear-gradient(180deg, rgba(112,179,13,1) 0%, rgba(81,161,77,1) 100%); padding: 1em; border-radius: 0.5em}
 .period-sec .subtitle {font-size: 1.5em; margin: 1.2em 0}
 
@@ -624,7 +624,7 @@ input[type=number]::-webkit-outer-spin-button {
     #terms-and-conditions .div-table-row > .div-table-col-5:first-child {display: none}
     #terms-and-conditions .title {margin-top: 2em}
     
-    .period-sec .period-table li {float: none; width: 100%; margin-top: 2em; height: 900px;}
+    .period-sec .period-table li {float: none; width: 100%; margin-top: 2em}
     
 }
 
