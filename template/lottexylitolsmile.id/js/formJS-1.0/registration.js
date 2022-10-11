@@ -127,8 +127,8 @@ function Registration(opt) {
                         grecaptcha.reset();
                     } else {
                         setStatusColorNotification(notifObj, 2);
-                        // alert(lang.registrationSuccessMessage);
-                        alert('Terima kasih sudah mendaftar di Smile Project Lotte Xylitol. Silakan lengkapi data diri Anda di profil.')
+                        alert(lang.registrationSuccessMessage);
+                        // alert('Terima kasih sudah mendaftar di Smile Project Lotte Xylitol. Silakan lengkapi data diri Anda di profil.')
                         location.href = "/";
                     }
                 }, 'json');
