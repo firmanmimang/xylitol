@@ -611,7 +611,7 @@ class ItemUploadReceipt extends BaseClass
         // $this->sendMail('','', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME,$content,'martinhalimk@gmail.com');
         // mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content ,$headers);
 
-        require __DIR__.'/_function_smtp_ff.php';
+        require __DIR__.'/../../_function_smtp_ff.php';
         smtp_mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
@@ -647,7 +647,7 @@ class ItemUploadReceipt extends BaseClass
         $content = $twig->render('email-receipt-approved.html', $arrTwigVar);
 
         // $this->sendMail('', '', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);        
-        require __DIR__.'/_function_smtp_ff.php';
+        require __DIR__.'/../../_function_smtp_ff.php';
         smtp_mail($rsCust[0]['email'], 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
@@ -684,7 +684,7 @@ class ItemUploadReceipt extends BaseClass
 
         //$this->setLog($content,true);
         // $this->sendMail('', '', 'Verifikasi Struk Gagal' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
-        require __DIR__.'/_function_smtp_ff.php';
+        require __DIR__.'/../../_function_smtp_ff.php';
         smtp_mail($rsCust[0]['email'], 'Verifikasi Struk Gagal' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
@@ -714,7 +714,7 @@ class ItemUploadReceipt extends BaseClass
         $content = $twig->render('email-voucher.html', $arrTwigVar);
 
         // $this->sendMail('', '', 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
-        require __DIR__.'/_function_smtp_ff.php';
+        require __DIR__.'/../../_function_smtp_ff.php';
         smtp_mail($rsCust[0]['email'], 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
@@ -750,7 +750,7 @@ class ItemUploadReceipt extends BaseClass
 
         //$this->setLog($content,true);
         // $this->sendMail('', '', 'Point Anda Belum Cukup' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
-        require __DIR__.'/_function_smtp_ff.php';
+        require __DIR__.'/../../_function_smtp_ff.php';
         smtp_mail($rsCust[0]['email'], 'Point Anda Belum Cukup' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
@@ -796,7 +796,7 @@ class ItemUploadReceipt extends BaseClass
         $content = $twig->render('email-voucher40.html', $arrTwigVar);
 
         // $this->sendMail('', '', 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
-        require __DIR__.'/_function_smtp_ff.php';
+        require __DIR__.'/../../_function_smtp_ff.php';
         smtp_mail($rsCust[0]['email'], 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, '');
     }
 }
