@@ -337,7 +337,8 @@ class Customer extends BaseClass{
  		return $arrayToJs; 
 	}
     
-	function sendActivationEmail($userkey){
+	function sendActivationEmail($userkey)
+    {
 		
         global $twig;
         
@@ -354,7 +355,9 @@ class Customer extends BaseClass{
         $twig->render('email-template.html');  
         $content = $twig->render('email-activation.html', $arrTwigVar);
 
-        $this->sendMail('','', $this->lang['activationEmail'] . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']); 
+        // $this->sendMail('','', $this->lang['activationEmail'] . ' - ' . DOMAIN_NAME,$content,$rsCust[0]['email']);
+        require __DIR__.'/_function_smtp_ff.php';
+        smtp_mail($rsCust[0]['email'], $this->lang['activationEmail'] . ' - ' . DOMAIN_NAME, $content, '');
 		 
 	}
 	

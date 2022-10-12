@@ -601,16 +601,18 @@ class ItemUploadReceipt extends BaseClass
         $twig->render('email-template.html');
         $content = $twig->render('email-receipt-uploaded.html', $arrTwigVar);
 
-        // Always set content-type when sending HTML email
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        // More headers
-        $headers .= 'From: <no-reply@lottexylitolsmile.id>' . "\r\n";
+        // // Always set content-type when sending HTML email
+        // $headers = "MIME-Version: 1.0" . "\r\n";
+        // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        // // More headers
+        // $headers .= 'From: <no-reply@lottexylitolsmile.id>' . "\r\n";
 
         // $this->sendMail('', '', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
-        mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content ,$headers);
         // $this->sendMail('','', 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME,$content,'martinhalimk@gmail.com');
+        // mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content ,$headers);
 
+        require __DIR__.'/_function_smtp_ff.php';
+        smtp_mail($rsCust[0]['email'], 'Struk berhasil diupload' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
 
@@ -644,7 +646,9 @@ class ItemUploadReceipt extends BaseClass
         $twig->render('email-template.html');
         $content = $twig->render('email-receipt-approved.html', $arrTwigVar);
 
-        $this->sendMail('', '', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);        
+        // $this->sendMail('', '', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);        
+        require __DIR__.'/_function_smtp_ff.php';
+        smtp_mail($rsCust[0]['email'], 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
 
@@ -679,7 +683,9 @@ class ItemUploadReceipt extends BaseClass
         $content = $twig->render('email-receipt-rejected.html', $arrTwigVar);
 
         //$this->setLog($content,true);
-        $this->sendMail('', '', 'Verifikasi Struk Gagal' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        // $this->sendMail('', '', 'Verifikasi Struk Gagal' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        require __DIR__.'/_function_smtp_ff.php';
+        smtp_mail($rsCust[0]['email'], 'Verifikasi Struk Gagal' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
     function sendVoucherEmail($customerkey, $code)
@@ -707,7 +713,9 @@ class ItemUploadReceipt extends BaseClass
         $twig->render('email-template.html');
         $content = $twig->render('email-voucher.html', $arrTwigVar);
 
-        $this->sendMail('', '', 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        // $this->sendMail('', '', 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        require __DIR__.'/_function_smtp_ff.php';
+        smtp_mail($rsCust[0]['email'], 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
     function sendReceiptPoinsEmail($rsHeader)
@@ -741,7 +749,9 @@ class ItemUploadReceipt extends BaseClass
         $content = $twig->render('email-notification-poins.html', $arrTwigVar);
 
         //$this->setLog($content,true);
-        $this->sendMail('', '', 'Point Anda Belum Cukup' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        // $this->sendMail('', '', 'Point Anda Belum Cukup' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        require __DIR__.'/_function_smtp_ff.php';
+        smtp_mail($rsCust[0]['email'], 'Point Anda Belum Cukup' . ' - ' . DOMAIN_NAME, $content, '');
     }
 
     function isAgeValid($trdate, $ageLimit = 12)
@@ -785,6 +795,8 @@ class ItemUploadReceipt extends BaseClass
         $twig->render('email-template.html');
         $content = $twig->render('email-voucher40.html', $arrTwigVar);
 
-        $this->sendMail('', '', 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        // $this->sendMail('', '', 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);
+        require __DIR__.'/_function_smtp_ff.php';
+        smtp_mail($rsCust[0]['email'], 'Tiket Lucky Draw' . ' - ' . DOMAIN_NAME, $content, '');
     }
 }
