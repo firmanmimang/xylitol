@@ -41,11 +41,13 @@ function smtp_mail($to, $subject, $message, $from, $debug = false)
 
     $mail->addAddress($to);
     
-    if ($mail->Send()) {
-        echo "Email Sent..!";
-    } else {
-        echo "Error..!";
-    }
+    // if ($mail->Send()) {
+    //     echo "Email Sent..!";
+    // } else {
+    //     echo "Error..!";
+    // }
+
+    $mail->Send();
 
     $mail->smtpClose();
 }
