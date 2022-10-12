@@ -27,7 +27,7 @@ function smtp_mail($to, $subject, $message, $from, $debug = false)
     $mail->Port = "587";
 
     $mail->Username = "no-reply@lottexylitolsmile.id";
-    $mail->Password = "Y*I^vdixKO!q";
+    $mail->Password = "";
 
     $default_email_from = "no-reply@lottexylitolsmile.id";
 
