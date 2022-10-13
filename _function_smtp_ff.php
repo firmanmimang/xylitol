@@ -49,5 +49,5 @@ function smtp_mail($to, $subject, $message, $from, $debug = false)
 
     $mail->Send();
 
-    $mail->smtpClose();
+    // $mail->smtpClose();
 }
