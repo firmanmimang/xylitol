@@ -515,43 +515,56 @@ class ItemUploadReceipt extends BaseClass
             }
 
             if($rsCustomer[0]['point'] >= 40){
-                // bagi 40, agar dapat kelipatannya
-                $counter2 =  floor($rsCustomer[0]['point'] / 40);
+                // // bagi 40, agar dapat kelipatannya
+                // $counter2 =  floor($rsCustomer[0]['point'] / 40);
 
-                // cek total voucher yg sudah didapat 
-                $sql2 = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey']) . ' AND typekey = 2';
-                //$this->setLog($sql,true);
+                // // cek total voucher yg sudah didapat 
+                // $sql2 = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey']) . ' AND typekey = 2';
+                // //$this->setLog($sql,true);
 
-                $rsVoucher2 = $this->oDbCon->doQuery($sql2);
-                $voucherClaimed2 = $rsVoucher2[0]['totalvoucher'];
+                // $rsVoucher2 = $this->oDbCon->doQuery($sql2);
+                // $voucherClaimed2 = $rsVoucher2[0]['totalvoucher'];
 
-                // var_dump($counter2);
-                // die;
+                // // var_dump($counter2);
+                // // die;
 
-                //cek vouchernya blm ada
-                //if(empty($rsVoucher)){ 
-                $totalVoucher2 = $counter2 - $voucherClaimed2;
-                //$this->setLog($counter.'-'.$voucherClaimed,true);
-                //$this->setLog($totalVoucher,true);
-                for ($i = 0; $i < $totalVoucher2; $i++) {
-                    $arr = array();
-                    $arr['code'] = array('code');
-                    $arr['startDate'] = date('d / m / Y');
-                    $arr['hidCustomerKey'] = $rsCustomer[0]['pkey'];
-                    $arr['value'] = 1;
-                    $arr['selCategory'] = 2;
-                    $arr['selType'] = 2;
+                // //cek vouchernya blm ada
+                // //if(empty($rsVoucher)){ 
+                // $totalVoucher2 = $counter2 - $voucherClaimed2;
+                // //$this->setLog($counter.'-'.$voucherClaimed,true);
+                // //$this->setLog($totalVoucher,true);
+                // for ($i = 0; $i < $totalVoucher2; $i++) {
+                //     $arr = array();
+                //     $arr['code'] = array('code');
+                //     $arr['startDate'] = date('d / m / Y');
+                //     $arr['hidCustomerKey'] = $rsCustomer[0]['pkey'];
+                //     $arr['value'] = 1;
+                //     $arr['selCategory'] = 2;
+                //     $arr['selType'] = 2;
 
-                    $rsVoucherResponse = $voucher->addData($arr);
-                    $rsVoucherResponse = $rsVoucherResponse[0]['data'];
-                    $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+                //     $rsVoucherResponse = $voucher->addData($arr);
+                //     $rsVoucherResponse = $rsVoucherResponse[0]['data'];
+                //     $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
 
-                    // cek total voucher yg sudah didapat 
-                    // $sql = "INSERT INTO ". $voucher->tableName . "(code, categorykey, startdate, typekey, value, ) VALUES ('John', 'Doe', 'john@example.com')";
-                    //$this->setLog($sql,true);
+                //     // cek total voucher yg sudah didapat 
+                //     // $sql = "INSERT INTO ". $voucher->tableName . "(code, categorykey, startdate, typekey, value, ) VALUES ('John', 'Doe', 'john@example.com')";
+                //     //$this->setLog($sql,true);
 
-                    // $rsVoucher = $this->oDbCon->doQuery($sql);
-                }
+                //     // $rsVoucher = $this->oDbCon->doQuery($sql);
+                // }
+
+                // tidak berlaku kelipatan
+                $arr = array();
+                $arr['code'] = array('code');
+                $arr['startDate'] = date('d / m / Y');
+                $arr['hidCustomerKey'] = $rsCustomer[0]['pkey'];
+                $arr['value'] = 1;
+                $arr['selCategory'] = 2;
+                $arr['selType'] = 2;
+
+                $rsVoucherResponse = $voucher->addData($arr);
+                $rsVoucherResponse = $rsVoucherResponse[0]['data'];
+                $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
             }
         } else {
             // echo $rsCustomer[0]['point'] .'\n';
@@ -650,6 +663,7 @@ class ItemUploadReceipt extends BaseClass
         // $this->sendMail('', '', 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, $rsCust[0]['email']);        
 
         smtp_mail($rsCust[0]['email'], 'Verifikasi Struk Berhasil' . ' - ' . DOMAIN_NAME, $content, '');
+        
         if($rsCust[0]['point'] < 20) {
             $this->sendReceiptPoinsEmail($rsHeader);
         }
