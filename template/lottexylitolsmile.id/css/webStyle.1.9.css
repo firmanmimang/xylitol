@@ -554,7 +554,7 @@ input[type=number]::-webkit-outer-spin-button {
 .item-image-uploader .image-list {list-style: none; margin: 0; padding: 0; }
 .item-image-uploader .image-list li {border:1px solid #dedede; border-radius: 0.5em; float: left; display: inline-block; background-color: #fff; padding: 0.5em}
 
-.fb-login  {width:275px; margin:auto; background-color: #314e89; border-radius: 0.3em; text-align: center; color :#fff;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;  } 
+.fb-login  {margin-left: 0; width:275px; margin:auto; background-color: #314e89; border-radius: 0.3em; text-align: center; color :#fff;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;  } 
 .fb-login div {padding: 0.5em}
 .fb-login:hover {background-color: #3c5fa9; }
 .fb-login a {color: #fff !important; text-decoration: none !important}
@@ -913,5 +913,7 @@ input[type=number]::-webkit-outer-spin-button {
         align-items: center;
         justify-content: center;
     }
+
+    .fb-login { margin-left: -6.5px;}
 }
 /* -------- */
