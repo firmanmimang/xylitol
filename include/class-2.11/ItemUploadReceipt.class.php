@@ -554,17 +554,22 @@ class ItemUploadReceipt extends BaseClass
                 // }
 
                 // tidak berlaku kelipatan
-                $arr = array();
-                $arr['code'] = array('code');
-                $arr['startDate'] = date('d / m / Y');
-                $arr['hidCustomerKey'] = $rsCustomer[0]['pkey'];
-                $arr['value'] = 1;
-                $arr['selCategory'] = 2;
-                $arr['selType'] = 2;
-
-                $rsVoucherResponse = $voucher->addData($arr);
-                $rsVoucherResponse = $rsVoucherResponse[0]['data'];
-                $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+                $sql2 = 'select coalesce(count(pkey),0) as totalvoucher from ' . $voucher->tableName . ' where customerkey = ' . $this->oDbCon->paramString($rsCustomer[0]['pkey']) . ' AND typekey = 2';
+                $rsVoucher2 = $this->oDbCon->doQuery($sql2);
+                $voucherClaimed2 = $rsVoucher2[0]['totalvoucher'];
+                if($voucherClaimed2 < 1){
+                    $arr = array();
+                    $arr['code'] = array('code');
+                    $arr['startDate'] = date('d / m / Y');
+                    $arr['hidCustomerKey'] = $rsCustomer[0]['pkey'];
+                    $arr['value'] = 1;
+                    $arr['selCategory'] = 2;
+                    $arr['selType'] = 2;
+    
+                    $rsVoucherResponse = $voucher->addData($arr);
+                    $rsVoucherResponse = $rsVoucherResponse[0]['data'];
+                    $this->sendVoucher40Email($rsVoucherResponse['customerkey'], $rsVoucherResponse['code']);
+                }
             }
         } else {
             // echo $rsCustomer[0]['point'] .'\n';
