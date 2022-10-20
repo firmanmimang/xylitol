@@ -39,7 +39,7 @@
                     {% endfor %} 
                 </ul>   
     <div style="clear:both;height:2em"></div>
-    {% set searchkey = (keyword) ? keyword : '' %}
+    {% set searchkey = (keyword != '') ? keyword : '' %}
     {% if totalPages > 0 %}
         <ul class="prev-next-page">
             {% if pageIndex == 0 %}
