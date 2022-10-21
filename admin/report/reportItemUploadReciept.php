@@ -57,10 +57,8 @@ foreach($rsItem as $row => $value){
 }
 
 $arrDataStructure['total'] = array('title'=>ucwords($obj->lang['totalPoint']),'dbfield' => 'totalpoint', 'align'=>'right', 'width'=>"110px", 'format'=>'number'); 
-
-$arrDataStructure['itemUploadImage'] = array('title'=>ucwords("File Name"),'dbfield' => 'filename', 'width'=>"150px");
-
 $arrDataStructure['status'] = array('title'=>ucwords($obj->lang['status']),'dbfield' => 'statusname', 'width'=>"100px");
+$arrDataStructure['itemUploadImage'] = array('title'=>ucwords("File Name"),'dbfield' => 'filename', 'width'=>"150px");
 		   
 $arrHeaderTemplate = array();
 $arrHeaderTemplate['reportTitle'] = $obj->lang['receiptValidationReport']; 
@@ -179,7 +177,7 @@ if (isset($_POST) && !empty($_POST['hidAction'])){
 		// bagian ff, untuk ubah filename ke link image pada phpthumb
 		$fileName = $rs[$i]['filename'];
 		$thumbHash = getPHPThumbHash($rs[$i]['filename']);
-		$rs[$i]['filename'] = "https://".DOMAIN_NAME."/phpthumb/phpThumb.php?src=". $class->phpThumbURLSrc.$obj->uploadFolder.$rs[$i]['pkey'].'/'.$fileName."&far=C&hash=".$thumbHash;
+		$rs[$i]['filename'] = "https://"."xylitol.io"."/phpthumb/phpThumb.php?src=". $class->phpThumbURLSrc.$obj->uploadFolder.$rs[$i]['pkey'].'/'.$fileName."&far=C&hash=".$thumbHash;
 		// -----------
 
         $return = $obj->formatReportRows(array('data' => $rs[$i], 'style' => $arrHeaderStyle),$arrTemplate); 

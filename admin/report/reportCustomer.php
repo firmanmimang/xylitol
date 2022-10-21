@@ -38,12 +38,14 @@ switch($EXPORT_TYPE){
             $arrDataStructure['code'] = array('title'=>ucwords($obj->lang['code']),'dbfield' => 'code', 'width'=>"100px");
             $arrDataStructure['name'] = array('title'=>ucwords($obj->lang['name']),'dbfield' => 'name', 'width'=>"200px");
             $arrDataStructure['registrationdate'] = array('title'=>ucwords($obj->lang['registrationDate']),'dbfield' => 'createdon', 'width'=>"100px",'format'=>'date','align'=>'center');
+            $arrDataStructure['ktp'] = array('title'=>ucwords("KTP"),'dbfield' => 'idnumber', 'width'=>"200px");
             $arrDataStructure['dob'] = array('title'=>ucwords($obj->lang['dateOfBirth']),'dbfield' => 'dateofbirth', 'width'=>"100px",'format'=>'date','returnOnEmpty' => array('returnOnEmpty' => true, 'value' => ''));
             $arrDataStructure['sexname'] = array('title'=>ucwords($obj->lang['sex']),'dbfield' => 'sexname', 'width'=>"100px");
             
             $arrDataStructure['address'] = array('title'=>ucwords($obj->lang['address']),'dbfield' => 'address', 'width'=>"250px", "sortable" => false);
             $arrDataStructure['mobile'] = array('title'=>ucwords($obj->lang['mobilePhone']),'dbfield' => 'mobile', 'width'=>"100px");
             $arrDataStructure['email'] = array('title'=>ucwords($obj->lang['email']),'dbfield' => 'email', 'width'=>"180px");
+            $arrDataStructure['ig'] = array('title'=>ucwords("Username IG"),'dbfield' => 'igaccount', 'width'=>"180px");
             $arrDataStructure['point'] = array('title'=>ucwords($obj->lang['point']),'dbfield' => 'point', 'width'=>"80px", 'align' => 'right');
             $arrDataStructure['status'] = array('title'=>ucwords($obj->lang['status']),'dbfield' => 'statusname', 'width'=>"100px");
 }
