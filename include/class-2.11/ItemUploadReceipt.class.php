@@ -79,6 +79,9 @@ class ItemUploadReceipt extends BaseClass
                 ' . $this->tableCustomer . '.name as customername,
                 ' . $this->tableCustomer . '.mobile as customermobile,
                 ' . $this->tableCustomer . '.email as customeremail,
+                ' . $this->tableCustomer . '.address as customeraddress,
+                ' . $this->tableCustomer . '.idnumber as customeridnumber,
+                ' . $this->tableCustomer . '.igaccount as customerigaccount,
                 ' . $this->tableCity . '.name as cityname,
                 ' . $this->tableStatus . '.status as statusname
                 

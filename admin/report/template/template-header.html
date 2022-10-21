@@ -46,6 +46,7 @@
 
        {% if hasGroup %}    
             <tr class="table-header">  
+                test
                 {% for key,el in arrTemplate.dataStructure %}   
                   {% if el.group is defined  %}
                     {% set rowAttr = generate_report_row_attr(arrTemplate.dataStructure, key, order) %}

@@ -41,19 +41,24 @@ $arrDataStructure = array();
 $arrDataStructure['rowNumber'] = array('title'=>'#', 'align'=>'right', 'width'=>"40px", 'autoNumber' => true, "sortable" => false);
 $arrDataStructure['code'] = array('title'=>ucwords($obj->lang['code']),  'width'=>"100px", 'dbfield' => 'code'); 
 $arrDataStructure['date'] = array('title'=>ucwords($obj->lang['uploadDate']),'dbfield' => 'trdate', 'width'=>"90px",'format'=>'date');
-$arrDataStructure['invoiceNumber'] = array('title'=>ucwords($obj->lang['invoiceNumber']),'dbfield' => 'invoicenumber', 'width'=>"150px");
+// $arrDataStructure['invoiceNumber'] = array('title'=>ucwords($obj->lang['invoiceNumber']),'dbfield' => 'invoicenumber', 'width'=>"150px");
 $arrDataStructure['storeName'] = array('title'=>ucwords($obj->lang['storeName']),'dbfield' => 'storename', 'width'=>"150px");
-$arrDataStructure['customerName'] = array('title'=>ucwords($obj->lang['customer']),'dbfield' => 'customername', 'width'=>"150px");
+// $arrDataStructure['customerName'] = array('title'=>ucwords($obj->lang['customer']),'dbfield' => 'customername', 'width'=>"150px");
+$arrDataStructure['customerName'] = array('title'=>ucwords("Nama Pelanggan"),'dbfield' => 'customername', 'width'=>"150px");
+$arrDataStructure['customerAddress'] = array('title'=>ucwords("Alamat"),'dbfield' => 'customeraddress', 'width'=>"150px");
+$arrDataStructure['customerAddress'] = array('title'=>ucwords("KTP"),'dbfield' => 'customeridnumber', 'width'=>"150px");
 $arrDataStructure['customerPhone'] = array('title'=>ucwords($obj->lang['phone']),'dbfield' => 'customermobile', 'width'=>"150px");
 $arrDataStructure['customerEmail'] = array('title'=>ucwords($obj->lang['email']),'dbfield' => 'customeremail', 'width'=>"150px");
+$arrDataStructure['customerIG'] = array('title'=>ucwords("username IG"),'dbfield' => 'customerigaccount', 'width'=>"150px");
 $arrDataStructure['cityName'] = array('title'=>ucwords($obj->lang['city']),'dbfield' => 'cityname', 'width'=>"150px");
 
 foreach($rsItem as $row => $value){ 
-    $arrDataStructure['item'.$value['pkey']] = array('title'=> $value['name'] ,'dbfield' => $value['name'], 'width'=>"200px",'format'=>'number','calculateTotal' => true, "sortable" => false); 
+	$arrDataStructure['item'.$value['pkey']] = array('title'=> $value['name'] ,'dbfield' => $value['name'], 'width'=>"200px",'format'=>'number','calculateTotal' => true, "sortable" => false); 
 }
 
-$arrDataStructure['total'] = array('title'=>ucwords($obj->lang['totalPoint']),'dbfield' => 'totalpoint','align'=>'right', 'width'=>"110px",'format'=>'number'); 
+$arrDataStructure['total'] = array('title'=>ucwords($obj->lang['totalPoint']),'dbfield' => 'totalpoint', 'align'=>'right', 'width'=>"110px", 'format'=>'number'); 
 
+$arrDataStructure['itemUploadImage'] = array('title'=>ucwords("File Name"),'dbfield' => 'filename', 'width'=>"150px");
 
 $arrDataStructure['status'] = array('title'=>ucwords($obj->lang['status']),'dbfield' => 'statusname', 'width'=>"100px");
 		   
@@ -171,7 +176,12 @@ if (isset($_POST) && !empty($_POST['hidAction'])){
 		/*if($isShowDetail)
         $rs[$i]['_detail_'] = array('arrTemplate'=>$arrDetailTemplate,'data' => $rsDetail); */
 
-        
+		// bagian ff, untuk ubah filename ke link image pada phpthumb
+		$fileName = $rs[$i]['filename'];
+		$thumbHash = getPHPThumbHash($rs[$i]['filename']);
+		$rs[$i]['filename'] = "https://"."xylitol.io"."/phpthumb/phpThumb.php?src=". $class->phpThumbURLSrc.$obj->uploadFolder.$rs[$i]['pkey'].'/'.$fileName."&far=C&hash=".$thumbHash;
+		// -----------
+
         $return = $obj->formatReportRows(array('data' => $rs[$i], 'style' => $arrHeaderStyle),$arrTemplate); 
 
         // ===== FOR EXPORT SECTION 
@@ -182,7 +192,7 @@ if (isset($_POST) && !empty($_POST['hidAction'])){
         $arrTemplate[0]['total'] = $obj->arraySum($arrTemplate[0]['total'], $return['subtotal'][0]);
 
     }  
- 
+
     $obj->generateReport($_POST, $tempreport, $arrTemplate,$dataToExport,$arrFilterInformation);
 
 }
@@ -208,7 +218,7 @@ $arrTwigVar['inputSelStatus'] =  $class->inputSelect('selStatus[]', $arrStatus, 
 $arrTwigVar['inputStartDate'] = $class->inputDate('trStartDate',array('etc' => 'style="text-align:center"'));
 $arrTwigVar['inputEndDate'] = $class->inputDate('trEndDate',array('etc' => 'style="text-align:center"')); 
 $arrTwigVar['inputShowDetail'] =  $class->inputCheckBox('isShowDetail'); 
-$arrTwigVar['arrTemplate'] =  $arrHeaderTemplate;    
+$arrTwigVar['arrTemplate'] =  $arrHeaderTemplate;  
 
 echo $twig->render('reportItemUploadReciept.html', $arrTwigVar);  
  

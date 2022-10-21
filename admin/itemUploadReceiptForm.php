@@ -47,13 +47,14 @@ if (!empty($_GET['id'])){
     $rsImage = array(); 
     if(!empty($rs[0]['filename'])){ 
         $rs[0]['phpthumbhash'] = getPHPThumbHash($rs[0]['filename']);
-	
+
+        
 		$sourcePath = $obj->defaultDocUploadPath.$obj->uploadFolder.$id;
 		$destinationPath = $obj->uploadTempDoc.$obj->uploadFolder.$id; 
 		$obj->deleteAll($destinationPath); 
-	
+        
 		if(!is_dir($destinationPath))  mkdir ($destinationPath,  0755, true);
-				
+        
 		$obj->fullCopy($sourcePath,$destinationPath); 
 	} 
 
