@@ -177,7 +177,7 @@ if (isset($_POST) && !empty($_POST['hidAction'])){
 		// bagian ff, untuk ubah filename ke link image pada phpthumb
 		$fileName = $rs[$i]['filename'];
 		$thumbHash = getPHPThumbHash($rs[$i]['filename']);
-		$rs[$i]['filename'] = "https://"."xylitol.io"."/phpthumb/phpThumb.php?src=". $class->phpThumbURLSrc.$obj->uploadFolder.$rs[$i]['pkey'].'/'.$fileName."&far=C&hash=".$thumbHash;
+		$rs[$i]['filename'] = "https://".DOMAIN_NAME."/phpthumb/phpThumb.php?src=". $class->phpThumbURLSrc.$obj->uploadFolder.$rs[$i]['pkey'].'/'.$fileName."&far=C&hash=".$thumbHash;
 		// -----------
 
         $return = $obj->formatReportRows(array('data' => $rs[$i], 'style' => $arrHeaderStyle),$arrTemplate); 
