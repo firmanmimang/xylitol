@@ -15,7 +15,7 @@ function sendBlastEmail(){
         global $class;
         
         $customer = new Customer();
-        $rsCustomer = $customer->searchDataRow(array('email'),' and point < 60 and statuskey <> 3');
+        $rsCustomer = $customer->searchDataRow(array('email'),' and point < 20 and statuskey <> 3 and statuskey <> 1');
         
         
         // nanti jadikan default variable
@@ -27,6 +27,7 @@ function sendBlastEmail(){
         
         foreach($rsCustomer as $row){
               $email = $row['email']; 
+              echo $email . '<br>';
             //   $class->sendMail('','', DOMAIN_NAME,$content,$email); 
         }
          
