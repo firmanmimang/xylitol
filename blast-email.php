@@ -27,7 +27,7 @@ function sendBlastEmail(){
         
         foreach($rsCustomer as $row){
               $email = $row['email']; 
-              $class->sendMail('','', DOMAIN_NAME,$content,$email); 
+            //   $class->sendMail('','', DOMAIN_NAME,$content,$email); 
         }
          
         

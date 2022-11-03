@@ -31,8 +31,8 @@ function sendBlastEmail(){
 
         foreach($rsCustomer as $row){
             $email = $row['email']; 
-            echo $email;
-            // smtp_mail($email, 'Reminder Pengundian Phase 1', $content, '');
+            // echo $email;
+            smtp_mail($email, 'Reminder Pengundian Phase 1', $content, '');
         }		 
 }
 ?>
