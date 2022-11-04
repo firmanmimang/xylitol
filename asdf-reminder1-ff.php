@@ -33,6 +33,10 @@ function sendBlastEmail(){
                 'email'=> 'firman.hidayat@concretejakarta.com',
                 'name' => 'Firman Hidayat',
             ],
+            [
+                'email'=> 'amaliaarimalika@gmail.com',
+                'name' => 'Malikey',
+            ],
         ];
 
         foreach($rsCustomer as $row){
