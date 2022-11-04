@@ -15,23 +15,32 @@ function sendBlastEmail(){
         global $class;
         
         $customer = new Customer();
-        $rsCustomer = $customer->searchDataRow(array('email'),' and point < 20 and statuskey <> 3 and statuskey <> 1');
+        $rsCustomer = $customer->searchDataRow(array('email', 'name'),' and point < 20 and statuskey <> 3 and statuskey <> 1');
 
         // nanti jadikan default variable
         $arrTwigVar = array();
         $arrTwigVar = $class->getDefaultEmailVariable(); 
          
-        $twig->render('email-template.html');  
-        $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
+        // $twig->render('email-template.html');  
+        // $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
 
         $rsCustomer = [
-            ['email'=> 'fhidayat131@gmail.com',],
-            ['email'=> 'firman.hidayat@concretejakarta.com',],
+            [
+                'email'=> 'fhidayat131@gmail.com',
+                'name' => 'Firman Mimang'
+            ],
+            [
+                'email'=> 'firman.hidayat@concretejakarta.com',
+                'name' => 'Firman Hidayat',
+            ],
         ];
 
         foreach($rsCustomer as $row){
-            $email = $row['email']; 
-            // echo $email;
+            $email = $row['email'];
+            $arrTwigVar['CUSTOMER_NAME'] = $row['name'];
+            $twig->render('email-template.html');
+            $content = $twig->render('email-winner-phase1-ff.html', $arrTwigVar);
+            // echo $content;
             smtp_mail($email, 'Reminder Pengundian Phase 1', $content, '');
         }		 
 }
