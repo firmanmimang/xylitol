@@ -5,9 +5,9 @@ require_once '_global.php';
     
 includeClass("Customer.class.php");
 
-sendBlastEmail();
+// sendBlastEmail();
     
-echo 'done';
+echo 'not active';
 
 function sendBlastEmail(){
 		
