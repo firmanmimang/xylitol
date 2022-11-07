@@ -21,31 +21,27 @@ function sendBlastEmailReminderPhase1(){
         $arrTwigVar = array();
         $arrTwigVar = $class->getDefaultEmailVariable(); 
          
+        $chunk = array_chunk($rsCustomer,50);
+        echo count($chunk) . '<br>';
+        // print_r($chunk);
+         
         // $twig->render('email-template.html');  
         // $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
 
-        // $rsCustomer = [
-        //     [
-        //         'email'=> 'fhidayat131@gmail.com',
-        //         'name' => 'Firman Mimang'
-        //     ],
-        //     [
-        //         'email'=> 'firman.hidayat@concretejakarta.com',
-        //         'name' => 'Firman Hidayat',
-        //     ],
-        //     [
-        //         'email'=> 'amaliaarimalika@gmail.com',
-        //         'name' => 'Malikey',
-        //     ],
-        // ];
+        $chunk[5] = [
+            [
+                'email'=> 'nissanurlatifah96@gmail.com;',
+                'name' => 'Nisa Nurlatifah'
+            ],
+        ];
 
-        foreach($rsCustomer as $row){
+        foreach($chunk[5] as $row){
             $email = $row['email'];
             $arrTwigVar['CUSTOMER_NAME'] = $row['name'];
             $twig->render('email-template.html');
             $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
-            // echo $content;
-            smtp_mail($email, 'Reminder Pengundian Phase 1', $content, '');
+            echo $email . '<br>';
+            // smtp_mail($email, 'Reminder Pengundian Phase 1', $content, '');
         }		 
 }
 
