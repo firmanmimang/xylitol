@@ -35,6 +35,8 @@ function sendBlastEmailReminderPhase1(){
             ],
         ];
 
+        $chunk6 = array_slice( $chunk[6], 12, null, true);
+
         foreach($chunk[5] as $row){
             $email = $row['email'];
             $arrTwigVar['CUSTOMER_NAME'] = $row['name'];

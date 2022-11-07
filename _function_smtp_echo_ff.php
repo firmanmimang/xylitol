@@ -44,7 +44,7 @@ function smtp_mail($to, $subject, $message, $from, $debug = false)
     if ($mail->Send()) {
         echo $to ." Email Sent..! <br>";
     } else {
-        echo $to ." Error..! <br>";
+        echo $to ." Error..! <br>". $mail->ErrorInfo;
     }
 
     $mail->smtpClose();
