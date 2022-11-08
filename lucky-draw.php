@@ -41,7 +41,7 @@ $criteria = (!empty($criteria)) ? ' and ' . $criteria : '';
 
 $criteria .= ' and '.$voucher->tableName.'.statuskey in (1) ';
 
-$criteria .= ' and '.$voucher->tableName.'.typekey in (1) ';
+// $criteria .= ' and '.$voucher->tableName.'.typekey in (1) ';
 
 $rsVoucher = $voucher->searchData('','',true,$criteria,$limit);
 
