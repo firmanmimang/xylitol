@@ -82,7 +82,7 @@ function sendBlastEmailWinnerPhase1(){
             $twig->render('email-template.html');
             $content = $twig->render('email-winner-phase1-ff.html', $arrTwigVar);
             // echo $content;
-            smtp_mail($email, 'Pemenang Undian ', $content, '');
+            smtp_mail($email, 'Pengumuman Pemenang Smile Project IV Phase 1', $content, '');
         }		 
 }
 ?>
