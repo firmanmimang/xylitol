@@ -42,6 +42,7 @@ switch($EXPORT_TYPE){
             $arrDataStructure['customeremail'] = array('title'=>ucwords($obj->lang['email']),'dbfield' => 'customeremail', 'width'=>"200px");
             $arrDataStructure['customeraddress'] = array('title'=>ucwords($obj->lang['address']),'dbfield' => 'customeraddress', 'width'=>"250px");
             $arrDataStructure['status'] = array('title'=>ucwords($obj->lang['status']),'dbfield' => 'statusname', 'width'=>"100px");
+            $arrDataStructure['type'] = array('title'=>ucwords('type'),'dbfield' => 'vouchertype', 'width'=>"100px");
 }
   
 $arrHeaderTemplate = array();  
@@ -88,7 +89,35 @@ if (isset($_POST) && !empty($_POST['hidAction'])){
 	    array_push($arrFilterInformation,array("label" => 'Status', 'filter' => $statusName));
         
 	}  
-	  
+
+	if(isset($_POST) && !empty($_POST['selType'])) { 
+        
+        $key = implode(",", $class->oDbCon->paramString($_POST['selType']));   
+        
+       	$criteria .= ' AND '.$obj->tableName.'.typekey in('.$key.')';  
+
+        $rsCriteria =  [
+            [
+                "pkey"=> "1",
+                "status"=> "Foldable-Voucher",
+                "textcolor"=> "#4169E1",
+            ],
+            [
+                "pkey"=> "2",
+                "status"=> "E-Wallet",
+                "textcolor"=> "#F19A3E",
+            ],
+        ];
+	 
+        $arrTempStatus = array();
+		for ($k=0;$k<count($rsCriteria);$k++)
+		 	array_push($arrTempStatus,$rsCriteria[$k]['status']);
+			
+		$statusName = implode(", ",$arrTempStatus); 
+	    array_push($arrFilterInformation,array("label" => 'Type', 'filter' => $statusName));
+        
+	}  
+
     $orderBy = (!empty($_POST['hidOrderBy'])) ? $obj->oDbCon->paramOrder($_POST['hidOrderBy']) : 'pkey'; // order by harus dr kolom yg terdaftar saja
     $orderType = (isset($_POST['hidOrderType']) && !empty($_POST['hidOrderType']) && $_POST['hidOrderType'] == 1) ? 'desc' : 'asc';
  
@@ -131,8 +160,24 @@ if (isset($_POST) && !empty($_POST['hidAction'])){
 	$_POST['trEndDate'] = date('d / m / Y'); 
 }
 
-$arrStatus = $class->convertForCombobox($arrStatus,'pkey','status');   
+$arrStatus = $class->convertForCombobox($arrStatus,'pkey','status'); 
 //$arrCategory = $class->convertForCombobox($customerCategory->searchData($customerCategory->tableName.'.statuskey',1,true,'','order by name asc'),'pkey','name');
+
+// bagian ff type filter combobox
+$arrType = [
+    [
+        "pkey"=> "1",
+        "status"=> "Foldable-Voucher",
+        "textcolor"=> "#4169E1",
+    ],
+    [
+        "pkey"=> "2",
+        "status"=> "E-Wallet",
+        "textcolor"=> "#F19A3E",
+    ],
+];
+$arrType = $class->convertForCombobox($arrType,'pkey','status');
+// -------------------------------
 
 $arrTwigVar['importUrl'] = $obj->importUrl; 
 $arrTwigVar['inputCustomerCode'] =  $class->inputText('customerCode');  
@@ -140,6 +185,10 @@ $arrTwigVar['inputCustomerName'] =  $class->inputText('customerName');
 $arrTwigVar['inputSelStatus'] =  $class->inputSelect('selStatus[]', $arrStatus, array('etc' => 'multiple="multiple"', 'class' => 'multi-selectbox')); 
 $arrTwigVar['inputStartDate'] = $class->inputDate('trStartDate',array('etc' => 'style="text-align:center"'));
 $arrTwigVar['inputEndDate'] = $class->inputDate('trEndDate',array('etc' => 'style="text-align:center"')); 
+
+// bagian ff untuk input filter type
+$arrTwigVar['inputSelType'] =  $class->inputSelect('selType[]', $arrType, array('etc' => 'multiple="multiple"', 'class' => 'multi-selectbox')); 
+// --------
 
 $arrTwigVar['arrTemplate'] =  $arrHeaderTemplate;   
       
