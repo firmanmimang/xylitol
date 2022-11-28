@@ -6,7 +6,7 @@ require __DIR__.'/_function_smtp_echo_ff.php';
 
 includeClass("Customer.class.php");
 
-sendBlastEmailWinnerPhase1();
+sendBlastEmailReminderPhase2();
     
 echo 'done';
 
@@ -44,6 +44,34 @@ function sendBlastEmailReminderPhase1(){
             $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
             echo $email . '<br>';
             // smtp_mail($email, 'Reminder Pengundian Phase 1', $content, '');
+        }		 
+}
+
+function sendBlastEmailReminderPhase2(){
+        global $twig;
+        global $class;
+        
+        $customer = new Customer();
+        $rsCustomer = $customer->searchDataRow(array('email', 'name'),' and point < 20 and statuskey <> 3 and statuskey <> 1');
+
+        // nanti jadikan default variable
+        $arrTwigVar = array();
+        $arrTwigVar = $class->getDefaultEmailVariable(); 
+         
+        $chunk = array_chunk($rsCustomer,50);
+        echo count($chunk) . '<br>';
+        // print_r($chunk);
+         
+        // $twig->render('email-template.html');  
+        // $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
+
+        foreach($chunk[0] as $row){
+            $email = $row['email'];
+            $arrTwigVar['CUSTOMER_NAME'] = $row['name'];
+            $twig->render('email-template.html');
+            $content = $twig->render('email-reminder-phase2-ff.html', $arrTwigVar);
+            // echo $content . '<br>';
+            smtp_mail($email, 'Reminder Pengundian Phase 2', $content, '');
         }		 
 }
 
