@@ -666,395 +666,395 @@ function sendBlastEmailWinnerPhase2(){
               'email' => 'rkvgrc@gmail.com',
               'name' => 'Abigail Graciela'
             ],
-            [
-              'email' => 'adelynniesa13@gmail.com',
-              'name' => 'Adelyne'
-            ],
-            [
-              'email' => 'jeng.arum@gmail.com',
-              'name' => 'Adriana Arumndalu'
-            ],
-            [
-              'email' => 'setiawanahmad14.as@gmail.com',
-              'name' => 'Ahmad Setiawan'
-            ],
-            [
-              'email' => 'fani388@gmail.com',
-              'name' => 'Alfani Cahya'
-            ],
-            [
-              'email' => 'anastasiarisca110301@gmail.com',
-              'name' => 'Anastasia Risca'
-            ],
-            [
-              'email' => 'shirou.nanaya@gmail.com',
-              'name' => 'Andika H'
-            ],
-            [
-              'email' => 'Angeliamiraldi@gmail.com',
-              'name' => 'Angelia'
-            ],
-            [
-              'email' => 'annamayangsari10@gmail.com',
-              'name' => 'Anna MayangSari'
-            ],
-            [
-              'email' => 'annisa.nurlailia@gmail.com',
-              'name' => 'Annisa Nurlailia'
-            ],
-            [
-              'email' => 'angularmomentumrecords@gmail.com',
-              'name' => 'Annissa Utami'
-            ],
-            [
-              'email' => 'april.nurhalizah@gmail.com',
-              'name' => 'aprilia'
-            ],
-            [
-              'email' => 'Astri.sariani@gmail.com',
-              'name' => 'Astri sariani hrp'
-            ],
-            [
-              'email' => 'bondua@gmail.com',
-              'name' => 'BONNEY KUMALA'
-            ],
-            [
-              'email' => 'sucikhoerunnisa21@gmail.com',
-              'name' => 'Caca_ 21'
-            ],
-            [
-              'email' => 'cakaesihcacih@gmail.com',
-              'name' => 'Cacih Cakaesih'
-            ],
-            [
-              'email' => 'luckylifegoeson7@gmail.com',
-              'name' => 'Christine Susanto'
-            ],
-            [
-              'email' => 'delimafaradilla@gmail.com',
-              'name' => 'Delima'
-            ],
-            [
-              'email' => 'Nengedoll10@gmail.com',
-              'name' => 'Delvi'
-            ],
-            [
-              'email' => 'nooksxt.naa@gmail.com',
-              'name' => 'Dena Novita Rosiana'
-            ],
-            [
-              'email' => 'ratna7743@gmail.com',
-              'name' => 'Desi ratnasari'
-            ],
-            [
-              'email' => 'dessy.nurshiva@gmail.com',
-              'name' => 'Dessy Nurshiva'
-            ],
-            [
-              'email' => 'devihandika00@gmail.com',
-              'name' => 'Devi Handika'
-            ],
-            [
-              'email' => 'wookiedy@gmail.com',
-              'name' => 'Devi Kuraesin'
-            ],
-            [
-              'email' => 'dewianggraini220890@gmail.com',
-              'name' => 'DEWI Anggraeni'
-            ],
-            [
-              'email' => 'dheaseran@gmail.com',
-              'name' => 'Dhea Sekar Rana'
-            ],
-            [
-              'email' => 'dinarb151097@gmail.com',
-              'name' => 'Dinar'
-            ],
-            [
-              'email' => 'dwifajarrianto1@gmail.com',
-              'name' => 'Dwi Fajarrianto'
-            ],
-            [
-              'email' => 'Dwiewardhani21@gmail.com',
-              'name' => 'Dwie Wardhani'
-            ],
-            [
-              'email' => 'ebirahman4@gmail.com',
-              'name' => 'Ebi'
-            ],
-            [
-              'email' => 'kaniaaa201@gmail.com',
-              'name' => 'eka pramesty'
-            ],
-            [
-              'email' => 'elisabethfedora@gmail.com',
-              'name' => 'Elisabeth Fedora'
-            ],
-            [
-              'email' => 'elisa1407922@gmail.com',
-              'name' => 'Elisah Setiyawati'
-            ],
-            [
-              'email' => 'vahjumma@gmail.com',
-              'name' => 'Erlin'
-            ],
-            [
-              'email' => 'fairuz.husna55@gmail.com',
-              'name' => 'Fairuz Husna'
-            ],
-            [
-              'email' => 'febyrevilraharjo@gmail.com',
-              'name' => 'Feby Raharjo'
-            ],
-            [
-              'email' => 'babysung13@gmail.com',
-              'name' => 'Felly Hedriyani Laili'
-            ],
-            [
-              'email' => 'niedisini@gmail.com',
-              'name' => 'Fennie'
-            ],
-            [
-              'email' => 'fitriyuandini2@gmail.com',
-              'name' => 'Fitri Yuandini'
-            ],
-            [
-              'email' => 'novitagitha1@gmail.com',
-              'name' => 'Githanovita'
-            ],
-            [
-              'email' => 'gunje838@gmail.com',
-              'name' => 'gunawan julestari'
-            ],
-            [
-              'email' => 'mylanahana@gmail.com',
-              'name' => 'Hana Mylana'
-            ],
-            [
-              'email' => 'Hanny_setiadi10@yahoo.com',
-              'name' => 'Hanny'
-            ],
-            [
-              'email' => 'gdiskn@gmail.com',
-              'name' => 'Iin Sukendra'
-            ],
-            [
-              'email' => 'maidaikrima12@gmail.com',
-              'name' => 'Ikrima Maida'
-            ],
-            [
-              'email' => 'indriadesh@gmail.com',
-              'name' => 'indri adesh'
-            ],
-            [
-              'email' => 'izzawahyu@gmail.com',
-              'name' => 'Iza Agustin'
-            ],
-            [
-              'email' => 'janicevalerie2@gmail.com',
-              'name' => 'Janice Valerie'
-            ],
-            [
-              'email' => 'vero.jenni@gmail.com',
-              'name' => 'Jennifer Harinck'
-            ],
-            [
-              'email' => 'jillyresmalia@gmail.com',
-              'name' => 'Jilly Resmalia'
-            ],
-            [
-              'email' => 'gaby.domino82@gmail.com',
-              'name' => 'Josephine Gabrielle'
-            ],
-            [
-              'email' => 'rizkyakye@gmail.com',
-              'name' => 'Kiki rizkya'
-            ],
-            [
-              'email' => 'lidianatha180295@gmail.com',
-              'name' => 'Lidia Natalia'
-            ],
-            [
-              'email' => 'msurya1506@yahoo.com',
-              'name' => 'Maryati Surya'
-            ],
-            [
-              'email' => 'mayaf76@yahoo.com',
-              'name' => 'maya'
-            ],
-            [
-              'email' => 'mayandakartika5@gmail.com',
-              'name' => 'Mayanda Kartika Putri'
-            ],
-            [
-              'email' => 'meryandafitri@yahoo.co.id',
-              'name' => 'Meryanda Fitri'
-            ],
-            [
-              'email' => 'Fitriyani.fau@gmail.com',
-              'name' => 'Moonj'
-            ],
-            [
-              'email' => 'mutiahrahmadhani230@gmail.com',
-              'name' => 'Mutiah Rahmadani'
-            ],
-            [
-              'email' => 'nadiarieninta@yahoo.com',
-              'name' => 'nadiarieninta'
-            ],
-            [
-              'email' => 'nitaokta23.9c@gmail.com',
-              'name' => 'Nita Oktafia Sari'
-            ],
-            [
-              'email' => 'novanoviana472@gmail.com',
-              'name' => 'Nova Noviana'
-            ],
-            [
-              'email' => 'kookieyerim9799@gmail.com',
-              'name' => 'Novia Rizky Amelia'
-            ],
-            [
-              'email' => 'stellaamarillis@gmail.com',
-              'name' => 'Novilia amarillis'
-            ],
-            [
-              'email' => 'nuniyuniartini99@gmail.com',
-              'name' => 'Nuni Yuniartini'
-            ],
-            [
-              'email' => 'nurhasanah070186@gmail.com',
-              'name' => 'Nur Hasanah'
-            ],
-            [
-              'email' => 'muhammadahnur24@gmail.com',
-              'name' => 'Nur Muhammadah'
-            ],
-            [
-              'email' => 'pungky.wahyu@gmail.com',
-              'name' => 'Pungky W. Wijayani'
-            ],
-            [
-              'email' => 'aqomaruddin809@gmail.com',
-              'name' => 'qomaruddin ahmad'
-            ],
-            [
-              'email' => 'tautami112@gmail.com',
-              'name' => 'Rahmawati Nur Utami'
-            ],
-            [
-              'email' => 'Rant.phussa28@gmail.com',
-              'name' => 'Ranti Phussa'
-            ],
-            [
-              'email' => 'rara.maharani91@gmail.com',
-              'name' => 'Rara Maharani'
-            ],
-            [
-              'email' => 'ratihherdianti33@gmail.com',
-              'name' => 'Ratih Herdianti'
-            ],
-            [
-              'email' => 'noee131997@gmail.com',
-              'name' => 'Retno Setyaningrum'
-            ],
-            [
-              'email' => 'jhiacute@yahoo.co.id',
-              'name' => 'rikook'
-            ],
-            [
-              'email' => 'rinjani565@gmail.com',
-              'name' => 'RinjaniVia'
-            ],
-            [
-              'email' => 'radjaprawiraydh25@gmail.com',
-              'name' => 'Rita Kusumawardani'
-            ],
-            [
-              'email' => 'rizki.khairani18@mhs.uinjkt.ac.id',
-              'name' => 'Rizki Khairani'
-            ],
-            [
-              'email' => 'kiochan87@gmail.com',
-              'name' => 'Rizki Suseptiarini'
-            ],
-            [
-              'email' => 'wawawita28375@gmail.com',
-              'name' => 'Salwa Fakhirawita'
-            ],
-            [
-              'email' => 'sbariska@gmail.com',
-              'name' => 'Septiani B Ariska'
-            ],
-            [
-              'email' => 'sheillawidya@gmail.com',
-              'name' => 'Sheilla widya suci'
-            ],
-            [
-              'email' => 'siltaniami@gmail.com',
-              'name' => 'Silmi'
-            ],
-            [
-              'email' => 'ervianisiti@gmail.com',
-              'name' => 'Siti Erviani'
-            ],
-            [
-              'email' => 'sofianoorrahmi@gmail.com',
-              'name' => 'sofia noor rahmi'
-            ],
-            [
-              'email' => 'soniaaprilia56@gmail.com',
-              'name' => 'Sonia Aprilia'
-            ],
-            [
-              'email' => 'samarillis97@gmail.com',
-              'name' => 'stella amarillis'
-            ],
-            [
-              'email' => 'audinastella@gmail.com',
-              'name' => 'Stella Audina'
-            ],
-            [
-              'email' => 'sucishopping3@gmail.com',
-              'name' => 'Suci Nur Cahyati'
-            ],
-            [
-              'email' => 'may.cayman@gmail.com',
-              'name' => 'Sugi May'
-            ],
-            [
-              'email' => 'azzahraaliyah91@gmail.com',
-              'name' => 'Susanti'
-            ],
-            [
-              'email' => 'syiffafadzillah003@gmail.com',
-              'name' => 'Syiffa Fadzillah'
-            ],
-            [
-              'email' => 'yastarihumairantsy99@gmail.com',
-              'name' => 'Yastari natasya'
-            ],
-            [
-              'email' => 'Nanitnot07@gmail.com',
-              'name' => 'Yuhana'
-            ],
-            [
-              'email' => 'kimseokjin.myson@gmail.com',
-              'name' => 'Zivanka Beatrice Kristanto'
-            ],
+            // [
+            //   'email' => 'adelynniesa13@gmail.com',
+            //   'name' => 'Adelyne'
+            // ],
+            // [
+            //   'email' => 'jeng.arum@gmail.com',
+            //   'name' => 'Adriana Arumndalu'
+            // ],
+            // [
+            //   'email' => 'setiawanahmad14.as@gmail.com',
+            //   'name' => 'Ahmad Setiawan'
+            // ],
+            // [
+            //   'email' => 'fani388@gmail.com',
+            //   'name' => 'Alfani Cahya'
+            // ],
+            // [
+            //   'email' => 'anastasiarisca110301@gmail.com',
+            //   'name' => 'Anastasia Risca'
+            // ],
+            // [
+            //   'email' => 'shirou.nanaya@gmail.com',
+            //   'name' => 'Andika H'
+            // ],
+            // [
+            //   'email' => 'Angeliamiraldi@gmail.com',
+            //   'name' => 'Angelia'
+            // ],
+            // [
+            //   'email' => 'annamayangsari10@gmail.com',
+            //   'name' => 'Anna MayangSari'
+            // ],
+            // [
+            //   'email' => 'annisa.nurlailia@gmail.com',
+            //   'name' => 'Annisa Nurlailia'
+            // ],
+            // [
+            //   'email' => 'angularmomentumrecords@gmail.com',
+            //   'name' => 'Annissa Utami'
+            // ],
+            // [
+            //   'email' => 'april.nurhalizah@gmail.com',
+            //   'name' => 'aprilia'
+            // ],
+            // [
+            //   'email' => 'Astri.sariani@gmail.com',
+            //   'name' => 'Astri sariani hrp'
+            // ],
+            // [
+            //   'email' => 'bondua@gmail.com',
+            //   'name' => 'BONNEY KUMALA'
+            // ],
+            // [
+            //   'email' => 'sucikhoerunnisa21@gmail.com',
+            //   'name' => 'Caca_ 21'
+            // ],
+            // [
+            //   'email' => 'cakaesihcacih@gmail.com',
+            //   'name' => 'Cacih Cakaesih'
+            // ],
+            // [
+            //   'email' => 'luckylifegoeson7@gmail.com',
+            //   'name' => 'Christine Susanto'
+            // ],
+            // [
+            //   'email' => 'delimafaradilla@gmail.com',
+            //   'name' => 'Delima'
+            // ],
+            // [
+            //   'email' => 'Nengedoll10@gmail.com',
+            //   'name' => 'Delvi'
+            // ],
+            // [
+            //   'email' => 'nooksxt.naa@gmail.com',
+            //   'name' => 'Dena Novita Rosiana'
+            // ],
+            // [
+            //   'email' => 'ratna7743@gmail.com',
+            //   'name' => 'Desi ratnasari'
+            // ],
+            // [
+            //   'email' => 'dessy.nurshiva@gmail.com',
+            //   'name' => 'Dessy Nurshiva'
+            // ],
+            // [
+            //   'email' => 'devihandika00@gmail.com',
+            //   'name' => 'Devi Handika'
+            // ],
+            // [
+            //   'email' => 'wookiedy@gmail.com',
+            //   'name' => 'Devi Kuraesin'
+            // ],
+            // [
+            //   'email' => 'dewianggraini220890@gmail.com',
+            //   'name' => 'DEWI Anggraeni'
+            // ],
+            // [
+            //   'email' => 'dheaseran@gmail.com',
+            //   'name' => 'Dhea Sekar Rana'
+            // ],
+            // [
+            //   'email' => 'dinarb151097@gmail.com',
+            //   'name' => 'Dinar'
+            // ],
+            // [
+            //   'email' => 'dwifajarrianto1@gmail.com',
+            //   'name' => 'Dwi Fajarrianto'
+            // ],
+            // [
+            //   'email' => 'Dwiewardhani21@gmail.com',
+            //   'name' => 'Dwie Wardhani'
+            // ],
+            // [
+            //   'email' => 'ebirahman4@gmail.com',
+            //   'name' => 'Ebi'
+            // ],
+            // [
+            //   'email' => 'kaniaaa201@gmail.com',
+            //   'name' => 'eka pramesty'
+            // ],
+            // [
+            //   'email' => 'elisabethfedora@gmail.com',
+            //   'name' => 'Elisabeth Fedora'
+            // ],
+            // [
+            //   'email' => 'elisa1407922@gmail.com',
+            //   'name' => 'Elisah Setiyawati'
+            // ],
+            // [
+            //   'email' => 'vahjumma@gmail.com',
+            //   'name' => 'Erlin'
+            // ],
+            // [
+            //   'email' => 'fairuz.husna55@gmail.com',
+            //   'name' => 'Fairuz Husna'
+            // ],
+            // [
+            //   'email' => 'febyrevilraharjo@gmail.com',
+            //   'name' => 'Feby Raharjo'
+            // ],
+            // [
+            //   'email' => 'babysung13@gmail.com',
+            //   'name' => 'Felly Hedriyani Laili'
+            // ],
+            // [
+            //   'email' => 'niedisini@gmail.com',
+            //   'name' => 'Fennie'
+            // ],
+            // [
+            //   'email' => 'fitriyuandini2@gmail.com',
+            //   'name' => 'Fitri Yuandini'
+            // ],
+            // [
+            //   'email' => 'novitagitha1@gmail.com',
+            //   'name' => 'Githanovita'
+            // ],
+            // [
+            //   'email' => 'gunje838@gmail.com',
+            //   'name' => 'gunawan julestari'
+            // ],
+            // [
+            //   'email' => 'mylanahana@gmail.com',
+            //   'name' => 'Hana Mylana'
+            // ],
+            // [
+            //   'email' => 'Hanny_setiadi10@yahoo.com',
+            //   'name' => 'Hanny'
+            // ],
+            // [
+            //   'email' => 'gdiskn@gmail.com',
+            //   'name' => 'Iin Sukendra'
+            // ],
+            // [
+            //   'email' => 'maidaikrima12@gmail.com',
+            //   'name' => 'Ikrima Maida'
+            // ],
+            // [
+            //   'email' => 'indriadesh@gmail.com',
+            //   'name' => 'indri adesh'
+            // ],
+            // [
+            //   'email' => 'izzawahyu@gmail.com',
+            //   'name' => 'Iza Agustin'
+            // ],
+            // [
+            //   'email' => 'janicevalerie2@gmail.com',
+            //   'name' => 'Janice Valerie'
+            // ],
+            // [
+            //   'email' => 'vero.jenni@gmail.com',
+            //   'name' => 'Jennifer Harinck'
+            // ],
+            // [
+            //   'email' => 'jillyresmalia@gmail.com',
+            //   'name' => 'Jilly Resmalia'
+            // ],
+            // [
+            //   'email' => 'gaby.domino82@gmail.com',
+            //   'name' => 'Josephine Gabrielle'
+            // ],
+            // [
+            //   'email' => 'rizkyakye@gmail.com',
+            //   'name' => 'Kiki rizkya'
+            // ],
+            // [
+            //   'email' => 'lidianatha180295@gmail.com',
+            //   'name' => 'Lidia Natalia'
+            // ],
+            // [
+            //   'email' => 'msurya1506@yahoo.com',
+            //   'name' => 'Maryati Surya'
+            // ],
+            // [
+            //   'email' => 'mayaf76@yahoo.com',
+            //   'name' => 'maya'
+            // ],
+            // [
+            //   'email' => 'mayandakartika5@gmail.com',
+            //   'name' => 'Mayanda Kartika Putri'
+            // ],
+            // [
+            //   'email' => 'meryandafitri@yahoo.co.id',
+            //   'name' => 'Meryanda Fitri'
+            // ],
+            // [
+            //   'email' => 'Fitriyani.fau@gmail.com',
+            //   'name' => 'Moonj'
+            // ],
+            // [
+            //   'email' => 'mutiahrahmadhani230@gmail.com',
+            //   'name' => 'Mutiah Rahmadani'
+            // ],
+            // [
+            //   'email' => 'nadiarieninta@yahoo.com',
+            //   'name' => 'nadiarieninta'
+            // ],
+            // [
+            //   'email' => 'nitaokta23.9c@gmail.com',
+            //   'name' => 'Nita Oktafia Sari'
+            // ],
+            // [
+            //   'email' => 'novanoviana472@gmail.com',
+            //   'name' => 'Nova Noviana'
+            // ],
+            // [
+            //   'email' => 'kookieyerim9799@gmail.com',
+            //   'name' => 'Novia Rizky Amelia'
+            // ],
+            // [
+            //   'email' => 'stellaamarillis@gmail.com',
+            //   'name' => 'Novilia amarillis'
+            // ],
+            // [
+            //   'email' => 'nuniyuniartini99@gmail.com',
+            //   'name' => 'Nuni Yuniartini'
+            // ],
+            // [
+            //   'email' => 'nurhasanah070186@gmail.com',
+            //   'name' => 'Nur Hasanah'
+            // ],
+            // [
+            //   'email' => 'muhammadahnur24@gmail.com',
+            //   'name' => 'Nur Muhammadah'
+            // ],
+            // [
+            //   'email' => 'pungky.wahyu@gmail.com',
+            //   'name' => 'Pungky W. Wijayani'
+            // ],
+            // [
+            //   'email' => 'aqomaruddin809@gmail.com',
+            //   'name' => 'qomaruddin ahmad'
+            // ],
+            // [
+            //   'email' => 'tautami112@gmail.com',
+            //   'name' => 'Rahmawati Nur Utami'
+            // ],
+            // [
+            //   'email' => 'Rant.phussa28@gmail.com',
+            //   'name' => 'Ranti Phussa'
+            // ],
+            // [
+            //   'email' => 'rara.maharani91@gmail.com',
+            //   'name' => 'Rara Maharani'
+            // ],
+            // [
+            //   'email' => 'ratihherdianti33@gmail.com',
+            //   'name' => 'Ratih Herdianti'
+            // ],
+            // [
+            //   'email' => 'noee131997@gmail.com',
+            //   'name' => 'Retno Setyaningrum'
+            // ],
+            // [
+            //   'email' => 'jhiacute@yahoo.co.id',
+            //   'name' => 'rikook'
+            // ],
+            // [
+            //   'email' => 'rinjani565@gmail.com',
+            //   'name' => 'RinjaniVia'
+            // ],
+            // [
+            //   'email' => 'radjaprawiraydh25@gmail.com',
+            //   'name' => 'Rita Kusumawardani'
+            // ],
+            // [
+            //   'email' => 'rizki.khairani18@mhs.uinjkt.ac.id',
+            //   'name' => 'Rizki Khairani'
+            // ],
+            // [
+            //   'email' => 'kiochan87@gmail.com',
+            //   'name' => 'Rizki Suseptiarini'
+            // ],
+            // [
+            //   'email' => 'wawawita28375@gmail.com',
+            //   'name' => 'Salwa Fakhirawita'
+            // ],
+            // [
+            //   'email' => 'sbariska@gmail.com',
+            //   'name' => 'Septiani B Ariska'
+            // ],
+            // [
+            //   'email' => 'sheillawidya@gmail.com',
+            //   'name' => 'Sheilla widya suci'
+            // ],
+            // [
+            //   'email' => 'siltaniami@gmail.com',
+            //   'name' => 'Silmi'
+            // ],
+            // [
+            //   'email' => 'ervianisiti@gmail.com',
+            //   'name' => 'Siti Erviani'
+            // ],
+            // [
+            //   'email' => 'sofianoorrahmi@gmail.com',
+            //   'name' => 'sofia noor rahmi'
+            // ],
+            // [
+            //   'email' => 'soniaaprilia56@gmail.com',
+            //   'name' => 'Sonia Aprilia'
+            // ],
+            // [
+            //   'email' => 'samarillis97@gmail.com',
+            //   'name' => 'stella amarillis'
+            // ],
+            // [
+            //   'email' => 'audinastella@gmail.com',
+            //   'name' => 'Stella Audina'
+            // ],
+            // [
+            //   'email' => 'sucishopping3@gmail.com',
+            //   'name' => 'Suci Nur Cahyati'
+            // ],
+            // [
+            //   'email' => 'may.cayman@gmail.com',
+            //   'name' => 'Sugi May'
+            // ],
+            // [
+            //   'email' => 'azzahraaliyah91@gmail.com',
+            //   'name' => 'Susanti'
+            // ],
+            // [
+            //   'email' => 'syiffafadzillah003@gmail.com',
+            //   'name' => 'Syiffa Fadzillah'
+            // ],
+            // [
+            //   'email' => 'yastarihumairantsy99@gmail.com',
+            //   'name' => 'Yastari natasya'
+            // ],
+            // [
+            //   'email' => 'Nanitnot07@gmail.com',
+            //   'name' => 'Yuhana'
+            // ],
+            // [
+            //   'email' => 'kimseokjin.myson@gmail.com',
+            //   'name' => 'Zivanka Beatrice Kristanto'
+            // ],
 
-            [
-                'email'=> 'fhidayat131@gmail.com',
-                'name' => 'Firman Mimang'
-            ],
-            [
-                'email'=> 'firman.hidayat@concretejakarta.com',
-                'name' => 'Firman Hidayat',
-            ],
-            [
-                'email'=> 'amaliaarimalika@gmail.com',
-                'name' => 'Malikey',
-            ],
+            // [
+            //     'email'=> 'fhidayat131@gmail.com',
+            //     'name' => 'Firman Mimang'
+            // ],
+            // [
+            //     'email'=> 'firman.hidayat@concretejakarta.com',
+            //     'name' => 'Firman Hidayat',
+            // ],
+            // [
+            //     'email'=> 'amaliaarimalika@gmail.com',
+            //     'name' => 'Malikey',
+            // ],
         ];
 
         $chunk = array_chunk($rsCustomer,50);
