@@ -646,4 +646,45 @@ function sendBlastEmailWinnerPhase1(){
             smtp_mail($email, 'Pengumuman Pemenang Smile Project IV Phase 1', $content, '');
         }		 
 }
+
+function sendBlastEmailWinnerPhase2(){
+        global $twig;
+        global $class;
+        
+        // $customer = new Customer();
+        // $rsCustomer = $customer->searchDataRow(array('email', 'name'),' and point < 20 and statuskey <> 3 and statuskey <> 1');
+
+        // nanti jadikan default variable
+        $arrTwigVar = array();
+        $arrTwigVar = $class->getDefaultEmailVariable(); 
+         
+        // $twig->render('email-template.html');  
+        // $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
+
+        $rsCustomer = [
+            
+
+            [
+                'email'=> 'fhidayat131@gmail.com',
+                'name' => 'Firman Mimang'
+            ],
+            [
+                'email'=> 'firman.hidayat@concretejakarta.com',
+                'name' => 'Firman Hidayat',
+            ],
+            [
+                'email'=> 'amaliaarimalika@gmail.com',
+                'name' => 'Malikey',
+            ],
+        ];
+
+        foreach($rsCustomer as $row){
+            $email = $row['email'];
+            $arrTwigVar['CUSTOMER_NAME'] = $row['name'];
+            $twig->render('email-template.html');
+            $content = $twig->render('email-winner-phase1-ff.html', $arrTwigVar);
+            // echo $content;
+            smtp_mail($email, 'Pengumuman Pemenang Smile Project IV Phase 1', $content, '');
+        }		 
+}
 ?>
