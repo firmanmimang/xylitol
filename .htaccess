@@ -142,7 +142,10 @@ RewriteRule ^quiz-detail/([0-9]+)/(.*)$ quiz-detail.php?id=$1 [NC,L]
 
 # KHUSUS LOTTE 
 RewriteRule ^generator$ /personalized/lottexylitolsmile.id/generator.php [NC,L]    
-RewriteRule ^winners$ page.php?page=winners [NC,L]    
+RewriteRule ^winners$ page.php?page=winners-phase-1 [NC,L]    
+RewriteRule ^winners-phase-1$ page.php?page=winners-phase-1 [NC,L] 
+RewriteRule ^winners-phase-2$ page.php?page=winners-phase-2 [NC,L] 
+RewriteRule ^winners-e-wallet$ page.php?page=winners-e-wallet [NC,L] 
 
 #PENTING UTK CKFINDER
 RewriteCond %{REQUEST_FILENAME} !-f
