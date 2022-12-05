@@ -6,7 +6,7 @@ require __DIR__.'/_function_smtp_echo_ff.php';
 
 includeClass("Customer.class.php");
 
-sendBlastEmailWinnerPhase2();
+// sendBlastEmailWinnerPhase2();
     
 echo 'done';
 
