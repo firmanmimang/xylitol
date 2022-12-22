@@ -6,7 +6,7 @@ require __DIR__.'/_function_smtp_echo_ff.php';
 
 includeClass("Customer.class.php");
 
-// sendBlastEmailWinnerPhase2();
+sendBlastEmailWinnerEWallet1();
     
 echo 'done';
 
@@ -662,10 +662,10 @@ function sendBlastEmailWinnerPhase2(){
         // $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
 
         $rsCustomer = [
-            [
-              'email' => 'rkvgrc@gmail.com',
-              'name' => 'Abigail Graciela'
-            ],
+            // [
+            //   'email' => 'rkvgrc@gmail.com',
+            //   'name' => 'Abigail Graciela'
+            // ],
             // [
             //   'email' => 'adelynniesa13@gmail.com',
             //   'name' => 'Adelyne'
@@ -1043,18 +1043,18 @@ function sendBlastEmailWinnerPhase2(){
             //   'name' => 'Zivanka Beatrice Kristanto'
             // ],
 
-            // [
-            //     'email'=> 'fhidayat131@gmail.com',
-            //     'name' => 'Firman Mimang'
-            // ],
-            // [
-            //     'email'=> 'firman.hidayat@concretejakarta.com',
-            //     'name' => 'Firman Hidayat',
-            // ],
-            // [
-            //     'email'=> 'amaliaarimalika@gmail.com',
-            //     'name' => 'Malikey',
-            // ],
+            [
+                'email'=> 'fhidayat131@gmail.com',
+                'name' => 'Firman Mimang'
+            ],
+            [
+                'email'=> 'firman.hidayat@concretejakarta.com',
+                'name' => 'Firman Hidayat',
+            ],
+            [
+                'email'=> 'amaliaarimalika@gmail.com',
+                'name' => 'Malikey',
+            ],
         ];
 
         $chunk = array_chunk($rsCustomer,50);
@@ -1068,5 +1068,44 @@ function sendBlastEmailWinnerPhase2(){
             // echo $content;
             smtp_mail($email, 'Pengumuman Pemenang Smile Project IV Phase 2', $content, '');
         }		 
+}
+
+function sendBlastEmailWinnerEWallet1(){
+        global $twig;
+        global $class;
+        
+        // $customer = new Customer();
+        // $rsCustomer = $customer->searchDataRow(array('email', 'name'),' and point < 20 and statuskey <> 3 and statuskey <> 1');
+
+        // nanti jadikan default variable
+        $arrTwigVar = array();
+        $arrTwigVar = $class->getDefaultEmailVariable(); 
+         
+        // $twig->render('email-template.html');  
+        // $content = $twig->render('email-reminder-phase1-ff.html', $arrTwigVar);
+
+        $rsCustomer = [
+            [
+              'email' => 'ansellafatma17@gmail.com',
+              'name' => 'Ansella'
+            ],
+            [
+              'email' => 'asmiatttiii@gmail.com',
+              'name' => 'Asmiati'
+            ],
+            [
+              'email' => 'chintyawati.tjokro@gmail.com',
+              'name' => 'Chintyawati'
+            ],
+        ];
+
+        foreach($rsCustomer as $row){
+            $email = $row['email'];
+            $arrTwigVar['CUSTOMER_NAME'] = $row['name'];
+            $twig->render('email-template.html');
+            $content = $twig->render('email-winner-e-wallet-ff.html', $arrTwigVar);
+            // echo $content;
+            smtp_mail($email, 'KONFIRMASI PENGIRIMAN HADIAH', $content, '');
+        }	
 }
 ?>
